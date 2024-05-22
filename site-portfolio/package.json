@@ -2,7 +2,7 @@
   "name": "site-portfolio",
   "private": false,
   "version": "0.0.0",
-  "homepage": "https://CypherO2.github.io/work",
+  "homepage": "https://cyphero2.github.io/work/",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
