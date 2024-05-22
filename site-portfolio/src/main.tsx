@@ -9,7 +9,7 @@ import { HashRouter } from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <HashRouter basename="/work">
+    <HashRouter basename="https://cyphero2.github.io/work/">
       <App />
     </HashRouter>
   </React.StrictMode>
