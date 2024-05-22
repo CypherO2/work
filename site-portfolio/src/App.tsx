@@ -12,6 +12,11 @@ import {
 import FootComp from "./components/FooterComp";
 import NavComp from "./components/NavbarComp";
 import Homepage from "./pages/Homepage";
+import Aboutpage from "./pages/Aboutpage";
+import Contactpage from "./pages/Contactpage";
+import Portfoliopage from "./pages/Portfoliopage";
+import Resumepage from "./pages/Resumepage";
+import Unknownpage from "./pages/Unknownpage";
 
 function App() {
   return (
@@ -20,11 +25,11 @@ function App() {
       <Container>
         <Routes>
           <Route path={INDEX_PATH} element={<Homepage />} />
-          <Route path={ABOUT_PATH} element={<></>} />
-          <Route path={CONTACT_PATH} element={<></>} />
-          <Route path={PORTFOLIO_PATH} element={<></>} />
-          <Route path={RESUME_PATH} element={<></>} />
-          <Route path={UNKNOWN_PATH} element={<></>} />
+          <Route path={ABOUT_PATH} element={<Aboutpage />} />
+          <Route path={CONTACT_PATH} element={<Contactpage />} />
+          <Route path={PORTFOLIO_PATH} element={<Portfoliopage />} />
+          <Route path={RESUME_PATH} element={<Resumepage />} />
+          <Route path={UNKNOWN_PATH} element={<Unknownpage />} />
         </Routes>
       </Container>
       <FootComp />

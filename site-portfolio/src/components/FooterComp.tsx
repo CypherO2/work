@@ -1,6 +1,5 @@
 import { MDBFooter, MDBContainer, MDBBtn, MDBIcon } from "mdb-react-ui-kit";
 import {
-  TWITTER_LINK,
   DISCORD_LINK,
   YOUTUBE_LINK,
   LINKEDIN_LINK,
@@ -16,18 +15,6 @@ export default function FootComp() {
       >
         <MDBContainer className="pt-4">
           <section className="mb-4">
-            <MDBBtn
-              rippleColor="dark"
-              color="dark"
-              floating
-              size="lg"
-              className="text-light m-1"
-              href={TWITTER_LINK}
-              role="button"
-            >
-              <MDBIcon fab className="fa-twitter" />
-            </MDBBtn>
-
             <MDBBtn
               rippleColor="dark"
               color="dark"
