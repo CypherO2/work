@@ -6,6 +6,10 @@ import {
   MDBNavbarNav,
   MDBNavbarItem,
   MDBNavbarLink,
+  MDBDropdown,
+  MDBDropdownItem,
+  MDBDropdownMenu,
+  MDBDropdownToggle,
 } from "mdb-react-ui-kit";
 
 export default function NavComp() {
@@ -16,7 +20,7 @@ export default function NavComp() {
           <MDBContainer fluid>
             <MDBNavbarToggler
               aria-controls="navbarExample01"
-              aria-expanded="false"
+              aria-expanded="true"
               aria-label="Toggle navigation"
             >
               <MDBIcon fas icon="bars" />
@@ -38,9 +42,25 @@ export default function NavComp() {
                   </MDBNavbarLink>
                 </MDBNavbarItem>
                 <MDBNavbarItem>
-                  <MDBNavbarLink className="text-light" href="#/portfolio">
-                    Portfolio
-                  </MDBNavbarLink>
+                  <MDBNavbarItem>
+                    <MDBDropdown>
+                      <MDBDropdownToggle
+                        tag="a"
+                        className="nav-link text-light"
+                        role="button"
+                      >
+                        Portfolio
+                      </MDBDropdownToggle>
+                      <MDBDropdownMenu className="bg-dark">
+                        <MDBDropdownItem href="#/portfolio-art" link>
+                          <span className="text-light">Art</span>
+                        </MDBDropdownItem>
+                        <MDBDropdownItem href="#/portfolio-code" link>
+                          <span className="text-light">Code</span>
+                        </MDBDropdownItem>
+                      </MDBDropdownMenu>
+                    </MDBDropdown>
+                  </MDBNavbarItem>
                 </MDBNavbarItem>
                 <MDBNavbarItem>
                   <MDBNavbarLink className="text-light" href="#/resume">
@@ -76,11 +96,18 @@ export default function NavComp() {
                   Full Stack / Web Developer & Graphic Design Artist
                 </h4>
                 <a
-                  className="btn btn-outline-light btn-lg"
-                  href="#/portfolio"
+                  className="btn btn-outline-light btn-lg m-1"
+                  href="#/portfolio-art"
                   role="button"
                 >
-                  See My Portfolio
+                  My Art{" "}
+                </a>
+                <a
+                  className="btn btn-outline-light btn-lg m-1"
+                  href="#/portfolio-code"
+                  role="button"
+                >
+                  My Code
                 </a>
               </div>
             </div>

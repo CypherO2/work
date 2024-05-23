@@ -3,13 +3,15 @@ const ABOUT_PATH = "/about";
 const UNKNOWN_PATH = "/*";
 const RESUME_PATH = "/resume";
 const CONTACT_PATH = "/contact";
-const PORTFOLIO_PATH = "/portfolio";
+const ARTS_PATH = "/portfolio-art";
+const CODE_PATH = "/portfolio-code";
 
 export {
   INDEX_PATH,
   ABOUT_PATH,
   CONTACT_PATH,
-  PORTFOLIO_PATH,
+  ARTS_PATH,
   RESUME_PATH,
   UNKNOWN_PATH,
+  CODE_PATH,
 };
