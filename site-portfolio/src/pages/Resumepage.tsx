@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import CV from "../assets/CV/UpdateCV(2)_23-05-2024.pdf";
+import CV from "../assets/CV/UpdateCV(2)_23-05-2024-Censored.pdf";
 import { MDBContainer, MDBIcon } from "mdb-react-ui-kit";
 import { Col, Row } from "react-bootstrap";
 
