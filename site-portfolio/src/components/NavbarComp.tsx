@@ -1,8 +1,10 @@
 import {
   MDBNavbar,
   MDBContainer,
+  MDBNavbarBrand,
   MDBNavbarToggler,
   MDBIcon,
+  MDBCollapse,
   MDBNavbarNav,
   MDBNavbarItem,
   MDBNavbarLink,
@@ -11,24 +13,33 @@ import {
   MDBDropdownMenu,
   MDBDropdownToggle,
 } from "mdb-react-ui-kit";
+import { useState } from "react";
 
 export default function NavComp() {
+  const [openNavNoTogglerSecond, setOpenNavNoTogglerSecond] = useState(false);
   return (
     <>
       <header style={{ paddingLeft: 0 }}>
-        <MDBNavbar className="sticky-top" expand="lg" light bgColor="dark">
+        <MDBNavbar expand="lg" light bgColor="dark">
           <MDBContainer fluid>
+            <MDBNavbarBrand href="#/">
+              <MDBIcon fab className="fa-github text-light fs-3" />
+            </MDBNavbarBrand>
             <MDBNavbarToggler
-              aria-controls="navbarExample01"
-              aria-expanded="true"
+              type="button"
+              data-target="#navbarTogglerDemo02"
+              aria-controls="navbarTogglerDemo02"
+              aria-expanded="false"
               aria-label="Toggle navigation"
+              onClick={() => setOpenNavNoTogglerSecond(!openNavNoTogglerSecond)}
             >
-              <MDBIcon fas icon="bars" />
+              <MDBIcon fas className="fa-bars text-light" />
             </MDBNavbarToggler>
-            <div className="collapse navbar-collapse" id="navbarExample01">
-              <MDBNavbarNav right className="mb-2 mb-lg-0">
+            <MDBCollapse navbar open={openNavNoTogglerSecond}>
+              <MDBNavbarNav className="mr-auto mb-2 mb-lg-0">
                 <MDBNavbarItem>
                   <MDBNavbarLink
+                    active
                     className="text-light"
                     aria-current="page"
                     href="#/"
@@ -37,43 +48,51 @@ export default function NavComp() {
                   </MDBNavbarLink>
                 </MDBNavbarItem>
                 <MDBNavbarItem>
-                  <MDBNavbarLink className="text-light" href="#/about">
+                  <MDBNavbarLink active className="text-light" href="#/about">
                     About
                   </MDBNavbarLink>
                 </MDBNavbarItem>
                 <MDBNavbarItem>
-                  <MDBNavbarItem>
-                    <MDBDropdown>
-                      <MDBDropdownToggle
-                        tag="a"
-                        className="nav-link text-light"
-                        role="button"
-                      >
-                        Portfolio
-                      </MDBDropdownToggle>
-                      <MDBDropdownMenu className="bg-dark">
-                        <MDBDropdownItem href="#/portfolio-art" link>
-                          <span className="text-light">Art</span>
-                        </MDBDropdownItem>
-                        <MDBDropdownItem href="#/portfolio-code" link>
-                          <span className="text-light">Code</span>
-                        </MDBDropdownItem>
-                      </MDBDropdownMenu>
-                    </MDBDropdown>
-                  </MDBNavbarItem>
+                  <MDBDropdown>
+                    <MDBDropdownToggle
+                      tag="a"
+                      className="nav-link text-light"
+                      role="button"
+                    >
+                      Portfolio
+                    </MDBDropdownToggle>
+                    <MDBDropdownMenu className="bg-dark">
+                      <MDBDropdownItem href="#/portfolio-art" link>
+                        <span className="text-light">Art</span>
+                      </MDBDropdownItem>
+                      <MDBDropdownItem href="#/portfolio-code" link>
+                        <span className="text-light">Code</span>
+                      </MDBDropdownItem>
+                    </MDBDropdownMenu>
+                  </MDBDropdown>
                 </MDBNavbarItem>
                 <MDBNavbarItem>
-                  <MDBNavbarLink className="text-light" href="#/resume">
+                  <MDBNavbarLink
+                    active
+                    className="text-light"
+                    href="#/resume"
+                    tabIndex={-1}
+                  >
                     Resume
                   </MDBNavbarLink>
                 </MDBNavbarItem>
                 <MDBNavbarItem>
-                  <MDBNavbarLink className="text-light" href="#/contact">
+                  <MDBNavbarLink
+                    active
+                    className="text-light"
+                    href="#/contact"
+                    tabIndex={-1}
+                  >
                     Contact
                   </MDBNavbarLink>
                 </MDBNavbarItem>
               </MDBNavbarNav>
-            </div>
+            </MDBCollapse>
           </MDBContainer>
         </MDBNavbar>
 

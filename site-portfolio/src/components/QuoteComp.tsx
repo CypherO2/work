@@ -1,7 +1,6 @@
 import {
   MDBCard,
   MDBCardBody,
-  MDBCardImage,
   MDBCol,
   MDBContainer,
   MDBIcon,
@@ -11,6 +10,7 @@ import {
 
 export default function QuoteComp() {
   return (
+    
     <MDBContainer className="py-5 h-100">
       <MDBRow className="justify-content-center align-items-center h-100">
         <MDBCol lg="6" xl="12">
