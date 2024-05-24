@@ -80,9 +80,9 @@ export default function NavComp() {
                     >
                       Apps
                     </MDBDropdownToggle>
-                    <MDBDropdownMenu className="bg-danger">
-                      <MDBDropdownItem href="#/portfolio-art" disabled link>
-                        <span className="text-light">COMING SOON!</span>
+                    <MDBDropdownMenu className="bg-dark">
+                      <MDBDropdownItem href="#/blog" link>
+                        <span className="text-light">Blog</span>
                       </MDBDropdownItem>
                     </MDBDropdownMenu>
                   </MDBDropdown>
