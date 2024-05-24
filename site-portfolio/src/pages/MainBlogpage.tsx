@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import BlogCards from "../components/BlogCard";
 import TestImage from "../assets/BannerSgathach(1).png";
-import { Row, Col } from "react-bootstrap";
+import { Col } from "react-bootstrap";
 import { ARTCODECURIOUSITY_DESC } from "../constants/blog_desc";
 import { ARTCODECURIOUSITY_PATH } from "../constants/paths";
 

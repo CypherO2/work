@@ -21,7 +21,8 @@ export default function ArtCodeCuriousityPage() {
               By{" "}
               <a className="text-muted" href="#/about">
                 CJ PRESLEY
-              </a>
+              </a>{" "}
+              [ 24-05-2-24 - 22:51 ]
             </h6>
             <h4 className="fw-bold">Introduction</h4>
             <h5 className="">
