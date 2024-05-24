@@ -72,6 +72,22 @@ export default function NavComp() {
                   </MDBDropdown>
                 </MDBNavbarItem>
                 <MDBNavbarItem>
+                  <MDBDropdown>
+                    <MDBDropdownToggle
+                      tag="a"
+                      className="nav-link text-light"
+                      role="button"
+                    >
+                      Apps
+                    </MDBDropdownToggle>
+                    <MDBDropdownMenu className="bg-danger">
+                      <MDBDropdownItem href="#/portfolio-art" disabled link>
+                        <span className="text-light">COMING SOON!</span>
+                      </MDBDropdownItem>
+                    </MDBDropdownMenu>
+                  </MDBDropdown>
+                </MDBNavbarItem>
+                <MDBNavbarItem>
                   <MDBNavbarLink
                     active
                     className="text-light"
