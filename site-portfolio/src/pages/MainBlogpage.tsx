@@ -4,6 +4,7 @@ import TestImage from "../assets/BannerSgathach(1).png";
 import { Col } from "react-bootstrap";
 import { ARTCODECURIOUSITY_DESC } from "../constants/blog_desc";
 import { ARTCODECURIOUSITY_PATH } from "../constants/paths";
+import Thumbnail from "../assets/SiteIcon.png";
 
 export default function MainBlogpage() {
   useEffect(() => {
@@ -11,6 +12,9 @@ export default function MainBlogpage() {
   });
   return (
     <>
+      <div className="thumbnail">
+        <img src={Thumbnail} alt="" />
+      </div>
       <h1 className="text-center fw-bold pt-3">My Blog</h1>
       <h5 className="text-center text-muted px-5">
         Welcome to my creative corner where art meets code! Discover a blend of

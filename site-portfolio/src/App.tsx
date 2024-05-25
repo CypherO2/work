@@ -23,6 +23,7 @@ import Artpage from "./pages/Artpage";
 import Codepage from "./pages/Codepage";
 import MainBlogpage from "./pages/MainBlogpage";
 import ArtCodeCuriousityPage from "./pages/blog-pages/ArtCodeCuriousityPage";
+import "./css/core.css";
 
 function App() {
   return (

@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import ContactForm from "../components/ContactForm";
+import Thumbnail from "../assets/SiteIcon.png";
 
 export default function Contactpage() {
   useEffect(() => {
@@ -7,6 +8,9 @@ export default function Contactpage() {
   });
   return (
     <>
+      <div className="thumbnail">
+        <img src={Thumbnail} alt="" />
+      </div>
       <ContactForm />
     </>
   );

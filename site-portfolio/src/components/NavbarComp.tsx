@@ -126,7 +126,7 @@ export default function NavComp() {
           >
             <div className="d-flex justify-content-center align-items-center h-100">
               <div className="text-white">
-                <h1 className="mb-3">Charles J Presley</h1>
+                <h1 className="mb-3">CJ Presley</h1>
                 <h4 className="mb-3">
                   Full Stack / Web Developer & Graphic Design Artist
                 </h4>

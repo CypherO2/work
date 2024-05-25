@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import CV from "../assets/CV/UpdateCV(2)_23-05-2024-Censored.pdf";
 import { MDBContainer, MDBIcon } from "mdb-react-ui-kit";
 import { Col, Row } from "react-bootstrap";
+import Thumbnail from "../assets/SiteIcon.png";
 
 export default function Resumepage() {
   useEffect(() => {
@@ -9,6 +10,9 @@ export default function Resumepage() {
   });
   return (
     <>
+      <div className="thumbnail">
+        <img src={Thumbnail} alt="" />
+      </div>
       <MDBContainer className="text-center py-2">
         <Row>
           <Col className="d-flex justify-content-center">

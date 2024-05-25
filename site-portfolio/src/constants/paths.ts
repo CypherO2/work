@@ -8,7 +8,7 @@ const CODE_PATH = "/portfolio-code";
 const BLOG_PATH = "/blog";
 //BLOG FORMAT VVVV
 // const *PURPOSE*_BLOG_PATH = "/*blog-title*"
-const ARTCODECURIOUSITY_PATH = "/art-code-curiousity";
+const ARTCODECURIOUSITY_PATH = "/blog/art-code-curiousity";
 
 export {
   INDEX_PATH,

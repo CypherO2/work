@@ -3,15 +3,19 @@ import QuoteComp from "../components/QuoteComp";
 import { Row, Col } from "react-bootstrap";
 import RecRepoCard from "../components/RecommendedRepoCard";
 import TimelineComp from "../components/TimelineComp";
-import "../css/timeline.css"
+import "../css/timeline.css";
 import { useEffect } from "react";
+import Thumbnail from "../assets/SiteIcon.png";
 
 export default function Homepage() {
-      useEffect(() => {
-        document.title = "CJ Presley | Github Pages";
-      });
+  useEffect(() => {
+    document.title = "CJ Presley | Github Pages";
+  });
   return (
     <MDBContainer>
+      <div className="thumbnail">
+        <img src={Thumbnail} alt="" />
+      </div>
       <Row>
         <Col>
           <RecRepoCard />
