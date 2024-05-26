@@ -14,6 +14,7 @@ import {
   MDBDropdownToggle,
 } from "mdb-react-ui-kit";
 import { useState } from "react";
+import Logo from "../assets/New Logo.png";
 
 export default function NavComp() {
   const [openNavNoTogglerSecond, setOpenNavNoTogglerSecond] = useState(false);
@@ -23,7 +24,12 @@ export default function NavComp() {
         <MDBNavbar expand="lg" light bgColor="dark">
           <MDBContainer fluid>
             <MDBNavbarBrand href="#/">
-              <MDBIcon fab className="fa-github text-light fs-3" />
+              <img
+                src={Logo}
+                alt="logo for site"
+                className="mx-2"
+                style={{ width: "40px" }}
+              />
             </MDBNavbarBrand>
             <MDBNavbarToggler
               type="button"
