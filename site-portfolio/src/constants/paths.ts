@@ -9,6 +9,7 @@ const BLOG_PATH = "/blog";
 //BLOG FORMAT VVVV
 // const *PURPOSE*_BLOG_PATH = "/*blog-title*"
 const ARTCODECURIOUSITY_PATH = "/blog/art-code-curiousity";
+const TLEVELEXPERIENCE_PATH = "/blog/t-level-experience";
 
 export {
   INDEX_PATH,
@@ -20,4 +21,5 @@ export {
   CODE_PATH,
   BLOG_PATH,
   ARTCODECURIOUSITY_PATH,
+  TLEVELEXPERIENCE_PATH,
 };

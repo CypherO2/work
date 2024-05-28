@@ -1,9 +1,10 @@
 import { useEffect } from "react";
 import BlogCards from "../components/BlogCard";
-import TestImage from "../assets/BannerSgathach(1).png";
+import BlogImage1 from "../assets/pexels-dariuskrs-2228183.jpg";
+import BlogImage2 from "../assets/pexels-pixabay-276452.jpg";
 import { Col } from "react-bootstrap";
 import { ARTCODECURIOUSITY_DESC } from "../constants/blog_desc";
-import { ARTCODECURIOUSITY_PATH } from "../constants/paths";
+import { ARTCODECURIOUSITY_PATH, TLEVELEXPERIENCE_PATH } from "../constants/paths";
 import Thumbnail from "../assets/SiteIcon.png";
 
 export default function MainBlogpage() {
@@ -27,7 +28,7 @@ export default function MainBlogpage() {
       <hr className="mx-5 my-4" style={{ border: "0.1px solid black" }} />
       <Col>
         <BlogCards
-          image={TestImage}
+          image={BlogImage1}
           title="Welcome to My World: Blending Art, Code and Curiousity"
           description={ARTCODECURIOUSITY_DESC}
           link={"#" + ARTCODECURIOUSITY_PATH}
@@ -38,10 +39,10 @@ export default function MainBlogpage() {
       </Col>
       <Col>
         <BlogCards
-          image={TestImage}
-          title="placeholder"
+          image={BlogImage2}
+          title="Britain's 'Gem': The T-Level Course - My Experience"
           description="placeholder"
-          link="#/placeholder"
+          link={"#" + TLEVELEXPERIENCE_PATH}
           tag1="placeholder"
           tag2="placeholder"
           tag3="placeholder"

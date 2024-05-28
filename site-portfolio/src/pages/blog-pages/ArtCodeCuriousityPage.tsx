@@ -34,7 +34,7 @@ export default function ArtCodeCuriousityPage() {
                 [ 24-05-2-24 - 22:51 ]
               </h6>
               <h3 className="fw-bold">Introduction</h3>
-              <h5 className="">
+              <h5 className="px-5">
                 Welcome to my first blog, as a bit of an explanation as to why I
                 started this: I was bored. Anyways! My name is CJ, you can call
                 me that or by my online pseudonym 'Cassi'. I am a chronically
@@ -58,7 +58,7 @@ export default function ArtCodeCuriousityPage() {
           <MDBRow className="my-2">
             <MDBCol>
               <h3 className="fw-bold">The Artistic Journey</h3>
-              <h5 className="">
+              <h5 className="px-5">
                 Since my early days in primary school talking with my friends, I
                 was enamored with art. At first, it was something I did to prove
                 I was as good as others, a product of my insecurities after
@@ -87,7 +87,7 @@ export default function ArtCodeCuriousityPage() {
           <MDBRow className="my-2">
             <MDBCol>
               <h3 className="fw-bold">The Binary Pilgrimage</h3>
-              <h5 className="">
+              <h5 className="px-5">
                 I began my journey into the hell that is coding just a few short
                 years ago, when I first started at my college on my T-Level
                 Course: Digital Production, Design, and Development. I started
@@ -128,7 +128,7 @@ export default function ArtCodeCuriousityPage() {
           <MDBRow className="my-2">
             <MDBCol>
               <h3 className="fw-bold">Beyond Powershells and Pencils</h3>
-              <h5 className="">
+              <h5 className="px-5">
                 Coding and Art aren't my only interests. Outside of them, I have
                 a vested interest in video games and general content creation,
                 especially when either are carried out with my friends. In my
@@ -153,7 +153,7 @@ export default function ArtCodeCuriousityPage() {
           <MDBRow className="my-2">
             <MDBCol>
               <h3 className="fw-bold">The Path Ahead</h3>
-              <h5 className="">
+              <h5 className="px-5">
                 Going forward you can expect anything from critical reviews to
                 promotional/accompanying video essays and blogs on anything from
                 art to code and anything else that catches my interest.
@@ -163,7 +163,7 @@ export default function ArtCodeCuriousityPage() {
           <MDBRow className="my-2">
             <MDBCol>
               <h3 className="fw-bold">Beyond Powershells and Pencils</h3>
-              <h5 className="">
+              <h5 className="px-5">
                 Coding and Art aren't my only interests. Outside of them, I have
                 a vested interest in video games and general content creation,
                 especially when either are carried out with my friends. In my
@@ -188,7 +188,7 @@ export default function ArtCodeCuriousityPage() {
           <MDBRow className="my-2">
             <MDBCol>
               <h3 className="fw-bold">Join the Discussion</h3>
-              <h5 className="">
+              <h5 className="px-5">
                 Want to join the conversation? Join the{" "}
                 <a href={DISCORD_LINK}>discord server</a>!
               </h5>
