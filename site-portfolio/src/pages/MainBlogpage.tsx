@@ -3,8 +3,14 @@ import BlogCards from "../components/BlogCard";
 import BlogImage1 from "../assets/pexels-dariuskrs-2228183.jpg";
 import BlogImage2 from "../assets/pexels-pixabay-276452.jpg";
 import { Col } from "react-bootstrap";
-import { ARTCODECURIOUSITY_DESC } from "../constants/blog_desc";
-import { ARTCODECURIOUSITY_PATH, TLEVELEXPERIENCE_PATH } from "../constants/paths";
+import {
+  ARTCODECURIOUSITY_DESC,
+  TLEVELEXPERIENCE_DESC,
+} from "../constants/blog_desc";
+import {
+  ARTCODECURIOUSITY_PATH,
+  TLEVELEXPERIENCE_PATH,
+} from "../constants/paths";
 import Thumbnail from "../assets/SiteIcon.png";
 
 export default function MainBlogpage() {
@@ -41,11 +47,11 @@ export default function MainBlogpage() {
         <BlogCards
           image={BlogImage2}
           title="Britain's 'Gem': The T-Level Course - My Experience"
-          description="placeholder"
+          description={TLEVELEXPERIENCE_DESC}
           link={"#" + TLEVELEXPERIENCE_PATH}
-          tag1="placeholder"
-          tag2="placeholder"
-          tag3="placeholder"
+          tag1="code"
+          tag2="t-level"
+          tag3="pearson"
         />
       </Col>
     </>

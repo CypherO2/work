@@ -45,6 +45,10 @@ export default function TLevelExperiencePage() {
                 </a>{" "}
                 [ 28-05-2-24 - 14:20 ]
               </h6>
+              <h6 className="text-danger fw-bold">
+                DISCLAIMER: This is my experience, anything stated in this must
+                be taken with a grain of salt as my opinion is not fact!
+              </h6>
               <h3 className="fw-bold">Introduction</h3>
               <MDBRow className="px-5">
                 <MDBCol className="">
