@@ -10,6 +10,7 @@ const BLOG_PATH = "/blog";
 // const *PURPOSE*_BLOG_PATH = "/*blog-title*"
 const ARTCODECURIOUSITY_PATH = "/blog/art-code-curiousity";
 const TLEVELEXPERIENCE_PATH = "/blog/t-level-experience";
+const HUNDREDSOFBEAVERS_PATH = "/blog/hundreds-of-beavers-review";
 
 export {
   INDEX_PATH,
@@ -22,4 +23,5 @@ export {
   BLOG_PATH,
   ARTCODECURIOUSITY_PATH,
   TLEVELEXPERIENCE_PATH,
+  HUNDREDSOFBEAVERS_PATH,
 };

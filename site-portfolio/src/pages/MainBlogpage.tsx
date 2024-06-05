@@ -2,13 +2,16 @@ import { useEffect } from "react";
 import BlogCards from "../components/BlogCard";
 import BlogImage1 from "../assets/pexels-dariuskrs-2228183.jpg";
 import BlogImage2 from "../assets/pexels-pixabay-276452.jpg";
+import BlogImage3 from "../assets/pexels-marian-havenga-531055927-18941446.jpg";
 import { Col } from "react-bootstrap";
 import {
   ARTCODECURIOUSITY_DESC,
+  HUNDREDSOFBEAVERS_DESC,
   TLEVELEXPERIENCE_DESC,
 } from "../constants/blog_desc";
 import {
   ARTCODECURIOUSITY_PATH,
+  HUNDREDSOFBEAVERS_PATH,
   TLEVELEXPERIENCE_PATH,
 } from "../constants/paths";
 import Thumbnail from "../assets/SiteIcon.png";
@@ -52,6 +55,17 @@ export default function MainBlogpage() {
           tag1="code"
           tag2="t-level"
           tag3="pearson"
+        />
+      </Col>
+      <Col>
+        <BlogCards
+          image={BlogImage3}
+          title="Mike Cheslik's Beaver Dream"
+          description={HUNDREDSOFBEAVERS_DESC}
+          link={"#" + HUNDREDSOFBEAVERS_PATH}
+          tag1="films"
+          tag2="comedy"
+          tag3="black&white"
         />
       </Col>
     </>
