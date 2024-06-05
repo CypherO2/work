@@ -28,7 +28,7 @@ export default function BlogCards(props: BlogCardsProps) {
             rippleColor="light"
           >
             <img src={props.image} className="w-100" />
-            <a href="#/blog">
+            <a href={props.link}>
               <div
                 className="mask"
                 style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
