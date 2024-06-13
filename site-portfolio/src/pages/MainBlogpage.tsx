@@ -8,7 +8,7 @@ import Thumbnail from "../assets/SiteIcon.png";
 
 export default function MainBlogpage() {
   useEffect(() => {
-    document.title = "CJ Presley | Portfolio - Art";
+    document.title = "CJ Presley | Blogs";
   });
   return (
     <>
