@@ -1,9 +1,19 @@
 import { useEffect } from "react";
 import BlogCards from "../components/BlogCard";
-import TestImage from "../assets/BannerSgathach(1).png";
+import BlogImage1 from "../assets/pexels-dariuskrs-2228183.jpg";
+import BlogImage2 from "../assets/pexels-pixabay-276452.jpg";
+import BlogImage3 from "../assets/pexels-marian-havenga-531055927-18941446.jpg";
 import { Col } from "react-bootstrap";
-import { ARTCODECURIOUSITY_DESC } from "../constants/blog_desc";
-import { ARTCODECURIOUSITY_PATH } from "../constants/paths";
+import {
+  ARTCODECURIOUSITY_DESC,
+  HUNDREDSOFBEAVERS_DESC,
+  TLEVELEXPERIENCE_DESC,
+} from "../constants/blog_desc";
+import {
+  ARTCODECURIOUSITY_PATH,
+  HUNDREDSOFBEAVERS_PATH,
+  TLEVELEXPERIENCE_PATH,
+} from "../constants/paths";
 import Thumbnail from "../assets/SiteIcon.png";
 
 export default function MainBlogpage() {
@@ -27,7 +37,7 @@ export default function MainBlogpage() {
       <hr className="mx-5 my-4" style={{ border: "0.1px solid black" }} />
       <Col>
         <BlogCards
-          image={TestImage}
+          image={BlogImage1}
           title="Welcome to My World: Blending Art, Code and Curiousity"
           description={ARTCODECURIOUSITY_DESC}
           link={"#" + ARTCODECURIOUSITY_PATH}
@@ -38,13 +48,24 @@ export default function MainBlogpage() {
       </Col>
       <Col>
         <BlogCards
-          image={TestImage}
-          title="placeholder"
-          description="placeholder"
-          link="#/placeholder"
-          tag1="placeholder"
-          tag2="placeholder"
-          tag3="placeholder"
+          image={BlogImage2}
+          title="Britain's 'Gem': The T-Level Course - My Experience"
+          description={TLEVELEXPERIENCE_DESC}
+          link={"#" + TLEVELEXPERIENCE_PATH}
+          tag1="code"
+          tag2="t-level"
+          tag3="pearson"
+        />
+      </Col>
+      <Col>
+        <BlogCards
+          image={BlogImage3}
+          title="Mike Cheslik's Beaver Dream"
+          description={HUNDREDSOFBEAVERS_DESC}
+          link={"#" + HUNDREDSOFBEAVERS_PATH}
+          tag1="films"
+          tag2="comedy"
+          tag3="black&white"
         />
       </Col>
     </>

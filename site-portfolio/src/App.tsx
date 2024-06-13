@@ -8,8 +8,10 @@ import {
   BLOG_PATH,
   CODE_PATH,
   CONTACT_PATH,
+  HUNDREDSOFBEAVERS_PATH,
   INDEX_PATH,
   RESUME_PATH,
+  TLEVELEXPERIENCE_PATH,
   UNKNOWN_PATH,
 } from "./constants/paths";
 import FootComp from "./components/FooterComp";
@@ -24,6 +26,8 @@ import Codepage from "./pages/Codepage";
 import MainBlogpage from "./pages/MainBlogpage";
 import ArtCodeCuriousityPage from "./pages/blog-pages/ArtCodeCuriousityPage";
 import "./css/core.css";
+import TLevelExperiencePage from "./pages/blog-pages/TLevelExperiencePage";
+import HunderedsOfBeavers from "./pages/blog-pages/HundredsOfBeavers";
 
 function App() {
   return (
@@ -39,6 +43,14 @@ function App() {
           <Route
             path={ARTCODECURIOUSITY_PATH}
             element={<ArtCodeCuriousityPage />}
+          />
+          <Route
+            path={TLEVELEXPERIENCE_PATH}
+            element={<TLevelExperiencePage />}
+          />
+          <Route
+            path={HUNDREDSOFBEAVERS_PATH}
+            element={<HunderedsOfBeavers />}
           />
           <Route path={CODE_PATH} element={<Codepage />} />
           <Route path={RESUME_PATH} element={<Resumepage />} />
