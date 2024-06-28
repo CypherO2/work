@@ -11,16 +11,16 @@ export default function FootComp() {
     <>
       <MDBFooter
         className="text-center text-white"
-        style={{ backgroundColor: "#382c2c" }}
+        style={{ backgroundColor: "#342542" }}
       >
         <MDBContainer className="pt-4">
           <section className="mb-4">
             <MDBBtn
               rippleColor="dark"
-              color="dark"
+              color="light"
               floating
               size="lg"
-              className="text-light m-1"
+              className="text-dark m-1"
               href={DISCORD_LINK}
               role="button"
             >
@@ -29,10 +29,10 @@ export default function FootComp() {
 
             <MDBBtn
               rippleColor="dark"
-              color="dark"
+              color="light"
               floating
               size="lg"
-              className="text-light m-1"
+              className="text-dark m-1"
               href={YOUTUBE_LINK}
               role="button"
             >
@@ -41,10 +41,10 @@ export default function FootComp() {
 
             <MDBBtn
               rippleColor="dark"
-              color="dark"
+              color="light"
               floating
               size="lg"
-              className="text-light m-1"
+              className="text-dark m-1"
               href={LINKEDIN_LINK}
               role="button"
             >
@@ -53,10 +53,10 @@ export default function FootComp() {
 
             <MDBBtn
               rippleColor="dark"
-              color="dark"
+              color="light"
               floating
               size="lg"
-              className="text-light m-1"
+              className="text-dark m-1"
               href={GITHUB_LINK}
               role="button"
             >

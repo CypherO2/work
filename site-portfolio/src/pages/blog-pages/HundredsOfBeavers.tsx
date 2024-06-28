@@ -2,6 +2,7 @@ import { MDBCol, MDBContainer, MDBRow } from "mdb-react-ui-kit";
 import { DISCORD_LINK } from "../../constants/mylinks";
 import { useEffect } from "react";
 
+
 export default function HunderedsOfBeavers() {
   useEffect(() => {
     document.title = "CJ Presley | Hundreds of Beavers Review";

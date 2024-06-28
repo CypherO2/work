@@ -3,6 +3,7 @@ import CV from "../assets/CV/UpdateCV(2)_23-05-2024-Censored.pdf";
 import { MDBContainer, MDBIcon } from "mdb-react-ui-kit";
 import { Col, Row } from "react-bootstrap";
 import Thumbnail from "../assets/SiteIcon.png";
+import MainBanner from "../components/BannerComp";
 
 export default function Resumepage() {
   useEffect(() => {
@@ -13,7 +14,8 @@ export default function Resumepage() {
       <div className="thumbnail">
         <img src={Thumbnail} alt="" />
       </div>
-      <MDBContainer className="text-center py-2">
+      <MainBanner />
+      <MDBContainer className="text-center py-4">
         <Row>
           <Col className="d-flex justify-content-center">
             <iframe src={CV} width="80%" height="1435vw" className="" />

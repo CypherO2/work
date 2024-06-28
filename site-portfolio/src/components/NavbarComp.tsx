@@ -21,7 +21,7 @@ export default function NavComp() {
   return (
     <>
       <header style={{ paddingLeft: 0 }}>
-        <MDBNavbar expand="lg" light bgColor="dark">
+        <MDBNavbar expand="lg" light style={{ backgroundColor: "#342542" }}>
           <MDBContainer fluid>
             <MDBNavbarBrand href="#/">
               <img
@@ -117,43 +117,6 @@ export default function NavComp() {
             </MDBCollapse>
           </MDBContainer>
         </MDBNavbar>
-
-        <div
-          className="p-5 text-center bg-image"
-          style={{
-            backgroundImage:
-              "url(https://github.com/CypherO2/Pokedex-python/blob/main/Python%20Code/Code/Banner_Image.png?raw=true)",
-            height: 400,
-          }}
-        >
-          <div
-            className="mask"
-            style={{ backgroundColor: "rgba(0, 0, 0, 0.6)" }}
-          >
-            <div className="d-flex justify-content-center align-items-center h-100">
-              <div className="text-white">
-                <h1 className="mb-3">CJ Presley</h1>
-                <h4 className="mb-3">
-                  Full Stack / Web Developer & Graphic Design Artist
-                </h4>
-                <a
-                  className="btn btn-outline-light btn-lg m-1"
-                  href="#/portfolio-art"
-                  role="button"
-                >
-                  My Art{" "}
-                </a>
-                <a
-                  className="btn btn-outline-light btn-lg m-1"
-                  href="#/portfolio-code"
-                  role="button"
-                >
-                  My Code
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
       </header>
     </>
   );
