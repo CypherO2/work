@@ -101,16 +101,6 @@ export default function NavComp() {
                     </MDBDropdownMenu>
                   </MDBDropdown>
                 </MDBNavbarItem>
-                <MDBNavbarItem>
-                  <MDBNavbarLink
-                    active
-                    className="text-light"
-                    href="#/contact"
-                    tabIndex={-1}
-                  >
-                    Contact
-                  </MDBNavbarLink>
-                </MDBNavbarItem>
               </MDBNavbarNav>
             </MDBCollapse>
           </MDBContainer>

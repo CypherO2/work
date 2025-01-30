@@ -1,14 +1,10 @@
-import Banner from "../assets/BannerSgathach(1).png";
 import {
   MDBCard,
   MDBCardTitle,
   MDBCardText,
-  MDBCardOverlay,
-  MDBCardImage,
   MDBContainer,
-  MDBCardLink,
 } from "mdb-react-ui-kit";
-import { DISCORD_LINK, SGATHACH_LINK } from "../constants/mylinks";
+import { SGATHACH_LINK } from "../constants/mylinks";
 
 export default function RecRepoCard() {
   return (

@@ -1,7 +1,7 @@
 import { MDBContainer } from "mdb-react-ui-kit";
 import { useEffect } from "react";
-import { Row, Col, Image } from "react-bootstrap";
-import ErrorImage from "../assets/PageNotFound.png";
+import { Row, Col } from "react-bootstrap";
+import MainBanner from "../components/BannerComp";
 
 export default function Unknownpage() {
   useEffect(() => {
@@ -12,19 +12,20 @@ export default function Unknownpage() {
       <MDBContainer>
         <Row>
           <Col>
-            <h1 className="fw-bold text-dark mt-5 pt-5">Error 404: 😔</h1>
-            <h3 className=" text-primary">page not found</h3>
+            <h1 className="fw-bold text-light mt-5 pt-5">
+              404 - Page Not Found
+            </h1>
+            <h3
+              style={{ color: "rgb(190,50,150)", fontFamily: "monospace" }}
+              className="fw-bold"
+            >
+              are you in the right place?
+            </h3>
           </Col>
-          <Col></Col>
         </Row>
         <Row>
           <Col className="text-center">
-            <Image
-              src={ErrorImage}
-              alt="404 Image for Page"
-              style={{ width: "50%" }}
-              className="my-3 py-2 "
-            />
+            <MainBanner titleText="❓🌐❓" subtitleText="❔🤔❔" />
           </Col>
         </Row>
       </MDBContainer>

@@ -6,7 +6,6 @@ import {
   ARTS_PATH,
   BLOG_PATH,
   CODE_PATH,
-  CONTACT_PATH,
   HUNDREDSOFBEAVERS_PATH,
   INDEX_PATH,
   TLEVELEXPERIENCE_PATH,
@@ -16,7 +15,6 @@ import FootComp from "./components/FooterComp";
 import NavComp from "./components/NavbarComp";
 import Homepage from "./pages/Homepage";
 import Aboutpage from "./pages/Aboutpage";
-import Contactpage from "./pages/Contactpage";
 import Unknownpage from "./pages/Unknownpage";
 import Artpage from "./pages/Artpage";
 import Codepage from "./pages/Codepage";
@@ -35,7 +33,6 @@ function App() {
       <Routes>
         <Route path={INDEX_PATH} element={<Homepage />} />
         <Route path={ABOUT_PATH} element={<Aboutpage />} />
-        <Route path={CONTACT_PATH} element={<Contactpage />} />
         <Route path={ARTS_PATH} element={<Artpage />} />
         <Route path={BLOG_PATH} element={<MainBlogpage />} />
         <Route
