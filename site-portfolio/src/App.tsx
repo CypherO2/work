@@ -9,7 +9,6 @@ import {
   CONTACT_PATH,
   HUNDREDSOFBEAVERS_PATH,
   INDEX_PATH,
-  RESUME_PATH,
   TLEVELEXPERIENCE_PATH,
   UNKNOWN_PATH,
 } from "./constants/paths";
@@ -18,13 +17,13 @@ import NavComp from "./components/NavbarComp";
 import Homepage from "./pages/Homepage";
 import Aboutpage from "./pages/Aboutpage";
 import Contactpage from "./pages/Contactpage";
-import Resumepage from "./pages/Resumepage";
 import Unknownpage from "./pages/Unknownpage";
 import Artpage from "./pages/Artpage";
 import Codepage from "./pages/Codepage";
 import MainBlogpage from "./pages/MainBlogpage";
 import ArtCodeCuriousityPage from "./pages/blog-pages/ArtCodeCuriousityPage";
 import "./css/core.css";
+
 import TLevelExperiencePage from "./pages/blog-pages/TLevelExperiencePage";
 import HunderedsOfBeavers from "./pages/blog-pages/HundredsOfBeavers";
 
@@ -32,6 +31,7 @@ function App() {
   return (
     <>
       <NavComp />
+      <span style={{backgroundColor:"rgb(10,10,10)"}}>
       <Routes>
         <Route path={INDEX_PATH} element={<Homepage />} />
         <Route path={ABOUT_PATH} element={<Aboutpage />} />
@@ -48,9 +48,10 @@ function App() {
         />
         <Route path={HUNDREDSOFBEAVERS_PATH} element={<HunderedsOfBeavers />} />
         <Route path={CODE_PATH} element={<Codepage />} />
-        <Route path={RESUME_PATH} element={<Resumepage />} />
+        
         <Route path={UNKNOWN_PATH} element={<Unknownpage />} />
       </Routes>
+      </span>
       <FootComp />
     </>
   );

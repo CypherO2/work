@@ -21,8 +21,12 @@ export default function NavComp() {
   return (
     <>
       <header style={{ paddingLeft: 0 }}>
-        <MDBNavbar expand="lg" light style={{ backgroundColor: "#342542" }}>
-          <MDBContainer fluid>
+        <MDBNavbar
+          expand="lg"
+          light
+          style={{ backgroundColor: "rgb(10,10,10,0)" }}
+        >
+          <MDBContainer>
             <MDBNavbarBrand href="#/">
               <img
                 src={Logo}
@@ -67,12 +71,14 @@ export default function NavComp() {
                     >
                       Portfolio
                     </MDBDropdownToggle>
-                    <MDBDropdownMenu className="bg-dark">
+                    <MDBDropdownMenu
+                      style={{ backgroundColor: "rgba(10, 10, 10, 0.9)" }}
+                    >
                       <MDBDropdownItem href="#/portfolio-art" link>
-                        <span className="text-light">Art</span>
+                        <span className="text-secondary fw-bold">Art</span>
                       </MDBDropdownItem>
                       <MDBDropdownItem href="#/portfolio-code" link>
-                        <span className="text-light">Code</span>
+                        <span className="text-secondary fw-bold">Code</span>
                       </MDBDropdownItem>
                     </MDBDropdownMenu>
                   </MDBDropdown>
@@ -86,22 +92,14 @@ export default function NavComp() {
                     >
                       Apps
                     </MDBDropdownToggle>
-                    <MDBDropdownMenu className="bg-dark">
+                    <MDBDropdownMenu
+                      style={{ backgroundColor: "rgba(10, 10, 10, 0.9)" }}
+                    >
                       <MDBDropdownItem href="#/blog" link>
-                        <span className="text-light">Blog</span>
+                        <span className="text-secondary fw-bold">Blog</span>
                       </MDBDropdownItem>
                     </MDBDropdownMenu>
                   </MDBDropdown>
-                </MDBNavbarItem>
-                <MDBNavbarItem>
-                  <MDBNavbarLink
-                    active
-                    className="text-light"
-                    href="#/resume"
-                    tabIndex={-1}
-                  >
-                    Resume
-                  </MDBNavbarLink>
                 </MDBNavbarItem>
                 <MDBNavbarItem>
                   <MDBNavbarLink

@@ -11,7 +11,7 @@ export default function FootComp() {
     <>
       <MDBFooter
         className="text-center text-white"
-        style={{ backgroundColor: "#342542" }}
+        style={{ backgroundColor: "rgba(10,10,10,0)" }}
       >
         <MDBContainer className="pt-4">
           <section className="mb-4">
@@ -67,12 +67,12 @@ export default function FootComp() {
 
         <div
           className="text-center text-secondary p-3"
-          style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
+          style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
         >
-          © 2024 Copyright:
-          <a className="text-light" href="#placeholderGithubLink">
+          Made by
+          <a className="text-light" href={GITHUB_LINK}>
             {" "}
-            Charles J Presley
+            CJ Presley
           </a>
         </div>
       </MDBFooter>

@@ -1,12 +1,9 @@
 import { MDBContainer } from "mdb-react-ui-kit";
-import QuoteComp from "../components/QuoteComp";
-import { Row, Col } from "react-bootstrap";
-import RecRepoCard from "../components/RecommendedRepoCard";
-import TimelineComp from "../components/TimelineComp";
+import { Row } from "react-bootstrap";
 import "../css/timeline.css";
 import { useEffect } from "react";
-import Thumbnail from "../assets/SiteIcon.png";
 import MainBanner from "../components/BannerComp";
+import QuoteComp from "../components/QuoteComp";
 
 export default function Homepage() {
   useEffect(() => {
@@ -16,19 +13,8 @@ export default function Homepage() {
     <>
       <MainBanner />
       <MDBContainer>
-        <div className="thumbnail">
-          <img src={Thumbnail} alt="" />
-        </div>
         <Row>
-          <Col>
-            <RecRepoCard />
-          </Col>
-          <Col>
-            <QuoteComp />
-          </Col>
-        </Row>
-        <Row>
-          <TimelineComp />
+          <QuoteComp/>
         </Row>
       </MDBContainer>
     </>
