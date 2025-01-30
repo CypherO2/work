@@ -10,13 +10,13 @@ export default function ArtCodeCuriousityPage() {
   });
   return (
     <>
-      <MDBContainer className="my-4 px-3">
+      <MDBContainer className="my-4 px-3 text-light">
         <div className="thumbnail">
           <img src={Thumbnail} alt="" />
         </div>
         <MDBRow>
           <MDBCol>
-            <h1 className="text-center text-dark fw-bold pb-2">
+            <h1 className="text-center text-light fw-bold pb-2">
               Welcome to My World:
               <br />
               Blending Art, Code and Curiousity
@@ -27,9 +27,9 @@ export default function ArtCodeCuriousityPage() {
         <div className="px-5">
           <MDBRow className="my-2">
             <MDBCol>
-              <h6 className="text-muted fw-light fw-italic">
+              <h6 className="text-light fw-light fw-italic">
                 By{" "}
-                <a className="text-muted" href="#/about">
+                <a className="text-light" href="#/about">
                   CJ PRESLEY
                 </a>{" "}
                 [ 24-05-2-24 - 22:51 ]

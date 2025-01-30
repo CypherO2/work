@@ -21,14 +21,14 @@ export default function TLevelExperiencePage() {
   });
   return (
     <>
-      <MDBContainer className="my-4 px-3">
+      <MDBContainer className="my-4 px-3 text-light">
         <div className="thumbnail">
           <img src={Thumbnail} alt="" />
         </div>
         <MDBRow>
           <MDBCol>
             <h1 className="text-center text-dark fw-bold pb-2">
-              England's Gem: The T-Level Course
+              The T-Level Course:
               <br />
               My Experience
             </h1>

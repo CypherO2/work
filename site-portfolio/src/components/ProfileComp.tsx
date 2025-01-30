@@ -11,8 +11,11 @@ import {
   MDBIcon,
   MDBListGroup,
   MDBListGroupItem,
+  MDBCardTitle,
 } from "mdb-react-ui-kit";
 import Avatar from "../assets/myavatar.jpg";
+import ExperienceText from "./experienceText.tsx";
+import { COPYWRITE_DESC, MCDONALDS_DESC, PEXP_DESC, TTB_DESC } from "../constants/jobdesc.ts";
 
 export default function ProfileComp() {
   return (
@@ -50,9 +53,9 @@ export default function ProfileComp() {
                   style={{ width: "150px" }}
                   fluid
                 />
-                <p className="text-light mb-1 fw-bold">
-                  Full Stack Developer & Graphic Design Artist
-                </p>
+                <h5 className="text-light mb-1 fw-bold">
+                  Developer, Copywriter & Graphic Designer
+                </h5>
                 <p className="text-light mb-4">Manchester, England, UK</p>
               </MDBCardBody>
             </MDBCard>
@@ -113,6 +116,45 @@ export default function ProfileComp() {
                     <MDBCardText>www.linkedin.com/in/cjpresley/</MDBCardText>
                   </MDBListGroupItem>
                 </MDBListGroup>
+              </MDBCardBody>
+            </MDBCard>
+          </MDBCol>
+          <MDBCol>
+            <MDBCard style={{ backgroundColor: "rgba(10, 10, 10, 0.7)" }}>
+              <MDBCardBody className="text-light">
+                <MDBCardTitle className="fw-bold mb-2 fs-3">
+                  My Experience
+                </MDBCardTitle>
+                <MDBContainer>
+                  <ExperienceText
+                    dateStart="Nov 2022"
+                    dateEnd="Dec 2022"
+                    jobRole="Team Member"
+                    workPlace="McDonalds"
+                    roleDesc={MCDONALDS_DESC}
+                  />
+                  <ExperienceText
+                    dateStart="Dec 2023"
+                    dateEnd="Dec 2023"
+                    jobRole="Sole Cleaner"
+                    workPlace="Pizza Express"
+                    roleDesc={PEXP_DESC}
+                  />
+                  <ExperienceText
+                    dateStart="Mar 2024"
+                    dateEnd="July 2024"
+                    jobRole="Graphic Design / Copywriter"
+                    workPlace="LKYPCG Volunteer"
+                    roleDesc={COPYWRITE_DESC}
+                  />
+                  <ExperienceText
+                    dateStart="May 2024"
+                    dateEnd="July 2024"
+                    jobRole="CRM and Site Admin"
+                    workPlace="The Training Brokers Ltd"
+                    roleDesc={TTB_DESC}
+                  />
+                </MDBContainer>
               </MDBCardBody>
             </MDBCard>
           </MDBCol>

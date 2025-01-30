@@ -9,7 +9,17 @@ export default function HunderedsOfBeavers() {
   });
   return (
     <>
-      <MDBContainer className="my-4 px-3">
+      <MDBContainer className="my-4 px-3 text-light">
+        <MDBRow>
+          <MDBCol>
+            <h1 className="text-center text-light fw-bold pb-2">
+              A Beaver Dream:
+              <br />
+              Hundreds of Beavers
+            </h1>
+            <div className="border-bottom border-secondary mb-3" />
+          </MDBCol>
+        </MDBRow>
         <MDBRow className="my-2">
           <MDBCol>
             <h3 className="fw-bold">Introduction</h3>

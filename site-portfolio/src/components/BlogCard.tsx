@@ -37,10 +37,10 @@ export default function BlogCards(props: BlogCardsProps) {
           </MDBRipple>
         </MDBCol>
         <MDBCol md="6" className="mb-4">
-          <h4>
+          <h4 className="text-light">
             <strong>{props.title}</strong>
           </h4>
-          <p className="text-muted">
+          <p className="text-light">
             {props.description}{" "}
             <MDBBadge color="danger" className="ms-2">
               {props.tag1}

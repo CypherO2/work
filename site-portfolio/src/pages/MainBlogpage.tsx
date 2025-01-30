@@ -27,8 +27,8 @@ export default function MainBlogpage() {
         <div className="thumbnail">
           <img src={Thumbnail} alt="" />
         </div>
-        <h1 className="text-center fw-bold pt-4 pb-2">My Blog</h1>
-        <h5 className="text-center text-muted px-5">
+        <h1 className="text-center text-light fw-bold pt-4 pb-2">My Blog</h1>
+        <h5 className="text-center text-light px-5">
           Welcome to my creative corner where art meets code! Discover a blend
           of artistic inspiration, coding challenges, and diverse curiosities.
           Whether you're an artist, coder, or curious mind, there's something
