@@ -26,7 +26,7 @@ export default function NavComp() {
           light
           style={{ backgroundColor: "rgb(10,10,10,0)" }}
         >
-          <MDBContainer>
+          <MDBContainer className="fw-bold" style={{ fontFamily: "monospace" }}>
             <MDBNavbarBrand href="#/">
               <img
                 src={Logo}

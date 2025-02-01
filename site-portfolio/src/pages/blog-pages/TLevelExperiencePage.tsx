@@ -27,7 +27,7 @@ export default function TLevelExperiencePage() {
         </div>
         <MDBRow>
           <MDBCol>
-            <h1 className="text-center text-dark fw-bold pb-2">
+            <h1 className="text-center text-light fw-bold pb-2">
               The T-Level Course:
               <br />
               My Experience
@@ -38,9 +38,9 @@ export default function TLevelExperiencePage() {
         <div className="px-5">
           <MDBRow className="my-2">
             <MDBCol>
-              <h6 className="text-muted fw-light fw-italic">
+              <h6 className="text-light fw-light fw-italic">
                 By{" "}
-                <a className="text-muted" href="#/about">
+                <a className="text-light" href="#/about">
                   CJ PRESLEY
                 </a>{" "}
                 [ 28-05-2-24 - 14:20 ]

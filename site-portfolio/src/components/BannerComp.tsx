@@ -25,12 +25,16 @@ export default function MainBanner({
       <div className="mask">
         <div className="d-flex justify-content-center align-items-center h-100">
           <div className="text-white">
-            <h1 className="mb-3">{titleText}</h1>
-            <h4 className="mb-3">{subtitleText}</h4>
+            <h1 className="mb-3 fw-bold" style={{ fontFamily: "monospace" }}>
+              {titleText}
+            </h1>
+            <h4 className="mb-3 fw-bold" style={{ fontFamily: "monospace" }}>
+              {subtitleText}
+            </h4>
             {/* {firstButtonText && firstButtonText.length > 0 && (<a>test</a>)} */}
             {firstButtonText && firstButtonText.length > 0 && (
               <a
-                className="btn btn-outline-light btn-lg m-1"
+                className="btn btn-outline-light btn-lg m-1 fw-bold"
                 href={firstRedirect}
                 role="button"
               >
@@ -39,7 +43,7 @@ export default function MainBanner({
             )}
             {secondButtonText && secondButtonText.length > 0 && (
               <a
-                className="btn btn-outline-light btn-lg m-1"
+                className="btn btn-outline-light btn-lg m-1 fw-bold"
                 href={secondRedirect}
                 role="button"
               >

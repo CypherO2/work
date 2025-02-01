@@ -4,9 +4,19 @@ import {
   MDBCardText,
   MDBContainer,
 } from "mdb-react-ui-kit";
-import { SGATHACH_LINK } from "../constants/mylinks";
+// import { SGATHACH_LINK } from "../constants/mylinks";
 
-export default function RecRepoCard() {
+export interface RecRepoProps {
+  repoTitle: string;
+  repoDesc: string;
+  repoLink: string;
+}
+
+export default function RecRepoCard({
+  repoDesc,
+  repoLink,
+  repoTitle,
+}: RecRepoProps) {
   return (
     <MDBContainer className="text-light py-5 h-100">
       <MDBCard
@@ -14,19 +24,16 @@ export default function RecRepoCard() {
         style={{ backgroundColor: "rgba(10,10,10,0.7)", height: "20rem" }}
       >
         <MDBContainer className="px-5 my-auto">
-          <MDBCardTitle className="fw-bold fs-3">
-            Sgàthach Discord Bot
+          <MDBCardTitle
+            className="fw-bold fs-3"
+            style={{ fontFamily: "monospace" }}
+          >
+            {repoTitle}
           </MDBCardTitle>
-          <MDBCardText className="fs-6">
-            Sgàthach is a versatile Python-based Discord bot designed to enhance
-            your server's functionality and user experience. With a wide range
-            of features tailored to streamline moderation, engagement, and
-            community management, Sgàthach offers an all-in-one solution for
-            Discord server administration.
-          </MDBCardText>
+          <MDBCardText className="fs-6">{repoDesc}</MDBCardText>
           <a
             className="btn btn-outline-purple btn-lg m-1 fw-bold my-auto"
-            href={SGATHACH_LINK}
+            href={repoLink}
             style={{ color: "rgb(150,70,150)" }}
             role="button"
           >

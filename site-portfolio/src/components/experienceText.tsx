@@ -15,11 +15,11 @@ export default function ExperienceText({
 }: experienceProps) {
   return (
     <>
-      <div className="py-1">
-        <span className="text-secondary">
+      <div className="py-2">
+        <span className="text-secondary" style={{ fontFamily: "monospace" }}>
           {dateStart} - {dateEnd}
         </span>
-        <h4 className="fw-bold">
+        <h4 className="fw-bold" style={{ fontFamily: "monospace" }}>
           {jobRole} - {workPlace}
         </h4>
         <h6 className="mx-3">{roleDesc}</h6>

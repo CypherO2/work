@@ -13,7 +13,7 @@ export default function Artpage() {
       <div className="thumbnail">
         <img src={Thumbnail} alt="" />
       </div>
-      <h1 className="p-1 text-center fw-bold my-2">Art Gallery</h1>
+      <h1 className="p-1 text-light text-center fw-bold my-2" style={{fontFamily:"monospace"}}>Art Gallery</h1>
       <MDBContainer>
         <GalleryComp />
       </MDBContainer>

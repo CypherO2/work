@@ -6,7 +6,12 @@ import {
   MDBRow,
 } from "mdb-react-ui-kit";
 
-export default function QuoteComp() {
+export interface QuoteCompProps {
+  quoteText: string,
+  quoteAuthor: string
+}
+
+export default function QuoteComp({quoteText, quoteAuthor}:QuoteCompProps) {
   return (
     <MDBContainer className="py-5 h-100">
       <MDBRow className="justify-content-center align-items-center h-100">
@@ -26,8 +31,7 @@ export default function QuoteComp() {
                 >
                   "
                 </span>
-                The reason we call them the tickle monster and not another
-                creature is because only a monster would tickle someone
+                {quoteText}
                 <span
                   style={{ color: "rgb(130, 5, 130)" }}
                   className="fw-bold fs-1"
@@ -35,7 +39,7 @@ export default function QuoteComp() {
                   "
                 </span>
                 <span className="fs-4 text-muted">
-                  <br />- CJ Presley
+                  <br />- {quoteAuthor}
                 </span>
               </h2>
             </MDBCardBody>

@@ -3,7 +3,6 @@ import { DISCORD_LINK } from "../../constants/mylinks";
 import Thumbnail from "../../assets/SiteIcon.png";
 import { useEffect } from "react";
 
-
 export default function ArtCodeCuriousityPage() {
   useEffect(() => {
     document.title = "CJ Presley | Art, Code & Curiousity";

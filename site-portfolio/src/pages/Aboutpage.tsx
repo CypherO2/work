@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import ProfileComp from "../components/ProfileComp";
 import Thumbnail from "../assets/SiteIcon.png";
-import { MDBContainer } from "mdb-react-ui-kit";
+import { Container, Row } from "react-bootstrap";
 
 export default function Aboutpage() {
   useEffect(() => {
@@ -12,9 +12,11 @@ export default function Aboutpage() {
       <div className="thumbnail">
         <img src={Thumbnail} alt="" />
       </div>
-      <MDBContainer>
-        <ProfileComp />
-      </MDBContainer>
+      <Container>
+        <Row>
+          <ProfileComp />
+        </Row>
+      </Container>
     </>
   );
 }

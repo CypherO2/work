@@ -15,7 +15,12 @@ import {
 } from "mdb-react-ui-kit";
 import Avatar from "../assets/myavatar.jpg";
 import ExperienceText from "./experienceText.tsx";
-import { COPYWRITE_DESC, MCDONALDS_DESC, PEXP_DESC, TTB_DESC } from "../constants/jobdesc.ts";
+import {
+  COPYWRITE_DESC,
+  MCDONALDS_DESC,
+  PEXP_DESC,
+  TTB_DESC,
+} from "../constants/jobdesc.ts";
 
 export default function ProfileComp() {
   return (
@@ -24,7 +29,10 @@ export default function ProfileComp() {
         <MDBRow>
           <MDBCol>
             <MDBBreadcrumb
-              style={{ backgroundColor: "rgba(10,10,10,0.7)" }}
+              style={{
+                backgroundColor: "rgba(10,10,10,0.7)",
+                fontFamily: "monospace",
+              }}
               className="rounded-3 p-3 mb-4"
             >
               <MDBBreadcrumbItem>
@@ -89,9 +97,7 @@ export default function ProfileComp() {
                       icon="youtube fa-lg"
                       style={{ color: "#ffffff" }}
                     />
-                    <MDBCardText>
-                      https://www.youtube.com/@nox-noctiflora
-                    </MDBCardText>
+                    <MDBCardText>@nox-noctiflora</MDBCardText>
                   </MDBListGroupItem>
                   <MDBListGroupItem
                     style={{ backgroundColor: "rgba(10,10,10,0.7)" }}
@@ -113,7 +119,18 @@ export default function ProfileComp() {
                       icon="linkedin fa-lg"
                       style={{ color: "#ffffff" }}
                     />
-                    <MDBCardText>www.linkedin.com/in/cjpresley/</MDBCardText>
+                    <MDBCardText>/in/cjpresley/</MDBCardText>
+                  </MDBListGroupItem>
+                  <MDBListGroupItem
+                    style={{ backgroundColor: "rgba(10,10,10,0.7)" }}
+                    className="text-light d-flex justify-content-between align-items-center p-3"
+                  >
+                    <MDBIcon
+                      fab
+                      icon="bluesky fa-lg"
+                      style={{ color: "#ffffff" }}
+                    />
+                    <MDBCardText>cassi06.bsky.social</MDBCardText>
                   </MDBListGroupItem>
                 </MDBListGroup>
               </MDBCardBody>
@@ -122,7 +139,10 @@ export default function ProfileComp() {
           <MDBCol>
             <MDBCard style={{ backgroundColor: "rgba(10, 10, 10, 0.7)" }}>
               <MDBCardBody className="text-light">
-                <MDBCardTitle className="fw-bold mb-2 fs-3">
+                <MDBCardTitle
+                  className="fw-bold mb-2 fs-3"
+                  style={{ fontFamily: "monospace" }}
+                >
                   My Experience
                 </MDBCardTitle>
                 <MDBContainer>

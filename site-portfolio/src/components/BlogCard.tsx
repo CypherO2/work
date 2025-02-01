@@ -1,11 +1,5 @@
-import {
-  MDBContainer,
-  MDBRow,
-  MDBCol,
-  MDBRipple,
-  MDBBtn,
-  MDBBadge,
-} from "mdb-react-ui-kit";
+import { MDBContainer, MDBRipple, MDBBadge } from "mdb-react-ui-kit";
+import { Row, Col } from "react-bootstrap";
 
 interface BlogCardsProps {
   image: string;
@@ -20,14 +14,14 @@ interface BlogCardsProps {
 export default function BlogCards(props: BlogCardsProps) {
   return (
     <MDBContainer className="py-3">
-      <MDBRow className="gx-5">
-        <MDBCol md="6" className="mb-1">
+      <Row className="gx-5">
+        <Col md="4" className="mb-1">
           <MDBRipple
             className="bg-image hover-overlay ripple shadow-2-strong rounded-5"
             rippleTag="div"
             rippleColor="light"
           >
-            <img src={props.image} className="w-100" />
+            <img src={props.image} className="img-fluid" />
             <a href={props.link}>
               <div
                 className="mask"
@@ -35,9 +29,9 @@ export default function BlogCards(props: BlogCardsProps) {
               ></div>
             </a>
           </MDBRipple>
-        </MDBCol>
-        <MDBCol md="6" className="mb-4">
-          <h4 className="text-light">
+        </Col>
+        <Col md="6" className="mb-4">
+          <h4 className="text-light" style={{ fontFamily: "monospace" }}>
             <strong>{props.title}</strong>
           </h4>
           <p className="text-light">
@@ -52,11 +46,11 @@ export default function BlogCards(props: BlogCardsProps) {
               {props.tag3}
             </MDBBadge>
           </p>
-          <MDBBtn color="danger" href={props.link}>
+          <a className="btn btn-outline-light btn-lg m-1" href="" role="button">
             Read More
-          </MDBBtn>
-        </MDBCol>
-      </MDBRow>
+          </a>
+        </Col>
+      </Row>
     </MDBContainer>
   );
 }

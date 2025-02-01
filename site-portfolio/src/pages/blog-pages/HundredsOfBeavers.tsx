@@ -2,7 +2,6 @@ import { MDBCol, MDBContainer, MDBRow } from "mdb-react-ui-kit";
 import { DISCORD_LINK } from "../../constants/mylinks";
 import { useEffect } from "react";
 
-
 export default function HunderedsOfBeavers() {
   useEffect(() => {
     document.title = "CJ Presley | Hundreds of Beavers Review";
@@ -22,6 +21,12 @@ export default function HunderedsOfBeavers() {
         </MDBRow>
         <MDBRow className="my-2">
           <MDBCol>
+            <h6 className="text-light fw-light fw-italic">
+              By{" "}
+              <a className="text-light" href="#/about">
+                CJ PRESLEY
+              </a>
+            </h6>
             <h3 className="fw-bold">Introduction</h3>
             <h5 className="px-5">
               The 2022 film <em>Hundreds of Beavers</em>, directed by Mike
