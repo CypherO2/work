@@ -46,7 +46,11 @@ export default function BlogCards(props: BlogCardsProps) {
               {props.tag3}
             </MDBBadge>
           </p>
-          <a className="btn btn-outline-light btn-lg m-1" href="" role="button">
+          <a
+            className="btn btn-outline-light btn-lg m-1"
+            href={props.link}
+            role="button"
+          >
             Read More
           </a>
         </Col>
