@@ -25,7 +25,17 @@ const TLEVELREF8 =
   "https://en.wikipedia.org/wiki/Pearson_plc#cite_note-marking-68";
 const TLEVELREF9 = "https://en.wikipedia.org/wiki/Pearson_plc#cite_note-70";
 
+const SOCIAL_INFO = [
+  "envelope charlespresley2006@outlook.com fas",
+  "github CypherO2 fab",
+  "youtube @nox-noctiflora fab",
+  "discord .cassi06 fab",
+  "linkedin /in/cjpresley fab",
+  "bluesky cassi06.bsky.social fab",
+];
+
 export {
+  SOCIAL_INFO,
   DISCORD_LINK,
   YOUTUBE_LINK,
   TWITTER_LINK,

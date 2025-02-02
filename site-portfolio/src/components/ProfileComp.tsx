@@ -14,13 +14,35 @@ import {
   MDBCardTitle,
 } from "mdb-react-ui-kit";
 import Avatar from "../assets/myavatar.jpg";
-import ExperienceText from "./experienceText.tsx";
-import {
-  COPYWRITE_DESC,
-  MCDONALDS_DESC,
-  PEXP_DESC,
-  TTB_DESC,
-} from "../constants/jobdesc.ts";
+import { SOCIAL_INFO } from "../constants/mylinks.ts";
+import ExperienceCard from "./ExperienceCard.tsx";
+import EducationCard from "./EducationCard.tsx";
+
+function SocialsInfo() {
+  return (
+    <>
+      {SOCIAL_INFO.map((information) => {
+        var infoIcon = information.split(" ")[0];
+        var infoText = information.split(" ")[1];
+        var infoIconType = information.split(" ")[2];
+        return (
+          <MDBListGroupItem
+            style={{ backgroundColor: "rgba(10,10,10,0.7)" }}
+            className="text-light d-flex justify-content-between align-items-center p-3"
+          >
+            {infoIconType == "fab" && (
+              <MDBIcon fab icon={infoIcon + " fa-lg text-light"} />
+            )}
+            {infoIconType == "fas" && (
+              <MDBIcon fas icon={infoIcon + " fa-lg text-light"} />
+            )}
+            <MDBCardText>{infoText}</MDBCardText>
+          </MDBListGroupItem>
+        );
+      })}
+    </>
+  );
+}
 
 export default function ProfileComp() {
   return (
@@ -67,117 +89,27 @@ export default function ProfileComp() {
                 <p className="text-light mb-4">Manchester, England, UK</p>
               </MDBCardBody>
             </MDBCard>
-
-            <MDBCard
-              className="mb-3 mb-lg-0"
-              style={{ backgroundColor: "rgba(10,10,10,0)" }}
-            >
-              <MDBCardBody className="p-0">
-                <MDBListGroup flush className="rounded-3">
-                  <MDBListGroupItem
-                    style={{ backgroundColor: "rgba(10,10,10,0.7)" }}
-                    className="text-light d-flex justify-content-between align-items-center p-3"
-                  >
-                    <MDBIcon fas icon="globe fa-lg text-light" />
-                    <MDBCardText>CypherO2.github.io/work</MDBCardText>
-                  </MDBListGroupItem>
-                  <MDBListGroupItem
-                    style={{ backgroundColor: "rgba(10,10,10,0.7)" }}
-                    className="text-light d-flex justify-content-between align-items-center p-3"
-                  >
-                    <MDBIcon fab icon="github fa-lg text-light" />
-                    <MDBCardText>CypherO2</MDBCardText>
-                  </MDBListGroupItem>
-                  <MDBListGroupItem
-                    style={{ backgroundColor: "rgba(10,10,10,0.7)" }}
-                    className="text-light d-flex justify-content-between align-items-center p-3"
-                  >
-                    <MDBIcon
-                      fab
-                      icon="youtube fa-lg"
-                      style={{ color: "#ffffff" }}
-                    />
-                    <MDBCardText>@nox-noctiflora</MDBCardText>
-                  </MDBListGroupItem>
-                  <MDBListGroupItem
-                    style={{ backgroundColor: "rgba(10,10,10,0.7)" }}
-                    className="text-light d-flex justify-content-between align-items-center p-3"
-                  >
-                    <MDBIcon
-                      fab
-                      icon="discord fa-lg"
-                      style={{ color: "#ffffff" }}
-                    />
-                    <MDBCardText>.cassi06</MDBCardText>
-                  </MDBListGroupItem>
-                  <MDBListGroupItem
-                    style={{ backgroundColor: "rgba(10,10,10,0.7)" }}
-                    className="text-light d-flex justify-content-between align-items-center p-3"
-                  >
-                    <MDBIcon
-                      fab
-                      icon="linkedin fa-lg"
-                      style={{ color: "#ffffff" }}
-                    />
-                    <MDBCardText>/in/cjpresley/</MDBCardText>
-                  </MDBListGroupItem>
-                  <MDBListGroupItem
-                    style={{ backgroundColor: "rgba(10,10,10,0.7)" }}
-                    className="text-light d-flex justify-content-between align-items-center p-3"
-                  >
-                    <MDBIcon
-                      fab
-                      icon="bluesky fa-lg"
-                      style={{ color: "#ffffff" }}
-                    />
-                    <MDBCardText>cassi06.bsky.social</MDBCardText>
-                  </MDBListGroupItem>
-                </MDBListGroup>
-              </MDBCardBody>
-            </MDBCard>
+            <MDBRow className="mb-4">
+              <MDBCard
+                className="mb-3 mb-lg-0"
+                style={{ backgroundColor: "rgba(10,10,10,0)" }}
+              >
+                <MDBCardBody className="p-0">
+                  <MDBListGroup flush className="rounded-3">
+                    <SocialsInfo />
+                  </MDBListGroup>
+                </MDBCardBody>
+              </MDBCard>
+            </MDBRow>
           </MDBCol>
           <MDBCol>
-            <MDBCard style={{ backgroundColor: "rgba(10, 10, 10, 0.7)" }}>
-              <MDBCardBody className="text-light">
-                <MDBCardTitle
-                  className="fw-bold mb-2 fs-3"
-                  style={{ fontFamily: "monospace" }}
-                >
-                  My Experience
-                </MDBCardTitle>
-                <MDBContainer>
-                  <ExperienceText
-                    dateStart="Nov 2022"
-                    dateEnd="Dec 2022"
-                    jobRole="Team Member"
-                    workPlace="McDonalds"
-                    roleDesc={MCDONALDS_DESC}
-                  />
-                  <ExperienceText
-                    dateStart="Dec 2023"
-                    dateEnd="Dec 2023"
-                    jobRole="Sole Cleaner"
-                    workPlace="Pizza Express"
-                    roleDesc={PEXP_DESC}
-                  />
-                  <ExperienceText
-                    dateStart="Mar 2024"
-                    dateEnd="July 2024"
-                    jobRole="Graphic Design / Copywriter"
-                    workPlace="LKYPCG Volunteer"
-                    roleDesc={COPYWRITE_DESC}
-                  />
-                  <ExperienceText
-                    dateStart="May 2024"
-                    dateEnd="July 2024"
-                    jobRole="CRM and Site Admin"
-                    workPlace="The Training Brokers Ltd"
-                    roleDesc={TTB_DESC}
-                  />
-                </MDBContainer>
-              </MDBCardBody>
-            </MDBCard>
+            <MDBRow>
+              <ExperienceCard />
+            </MDBRow>
           </MDBCol>
+        </MDBRow>
+        <MDBRow>
+          <EducationCard />
         </MDBRow>
       </MDBContainer>
     </>
