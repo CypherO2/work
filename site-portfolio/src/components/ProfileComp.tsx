@@ -11,7 +11,6 @@ import {
   MDBIcon,
   MDBListGroup,
   MDBListGroupItem,
-  MDBCardTitle,
 } from "mdb-react-ui-kit";
 import Avatar from "../assets/myavatar.jpg";
 import { SOCIAL_INFO } from "../constants/mylinks.ts";
