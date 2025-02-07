@@ -17,7 +17,7 @@ export default function Codepage() {
         className="p-1 text-light text-center fw-bold my-2"
         style={{ fontFamily: "monospace" }}
       >
-        Code Gallery
+        My Projects
       </h1>
       <MDBContainer>
         <Row>
@@ -30,9 +30,9 @@ export default function Codepage() {
           </Col>
           <Col>
             <RecRepoCard
-              repoTitle="CypherO2/Asteroid-Blasters"
-              repoDesc="A game I greated while I was bored."
-              repoLink="https://github.com/CypherO2/asteroid-blasters"
+              repoTitle="CypherO2/RZA-Project"
+              repoDesc="The 70 hours project where I planned, designed, built, documented and evaluated a Full-Stack Web App."
+              repoLink="https://github.com/CypherO2/rza-project"
             />
           </Col>
         </Row>

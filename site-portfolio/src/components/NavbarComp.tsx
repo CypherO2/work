@@ -59,7 +59,7 @@ export default function NavComp() {
                 </MDBNavbarItem>
                 <MDBNavbarItem>
                   <MDBNavbarLink active className="text-light" href="#/about">
-                    About
+                    About Me
                   </MDBNavbarLink>
                 </MDBNavbarItem>
                 <MDBNavbarItem>
@@ -69,16 +69,18 @@ export default function NavComp() {
                       className="nav-link text-light"
                       role="button"
                     >
-                      Portfolio
+                      My Portfolio
                     </MDBDropdownToggle>
                     <MDBDropdownMenu
                       style={{ backgroundColor: "rgba(10, 10, 10, 0.9)" }}
                     >
                       <MDBDropdownItem href="#/portfolio-art" link>
-                        <span className="text-secondary fw-bold">Art</span>
+                        <span className="text-secondary fw-bold">My Art</span>
                       </MDBDropdownItem>
                       <MDBDropdownItem href="#/portfolio-code" link>
-                        <span className="text-secondary fw-bold">Code</span>
+                        <span className="text-secondary fw-bold">
+                          My Projects
+                        </span>
                       </MDBDropdownItem>
                     </MDBDropdownMenu>
                   </MDBDropdown>
@@ -90,13 +92,13 @@ export default function NavComp() {
                       className="nav-link text-light"
                       role="button"
                     >
-                      Apps
+                      Extra
                     </MDBDropdownToggle>
                     <MDBDropdownMenu
                       style={{ backgroundColor: "rgba(10, 10, 10, 0.9)" }}
                     >
                       <MDBDropdownItem href="#/blog" link>
-                        <span className="text-secondary fw-bold">Blog</span>
+                        <span className="text-secondary fw-bold">Articles</span>
                       </MDBDropdownItem>
                     </MDBDropdownMenu>
                   </MDBDropdown>
