@@ -25,7 +25,7 @@ export default function ElysiumPage() {
               repoDesc={
                 "A multi-purpose discord bot, with an expansive selection of commands."
               }
-              repoLink={"https://github.come/CypherO2/Elysium_DiscordBot"}
+              repoLink={"https://github.com/CypherO2/Elysium_DiscordBot"}
             />
           </Col>
         </Row>
