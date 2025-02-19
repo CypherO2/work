@@ -11,8 +11,6 @@ export default function ElysiumPage() {
         subtitleText={
           "A multi-purpose discord bot, with an expansive selection of commands."
         }
-        firstButtonText="Add Bot"
-        firstRedirect="https://discord.com/oauth2/authorize?client_id=1341004138443444316&permissions=446676936768&integration_type=0&scope=bot"
       />
       <Container>
         <Row>
