@@ -100,6 +100,9 @@ export default function NavComp() {
                       <MDBDropdownItem href="#/blog" link>
                         <span className="text-secondary fw-bold">Articles</span>
                       </MDBDropdownItem>
+                      <MDBDropdownItem href="#/elysiumbot" link>
+                        <span className="text-secondary fw-bold">Elysium</span>
+                      </MDBDropdownItem>
                     </MDBDropdownMenu>
                   </MDBDropdown>
                 </MDBNavbarItem>

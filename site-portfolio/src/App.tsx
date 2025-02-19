@@ -6,6 +6,7 @@ import {
   ARTS_PATH,
   BLOG_PATH,
   CODE_PATH,
+  ELYSIAN_PATH,
   HUNDREDSOFBEAVERS_PATH,
   INDEX_PATH,
   TLEVELEXPERIENCE_PATH,
@@ -24,30 +25,35 @@ import "./css/core.css";
 
 import TLevelExperiencePage from "./pages/blog-pages/TLevelExperiencePage";
 import HunderedsOfBeavers from "./pages/blog-pages/HundredsOfBeavers";
+import ElysiumPage from "./pages/Elysiumpage";
 
 function App() {
   return (
     <>
       <NavComp />
-      <span style={{backgroundColor:"rgb(10,10,10)"}}>
-      <Routes>
-        <Route path={INDEX_PATH} element={<Homepage />} />
-        <Route path={ABOUT_PATH} element={<Aboutpage />} />
-        <Route path={ARTS_PATH} element={<Artpage />} />
-        <Route path={BLOG_PATH} element={<MainBlogpage />} />
-        <Route
-          path={ARTCODECURIOUSITY_PATH}
-          element={<ArtCodeCuriousityPage />}
-        />
-        <Route
-          path={TLEVELEXPERIENCE_PATH}
-          element={<TLevelExperiencePage />}
-        />
-        <Route path={HUNDREDSOFBEAVERS_PATH} element={<HunderedsOfBeavers />} />
-        <Route path={CODE_PATH} element={<Codepage />} />
-        
-        <Route path={UNKNOWN_PATH} element={<Unknownpage />} />
-      </Routes>
+      <span style={{ backgroundColor: "rgb(10,10,10)" }}>
+        <Routes>
+          <Route path={INDEX_PATH} element={<Homepage />} />
+          <Route path={ABOUT_PATH} element={<Aboutpage />} />
+          <Route path={ARTS_PATH} element={<Artpage />} />
+          <Route path={BLOG_PATH} element={<MainBlogpage />} />
+          <Route path={ELYSIAN_PATH} element={<ElysiumPage />} />
+          <Route
+            path={ARTCODECURIOUSITY_PATH}
+            element={<ArtCodeCuriousityPage />}
+          />
+          <Route
+            path={TLEVELEXPERIENCE_PATH}
+            element={<TLevelExperiencePage />}
+          />
+          <Route
+            path={HUNDREDSOFBEAVERS_PATH}
+            element={<HunderedsOfBeavers />}
+          />
+          <Route path={CODE_PATH} element={<Codepage />} />
+
+          <Route path={UNKNOWN_PATH} element={<Unknownpage />} />
+        </Routes>
       </span>
       <FootComp />
     </>
