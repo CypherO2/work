@@ -26,7 +26,7 @@ const TLEVELREF8 =
 const TLEVELREF9 = "https://en.wikipedia.org/wiki/Pearson_plc#cite_note-70";
 
 const SOCIAL_INFO = [
-  "envelope charlespresley2006@outlook.com fas",
+  "envelope CJ-Development@outlook.com fas",
   "github CypherO2 fab",
   "youtube @nox-noctiflora fab",
   "discord .cassi06 fab",
