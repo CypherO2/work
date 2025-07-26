@@ -6,6 +6,9 @@ const ARTS_PATH = "/portfolio-art";
 const CODE_PATH = "/portfolio-code";
 const BLOG_PATH = "/blog";
 const ELYSIAN_PATH = "/ElysiumBot";
+const ARG_LOGIN_PATH = "/argd";
+const ARG_ONE_PATH = "/arg1divergent1925";
+const ARG_TWO_PATH = "/argdivergent7683";
 //BLOG FORMAT VVVV
 // const *PURPOSE*_BLOG_PATH = "/*blog-title*"
 const ARTCODECURIOUSITY_PATH = "/blog/art-code-curiousity";
@@ -21,6 +24,9 @@ export {
   CODE_PATH,
   BLOG_PATH,
   ELYSIAN_PATH,
+  ARG_LOGIN_PATH,
+  ARG_ONE_PATH,
+  ARG_TWO_PATH,
   ARTCODECURIOUSITY_PATH,
   TLEVELEXPERIENCE_PATH,
   HUNDREDSOFBEAVERS_PATH,
