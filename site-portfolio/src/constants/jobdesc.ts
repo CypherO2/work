@@ -7,6 +7,7 @@ const TTB_DESC =
 const COPYWRITE_DESC =
   "This was a volunteer role, I was part of a group of people who helped to create and push to print and magazine for the 20th anniversary of the LKYPCG. I handled the designing of assets for the magazine as well as helped with editing the text present to make it easier to read.";
 
-const CASORT_DESC = "";
+const CASORT_DESC =
+  "In this role, I am a part of a team of developers and non-developers working to design, implement and produce content for digital solutions. My role is as that of a Junior Developer working with TypeScript - NextJS - and Python - FastAPI - to test and deploy digtal solutions.";
 
 export { MCDONALDS_DESC, TTB_DESC, COPYWRITE_DESC, CASORT_DESC };

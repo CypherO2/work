@@ -83,7 +83,7 @@ export default function ProfileComp() {
                   fluid
                 />
                 <h5 className="text-light mb-1 fw-bold">
-                  Junior Developer @ Citizens Advise SORT
+                  Junior Developer @ Citizens Advice SORT
                 </h5>
                 <p className="text-light mb-4">Manchester, England, UK</p>
               </MDBCardBody>

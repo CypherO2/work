@@ -2,9 +2,6 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import {
   ABOUT_PATH,
-  ARG_LOGIN_PATH,
-  ARG_ONE_PATH,
-  ARG_TWO_PATH,
   ARTCODECURIOUSITY_PATH,
   ARTS_PATH,
   BLOG_PATH,
@@ -29,9 +26,6 @@ import "./css/core.css";
 import TLevelExperiencePage from "./pages/blog-pages/TLevelExperiencePage";
 import HunderedsOfBeavers from "./pages/blog-pages/HundredsOfBeavers";
 import ElysiumPage from "./pages/Elysiumpage";
-import ArgLoginPage from "./pages/ArgLogin";
-import ArgPageOne from "./pages/ArgPageOne";
-import ArgPageTwo from "./pages/ArgPageTwo";
 
 function App() {
   return (
@@ -44,9 +38,6 @@ function App() {
           <Route path={ARTS_PATH} element={<Artpage />} />
           <Route path={BLOG_PATH} element={<MainBlogpage />} />
           <Route path={ELYSIAN_PATH} element={<ElysiumPage />} />
-          <Route path={ARG_LOGIN_PATH} element={<ArgLoginPage />} />
-          <Route path={ARG_ONE_PATH} element={<ArgPageOne />} />
-          <Route path={ARG_TWO_PATH} element={<ArgPageTwo />} />
           <Route
             path={ARTCODECURIOUSITY_PATH}
             element={<ArtCodeCuriousityPage />}
