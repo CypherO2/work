@@ -7,11 +7,11 @@ import {
 } from "mdb-react-ui-kit";
 
 export interface QuoteCompProps {
-  quoteText: string,
-  quoteAuthor: string
+  quoteText: string;
+  quoteAuthor: string;
 }
 
-export default function QuoteComp({quoteText, quoteAuthor}:QuoteCompProps) {
+export default function QuoteComp({ quoteText, quoteAuthor }: QuoteCompProps) {
   return (
     <MDBContainer className="py-5 h-100">
       <MDBRow className="justify-content-center align-items-center h-100">
@@ -26,14 +26,14 @@ export default function QuoteComp({quoteText, quoteAuthor}:QuoteCompProps) {
                 className="fw-bold text-center d-block m-auto py-auto"
               >
                 <span
-                  style={{ color: "rgb(130, 5, 130)" }}
+                  style={{ color: "rgba(5, 109, 130, 1)" }}
                   className="fw-bold fs-1"
                 >
                   "
                 </span>
                 {quoteText}
                 <span
-                  style={{ color: "rgb(130, 5, 130)" }}
+                  style={{ color: "rgb(5, 109, 130, 1)" }}
                   className="fw-bold fs-1"
                 >
                   "

@@ -34,7 +34,7 @@ export default function RecRepoCard({
           <a
             className="btn btn-outline-purple btn-lg m-1 fw-bold my-auto"
             href={repoLink}
-            style={{ color: "rgb(150,70,150)" }}
+            style={{ color: "rgba(5, 109, 130, 1)" }}
             role="button"
           >
             Github Repository
