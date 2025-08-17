@@ -6,7 +6,7 @@ import {
 } from "mdb-react-ui-kit";
 import {
   MCDONALDS_DESC,
-  PEXP_DESC,
+  CASORT_DESC,
   COPYWRITE_DESC,
   TTB_DESC,
 } from "../constants/jobdesc";
@@ -27,18 +27,18 @@ export default function ExperienceCard() {
         </MDBCardTitle>
         <MDBContainer>
           <ExperienceText
-            dateStart="Nov 2022"
-            dateEnd="Dec 2022"
-            jobRole="Team Member"
-            workPlace="McDonalds"
-            roleDesc={MCDONALDS_DESC}
+            dateStart="Aug 2025"
+            dateEnd="Present"
+            jobRole="Junior Developer"
+            workPlace="Citizens Advise Stockport, Oldham, Rochdale, Trafford"
+            roleDesc={CASORT_DESC}
           />
           <ExperienceText
-            dateStart="Dec 2023"
-            dateEnd="Dec 2023"
-            jobRole="Sole Cleaner"
-            workPlace="Pizza Express"
-            roleDesc={PEXP_DESC}
+            dateStart="May 2024"
+            dateEnd="July 2024"
+            jobRole="CRM and Site Admin"
+            workPlace="The Training Brokers Ltd"
+            roleDesc={TTB_DESC}
           />
           <ExperienceText
             dateStart="Mar 2024"
@@ -48,11 +48,11 @@ export default function ExperienceCard() {
             roleDesc={COPYWRITE_DESC}
           />
           <ExperienceText
-            dateStart="May 2024"
-            dateEnd="July 2024"
-            jobRole="CRM and Site Admin"
-            workPlace="The Training Brokers Ltd"
-            roleDesc={TTB_DESC}
+            dateStart="Nov 2022"
+            dateEnd="Dec 2022"
+            jobRole="Team Member"
+            workPlace="McDonalds"
+            roleDesc={MCDONALDS_DESC}
           />
         </MDBContainer>
       </MDBCardBody>

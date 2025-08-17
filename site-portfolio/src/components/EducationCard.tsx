@@ -22,10 +22,12 @@ export default function EducationCard() {
         <MDBContainer>
           <ExperienceText
             dateStart="April 2025"
-            dateEnd="Ongoing"
-            jobRole="Software Development"
+            dateEnd="Present"
+            jobRole="Software Engineering"
             workPlace="The Open University"
-            roleDesc="HTQ Diploma of Higher Education in Software Development."
+            roleDesc={
+              "HTQ Diploma of Higher Education in Software Development."
+            }
           />
           <ExperienceText
             dateStart="Sept 2022"
