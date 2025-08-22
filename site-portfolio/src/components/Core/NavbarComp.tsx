@@ -14,7 +14,7 @@ import {
   MDBDropdownToggle,
 } from "mdb-react-ui-kit";
 import { useState } from "react";
-import Logo from "../assets/SiteIcon.png";
+import Logo from "../../assets/SiteIcon.png";
 
 export default function NavComp() {
   const [openNavNoTogglerSecond, setOpenNavNoTogglerSecond] = useState(false);
