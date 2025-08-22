@@ -14,8 +14,8 @@ import {
 } from "mdb-react-ui-kit";
 import Avatar from "../assets/myavatar.jpg";
 import { SOCIAL_INFO } from "../constants/mylinks.ts";
-import ExperienceCard from "./ExperienceCard.tsx";
-import EducationCard from "./EducationCard.tsx";
+import ExperienceCard from "./Cards/ExperienceCard.tsx";
+import EducationCard from "./Cards/EducationCard.tsx";
 
 function SocialsInfo() {
   return (

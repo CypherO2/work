@@ -4,7 +4,7 @@ import {
   YOUTUBE_LINK,
   LINKEDIN_LINK,
   GITHUB_LINK,
-} from "../constants/mylinks";
+} from "../../constants/mylinks";
 
 export default function FootComp() {
   return (

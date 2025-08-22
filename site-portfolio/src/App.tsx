@@ -12,8 +12,8 @@ import {
   TLEVELEXPERIENCE_PATH,
   UNKNOWN_PATH,
 } from "./constants/paths";
-import FootComp from "./components/FooterComp";
-import NavComp from "./components/NavbarComp";
+import FootComp from "./components/Core/FooterComp";
+import NavComp from "./components/Core/NavbarComp";
 import Homepage from "./pages/Homepage";
 import Aboutpage from "./pages/Aboutpage";
 import Unknownpage from "./pages/Unknownpage";

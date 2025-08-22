@@ -1,9 +1,9 @@
 import { MDBContainer } from "mdb-react-ui-kit";
 import { Row } from "react-bootstrap";
 import { useEffect } from "react";
-import MainBanner from "../components/BannerComp";
+import MainBanner from "../components/Banner/BannerComp";
 import QuoteComp from "../components/QuoteComp";
-import RecRepoCard from "../components/RecommendedRepoCard";
+import RecRepoCard from "../components/Cards/RecommendedRepoCard";
 import { SGATHACH_LINK } from "../constants/mylinks";
 
 export default function Homepage() {

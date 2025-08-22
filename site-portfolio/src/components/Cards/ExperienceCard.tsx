@@ -9,8 +9,8 @@ import {
   CASORT_DESC,
   COPYWRITE_DESC,
   TTB_DESC,
-} from "../constants/jobdesc";
-import ExperienceText from "./experienceText";
+} from "../../constants/jobdesc";
+import ExperienceText from "../experienceText";
 
 export default function ExperienceCard() {
   return (

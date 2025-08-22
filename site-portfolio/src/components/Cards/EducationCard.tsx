@@ -4,7 +4,7 @@ import {
   MDBCardTitle,
   MDBContainer,
 } from "mdb-react-ui-kit";
-import ExperienceText from "./experienceText";
+import ExperienceText from "../experienceText";
 
 export default function EducationCard() {
   return (

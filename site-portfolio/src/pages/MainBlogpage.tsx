@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import BlogCards from "../components/BlogCard";
+import BlogCards from "../components/Cards/BlogCard";
 import BlogImage1 from "../assets/pexels-dariuskrs-2228183.jpg";
 import BlogImage2 from "../assets/pexels-pixabay-276452.jpg";
 import BlogImage3 from "../assets/pexels-marian-havenga-531055927-18941446.jpg";

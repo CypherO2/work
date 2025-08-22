@@ -1,7 +1,7 @@
 import { MDBContainer } from "mdb-react-ui-kit";
 import { useEffect } from "react";
 import { Row, Col } from "react-bootstrap";
-import MainBanner from "../components/BannerComp";
+import MainBanner from "../components/Banner/BannerComp";
 
 export default function Unknownpage() {
   useEffect(() => {

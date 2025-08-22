@@ -1,7 +1,7 @@
 import { Col, Container, Row } from "react-bootstrap";
-import MainBanner from "../components/BannerComp";
+import MainBanner from "../components/Banner/BannerComp";
 import TableComp from "../components/TableComp";
-import RecRepoCard from "../components/RecommendedRepoCard";
+import RecRepoCard from "../components/Cards/RecommendedRepoCard";
 
 export default function ElysiumPage() {
   return (

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import Thumbnail from "../assets/SiteIcon.png";
 import { MDBContainer } from "mdb-react-ui-kit";
-import RecRepoCard from "../components/RecommendedRepoCard";
+import RecRepoCard from "../components/Cards/RecommendedRepoCard";
 import { Col, Row } from "react-bootstrap";
 
 export default function Codepage() {
