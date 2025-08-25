@@ -1,18 +1,18 @@
 import { MDBContainer, MDBRow, MDBCol } from "mdb-react-ui-kit";
 import Thumbnail from "../../assets/SiteIcon.png";
 import { useEffect } from "react";
-import {
-  DISCORD_LINK,
-  TLEVELREF1,
-  TLEVELREF2,
-  TLEVELREF3,
-  TLEVELREF4,
-  TLEVELREF5,
-  TLEVELREF6,
-  TLEVELREF7,
-  TLEVELREF8,
-  TLEVELREF9,
-} from "../../constants/mylinks";
+// import {
+//   DISCORD_LINK,
+//   TLEVELREF1,
+//   TLEVELREF2,
+//   TLEVELREF3,
+//   TLEVELREF4,
+//   TLEVELREF5,
+//   TLEVELREF6,
+//   TLEVELREF7,
+//   TLEVELREF8,
+//   TLEVELREF9,
+// } from "../../constants/mylinks";
 import TLevelImage1 from "../../assets/T-Levels.jpg";
 
 export default function TLevelExperiencePage() {
@@ -75,12 +75,12 @@ export default function TLevelExperiencePage() {
                     <br />
                     The course is a "two-year qualification for 16-19 year olds
                     designed in collaboration with employers
-                    <a href={TLEVELREF1}>
+                    <a href={""}>
                       <sup>[1]</sup>
                     </a>
                     {'". '}
                     The course was designed to be equivalent to 3 A-Levels
-                    <a href={TLEVELREF2}>
+                    <a href={"TLEVELREF2"}>
                       <sup>[2]</sup>
                     </a>
                     {", "}
@@ -96,7 +96,7 @@ export default function TLevelExperiencePage() {
                   In this blog I will detail my personal experience with this
                   course, each of its aspects—as they relate to the Digital
                   Production, Design, and Development Course
-                  <a href={TLEVELREF3}>
+                  <a href={"TLEVELREF3"}>
                     <sup>[3]</sup>
                   </a>
                   {". "}
@@ -166,7 +166,7 @@ export default function TLevelExperiencePage() {
                 This is where the course starts to become confusing. During my
                 first year, my class had to complete the Employer Set Project
                 (ESP)
-                <a href={TLEVELREF4}>
+                <a href={"TLEVELREF4"}>
                   <sup>[4]</sup>
                 </a>
                 {". "}Contrary to its name, the project was not set by any
@@ -178,7 +178,7 @@ export default function TLevelExperiencePage() {
                 In fact, we had less than two weeks to prepare before we were
                 required to complete it. During this time, we had to learn new
                 Python functionality, including an entirely new library, Pandas
-                <a href={TLEVELREF5}>
+                <a href={"TLEVELREF5"}>
                   <sup>[5]</sup>
                 </a>
                 {", "} for using and sorting CSV files. This was not optional;
@@ -212,7 +212,7 @@ export default function TLevelExperiencePage() {
                 <br />
                 <br />
                 The Occupational Specialism
-                <a href={TLEVELREF6}>
+                <a href={"TLEVELREF6"}>
                   <sup>[6]</sup>
                 </a>
                 {". "} consisted of four main sections, which were to be
@@ -283,17 +283,17 @@ export default function TLevelExperiencePage() {
                 the T-Levels. It is the centre of a lot of controversy, namely
                 concerns about the amount of influence they have on the UK and
                 Global public's education
-                <a href={TLEVELREF7}>
+                <a href={"TLEVELREF7"}>
                   <sup>[7]</sup>
                 </a>
                 . Concerns that are partially validated when you realise that
                 the Pearson PLC owns the UK GCSE examination board, Edexcel
-                <a href={TLEVELREF8}>
+                <a href={"TLEVELREF8"}>
                   <sup>[8]</sup>
                 </a>{" "}
                 (acquired in 2003) and various other examination boards,
                 including Knowledge Technologies (acquired in 2004)
-                <a href={TLEVELREF9}>
+                <a href={"TLEVELREF9"}>
                   <sup>[9]</sup>
                 </a>
                 .
@@ -326,7 +326,7 @@ export default function TLevelExperiencePage() {
               <h3 className="fw-bold">Join the Discussion</h3>
               <h5 className="px-5">
                 Want to join the conversation? Join the{" "}
-                <a href={DISCORD_LINK}>discord server</a>!
+                <a href={"DISCORD_LINK"}>discord server</a>!
               </h5>
             </MDBCol>
           </MDBRow>

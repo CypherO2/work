@@ -1,5 +1,5 @@
 import { MDBCol, MDBContainer, MDBRow } from "mdb-react-ui-kit";
-import { DISCORD_LINK } from "../../constants/mylinks";
+// import { DISCORD_LINK } from "../../constants/mylinks";
 import { useEffect } from "react";
 
 export default function HunderedsOfBeavers() {
@@ -136,7 +136,7 @@ export default function HunderedsOfBeavers() {
             <h3 className="fw-bold">Join the Discussion</h3>
             <h5 className="px-5">
               Want to join the conversation? Join the{" "}
-              <a href={DISCORD_LINK}>discord server</a>!
+              {/* <a href={DISCORD_LINK}>discord server</a>! */}
             </h5>
           </MDBCol>
         </MDBRow>

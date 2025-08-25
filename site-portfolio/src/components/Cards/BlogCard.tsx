@@ -6,9 +6,7 @@ interface BlogCardsProps {
   title: string;
   description: string;
   link: string;
-  tag1: string;
-  tag2: string;
-  tag3: string;
+  tags: string[];
 }
 
 export default function BlogCards(props: BlogCardsProps) {
@@ -37,13 +35,13 @@ export default function BlogCards(props: BlogCardsProps) {
           <p className="text-light">
             {props.description}{" "}
             <MDBBadge color="danger" className="ms-2">
-              {props.tag1}
+              {props.tags[0]}
             </MDBBadge>
             <MDBBadge color="primary" className="ms-2">
-              {props.tag2}
+              {props.tags[1]}
             </MDBBadge>
             <MDBBadge color="success" className="ms-2">
-              {props.tag3}
+              {props.tags[2]}
             </MDBBadge>
           </p>
           <a

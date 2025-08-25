@@ -13,29 +13,27 @@ import {
   MDBListGroupItem,
 } from "mdb-react-ui-kit";
 import Avatar from "../assets/myavatar.jpg";
-import { SOCIAL_INFO } from "../constants/mylinks.ts";
+import { SOCIAL_LINKS } from "../constants/mylinks.ts";
 import ExperienceCard from "./Cards/ExperienceCard.tsx";
 import EducationCard from "./Cards/EducationCard.tsx";
 
 function SocialsInfo() {
   return (
     <>
-      {SOCIAL_INFO.map((information) => {
-        var infoIcon = information.split(" ")[0];
-        var infoText = information.split(" ")[1];
-        var infoIconType = information.split(" ")[2];
+      {SOCIAL_LINKS.map((social, index) => {
         return (
           <MDBListGroupItem
+            key={index}
             style={{ backgroundColor: "rgba(10,10,10,0.7)" }}
             className="text-light d-flex justify-content-between align-items-center p-3"
           >
-            {infoIconType == "fab" && (
-              <MDBIcon fab icon={infoIcon + " fa-lg text-light"} />
+            {social.socialIcon[1] == "fab" && (
+              <MDBIcon fab icon={social.socialIcon[0] + " fa-lg text-light"} />
             )}
-            {infoIconType == "fas" && (
-              <MDBIcon fas icon={infoIcon + " fa-lg text-light"} />
+            {social.socialIcon[1] == "fas" && (
+              <MDBIcon fas icon={social.socialIcon[0] + " fa-lg text-light"} />
             )}
-            <MDBCardText>{infoText}</MDBCardText>
+            <MDBCardText>{social.socialText}</MDBCardText>
           </MDBListGroupItem>
         );
       })}

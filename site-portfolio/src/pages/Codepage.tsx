@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import Thumbnail from "../assets/SiteIcon.png";
 import { MDBContainer } from "mdb-react-ui-kit";
-import RecRepoCard from "../components/Cards/RecommendedRepoCard";
 import { Col, Row } from "react-bootstrap";
+import ContentCard from "../components/Cards/ContentCard";
 
 export default function Codepage() {
   useEffect(() => {
@@ -22,14 +22,14 @@ export default function Codepage() {
       <MDBContainer>
         <Row>
           <Col>
-            <RecRepoCard
+            <ContentCard
               repoTitle="CypherO2/work"
               repoDesc="This is the repository that this site is hosted out of with Github Pages."
               repoLink="https://github.com/CypherO2/work"
             />
           </Col>
           <Col>
-            <RecRepoCard
+            <ContentCard
               repoTitle="CypherO2/RZA-Project"
               repoDesc="The 70 hours project where I planned, designed, built, documented and evaluated a Full-Stack Web App."
               repoLink="https://github.com/CypherO2/rza-project"
@@ -38,14 +38,14 @@ export default function Codepage() {
         </Row>
         <Row>
           <Col>
-            <RecRepoCard
+            <ContentCard
               repoTitle="CypherO2/Pokedex-python"
               repoDesc="A respository for any random projects I may have, feel free to look around :D ❤ Ich Liebe Dich"
               repoLink="https://github.com/CypherO2/Pokedex-python"
             />
           </Col>
           <Col>
-            <RecRepoCard
+            <ContentCard
               repoTitle="CypherO2/LoginSystem"
               repoDesc="College Winter Project based on using a react website to operate through a python + FLASK backend w/ an SQLite3 database for customer log-in/sign-up utilizing password encryption (Hashing)"
               repoLink="https://github.com/CypherO2/LoginSystem"
@@ -54,7 +54,7 @@ export default function Codepage() {
         </Row>
         <Row>
           <Col>
-            <RecRepoCard
+            <ContentCard
               repoTitle="CypherO2/GMC-Bury2024-CNCS "
               repoDesc="The GMSkills repo that me and a team of two others won 3rd place in a web development contest."
               repoLink="https://github.com/CypherO2/gmc-bury2024-cncs"

@@ -3,8 +3,7 @@ import { Row } from "react-bootstrap";
 import { useEffect } from "react";
 import MainBanner from "../components/Banner/BannerComp";
 import QuoteComp from "../components/QuoteComp";
-import RecRepoCard from "../components/Cards/RecommendedRepoCard";
-import { SGATHACH_LINK } from "../constants/mylinks";
+import ContentCard from "../components/Cards/ContentCard";
 
 export default function Homepage() {
   useEffect(() => {
@@ -28,14 +27,14 @@ export default function Homepage() {
           />
         </Row>
         <Row>
-          <RecRepoCard
+          <ContentCard
             repoTitle="Sgàthach Discord Bot"
             repoDesc="Sgàthach is a versatile Python-based Discord bot designed to enhance
             your server's functionality and user experience. With a wide range
             of features tailored to streamline moderation, engagement, and
             community management, Sgàthach offers an all-in-one solution for
             Discord server administration."
-            repoLink={SGATHACH_LINK}
+            repoLink="https://github.com/CypherO2/Sg-thach-Discord-Bot"
           />
         </Row>
       </MDBContainer>

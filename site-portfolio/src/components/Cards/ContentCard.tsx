@@ -12,7 +12,7 @@ export interface RecRepoProps {
   repoLink: string;
 }
 
-export default function RecRepoCard({
+export default function ContentCard({
   repoDesc,
   repoLink,
   repoTitle,

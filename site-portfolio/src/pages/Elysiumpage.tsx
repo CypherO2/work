@@ -1,7 +1,7 @@
 import { Col, Container, Row } from "react-bootstrap";
 import MainBanner from "../components/Banner/BannerComp";
 import TableComp from "../components/TableComp";
-import RecRepoCard from "../components/Cards/RecommendedRepoCard";
+import ContentCard from "../components/Cards/ContentCard";
 
 export default function ElysiumPage() {
   return (
@@ -18,7 +18,7 @@ export default function ElysiumPage() {
             <TableComp />
           </Col>
           <Col className="text-light">
-            <RecRepoCard
+            <ContentCard
               repoTitle={"CypherO2/Elysium_DiscordBot"}
               repoDesc={
                 "A multi-purpose discord bot, with an expansive selection of commands."
