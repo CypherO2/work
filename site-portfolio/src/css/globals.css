@@ -160,6 +160,10 @@
     scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
   }
 
+  html:not([data-theme]) body {
+    visibility: hidden;
+  }
+
   html[data-show-alts="off"] .img-caption {
     display: none;
   }

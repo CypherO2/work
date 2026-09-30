@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { btn } from "@/lib/ui";
 
 export type BannerProps = {
@@ -30,16 +31,16 @@ export default function MainBanner({
         </p>
         {(firstButtonText || secondButtonText) && (
           <div className="flex flex-wrap justify-center gap-1.5">
-            {firstButtonText && firstRedirect && (
-              <a className={btn} href={firstRedirect}>
+            {firstButtonText && firstRedirect ? (
+              <Link className={btn} href={firstRedirect}>
                 {firstButtonText}
-              </a>
-            )}
-            {secondButtonText && secondRedirect && (
-              <a className={btn} href={secondRedirect}>
+              </Link>
+            ) : null}
+            {secondButtonText && secondRedirect ? (
+              <Link className={btn} href={secondRedirect}>
                 {secondButtonText}
-              </a>
-            )}
+              </Link>
+            ) : null}
           </div>
         )}
       </div>

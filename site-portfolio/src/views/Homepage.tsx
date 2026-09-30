@@ -1,4 +1,4 @@
-import { withBase } from "@/lib/basePath";
+import Link from "next/link";
 import MainBanner from "../components/Banner/BannerComp";
 import ContentCard from "../components/Cards/ContentCard";
 import { about } from "@/lib/about";
@@ -16,9 +16,9 @@ export default function Homepage() {
         titleText="Cassi Presley"
         subtitleText={about.profile.headline}
         firstButtonText="Work"
-        firstRedirect={withBase(WORK_PATH)}
+        firstRedirect={WORK_PATH}
         secondButtonText="Projects"
-        secondRedirect={withBase(CODE_PATH)}
+        secondRedirect={CODE_PATH}
       />
 
       <div className={`${page} grid gap-10`}>
@@ -44,12 +44,12 @@ export default function Homepage() {
         <section>
           <div className="mb-4 flex flex-wrap items-end justify-between gap-3">
             <h2 className="m-0 text-[1.35rem] font-bold">Selected projects</h2>
-            <a
+            <Link
               className="text-sm font-bold text-accent hover:text-[var(--accent-hover)]"
-              href={withBase(CODE_PATH)}
+              href={CODE_PATH}
             >
               All projects
-            </a>
+            </Link>
           </div>
           <div className={cardGrid}>
             {featured.map((project) => (

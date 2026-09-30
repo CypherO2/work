@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Mono } from "next/font/google";
-import Script from "next/script";
 import "@/css/globals.css";
+import A11yApply from "@/components/A11yApply";
 import NavComp from "@/components/Core/NavbarComp";
 import Starfield from "@/components/Starfield";
 import { A11Y_BOOT_SCRIPT } from "@/lib/a11y";
@@ -30,12 +30,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={plexMono.variable} suppressHydrationWarning>
-      <body>
-        <Script
-          id="a11y-boot"
-          strategy="beforeInteractive"
+      <head>
+        <script
           dangerouslySetInnerHTML={{ __html: A11Y_BOOT_SCRIPT }}
         />
+      </head>
+      <body>
+        <A11yApply />
         <Starfield />
         <div className="relative z-[1] flex min-h-dvh flex-col lg:block">
           <NavComp />

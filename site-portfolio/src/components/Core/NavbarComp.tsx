@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useId, useState } from "react";
+import Link from "next/link";
 import {
   Accessibility,
   Briefcase,
@@ -21,7 +22,6 @@ import {
   INDEX_PATH,
   WORK_PATH,
 } from "../../constants/paths";
-import { withBase } from "@/lib/basePath";
 import { cx } from "@/lib/ui";
 
 type NavLink = {
@@ -73,14 +73,14 @@ function NavList({ onNavigate }: { onNavigate?: () => void }) {
             const Icon = item.icon;
             return (
               <li key={item.href}>
-                <a
+                <Link
                   className={linkClass}
-                  href={withBase(item.href)}
+                  href={item.href}
                   onClick={onNavigate}
                 >
                   <Icon className="h-4 w-4 shrink-0" aria-hidden={true} />
                   {item.label}
-                </a>
+                </Link>
               </li>
             );
           }
@@ -95,14 +95,14 @@ function NavList({ onNavigate }: { onNavigate?: () => void }) {
                   const Icon = child.icon;
                   return (
                     <li key={child.href}>
-                      <a
+                      <Link
                         className={linkClass}
-                        href={withBase(child.href)}
+                        href={child.href}
                         onClick={onNavigate}
                       >
                         <Icon className="h-4 w-4 shrink-0" aria-hidden={true} />
                         {child.label}
-                      </a>
+                      </Link>
                     </li>
                   );
                 })}
@@ -113,14 +113,14 @@ function NavList({ onNavigate }: { onNavigate?: () => void }) {
       </ul>
 
       <div className="mt-auto border-t border-panel-border pt-3">
-        <a
+        <Link
           className={linkClass}
-          href={withBase(A11Y_LINK.href)}
+          href={A11Y_LINK.href}
           onClick={onNavigate}
         >
           <A11yIcon className="h-4 w-4 shrink-0" aria-hidden={true} />
           {A11Y_LINK.label}
-        </a>
+        </Link>
       </div>
     </div>
   );
@@ -153,13 +153,13 @@ export default function NavComp() {
   return (
     <>
       <header className="sticky top-0 z-40 flex min-h-14 items-center gap-3 border-b border-panel-border bg-[var(--surface-chrome)] px-[clamp(1rem,3vw,1.75rem)] backdrop-blur-[10px] lg:hidden">
-        <a href={withBase(INDEX_PATH)} className="shrink-0" onClick={close}>
+        <Link href={INDEX_PATH} className="shrink-0" onClick={close}>
           <img
             src={Logo.src}
             alt="Cassi Presley site logo"
             className="site-logo block w-9"
           />
-        </a>
+        </Link>
         <span className="truncate text-sm font-bold text-ink">Cassi Presley</span>
         <button
           type="button"
@@ -179,13 +179,13 @@ export default function NavComp() {
 
       <aside className="fixed top-0 left-0 z-40 hidden h-dvh w-60 flex-col border-r border-panel-border bg-[var(--surface-sidebar)] backdrop-blur-[12px] lg:flex">
         <div className="flex items-center gap-3 border-b border-panel-border px-4 py-4">
-          <a href={withBase(INDEX_PATH)} className="shrink-0">
+          <Link href={INDEX_PATH} className="shrink-0">
             <img
               src={Logo.src}
               alt="CJ Presley site logo"
               className="site-logo block w-9"
             />
-          </a>
+          </Link>
           <div className="min-w-0">
             <p className="m-0 truncate text-sm font-bold text-ink">Cassi Presley</p>
             <p className="m-0 truncate text-xs text-muted">Portfolio</p>
