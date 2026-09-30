@@ -1,3 +1,5 @@
+"use client";
+
 import { MDBFooter, MDBContainer, MDBBtn, MDBIcon } from "mdb-react-ui-kit";
 import { SOCIAL_LINKS } from "../../constants/mylinks";
 

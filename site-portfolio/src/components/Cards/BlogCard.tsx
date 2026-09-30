@@ -1,8 +1,10 @@
+"use client";
+
 import { MDBContainer, MDBRipple, MDBBadge } from "mdb-react-ui-kit";
 import { Row, Col } from "react-bootstrap";
 
 interface BlogCardsProps {
-  image: string;
+  image: string | { src: string };
   title: string;
   description: string;
   link: string;
@@ -10,6 +12,8 @@ interface BlogCardsProps {
 }
 
 export default function BlogCards(props: BlogCardsProps) {
+  const imageSrc =
+    typeof props.image === "string" ? props.image : props.image.src;
   return (
     <MDBContainer className="py-3">
       <Row className="gx-5">
@@ -19,7 +23,7 @@ export default function BlogCards(props: BlogCardsProps) {
             rippleTag="div"
             rippleColor="light"
           >
-            <img src={props.image} className="img-fluid" />
+            <img src={imageSrc} className="img-fluid" alt="" />
             <a href={props.link}>
               <div
                 className="mask"

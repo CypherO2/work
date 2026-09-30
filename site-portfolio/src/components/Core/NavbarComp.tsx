@@ -1,3 +1,5 @@
+"use client";
+
 import {
   MDBNavbar,
   MDBContainer,
@@ -15,6 +17,15 @@ import {
 } from "mdb-react-ui-kit";
 import { useState } from "react";
 import Logo from "../../assets/SiteIcon.png";
+import {
+  ABOUT_PATH,
+  ARTS_PATH,
+  BLOG_PATH,
+  CODE_PATH,
+  ELYSIAN_PATH,
+  INDEX_PATH,
+} from "../../constants/paths";
+import { withBase } from "@/lib/basePath";
 
 export default function NavComp() {
   const [openNavNoTogglerSecond, setOpenNavNoTogglerSecond] = useState(false);
@@ -27,9 +38,9 @@ export default function NavComp() {
           style={{ backgroundColor: "rgb(10,10,10,0)" }}
         >
           <MDBContainer className="fw-bold" style={{ fontFamily: "monospace" }}>
-            <MDBNavbarBrand href="#/">
+            <MDBNavbarBrand href={withBase(INDEX_PATH)}>
               <img
-                src={Logo}
+                src={Logo.src}
                 alt="logo for site"
                 className="mx-2"
                 style={{ width: "40px" }}
@@ -52,13 +63,17 @@ export default function NavComp() {
                     active
                     className="text-light"
                     aria-current="page"
-                    href="#/"
+                    href={withBase(INDEX_PATH)}
                   >
                     Home
                   </MDBNavbarLink>
                 </MDBNavbarItem>
                 <MDBNavbarItem>
-                  <MDBNavbarLink active className="text-light" href="#/about">
+                  <MDBNavbarLink
+                    active
+                    className="text-light"
+                    href={withBase(ABOUT_PATH)}
+                  >
                     About Me
                   </MDBNavbarLink>
                 </MDBNavbarItem>
@@ -74,10 +89,10 @@ export default function NavComp() {
                     <MDBDropdownMenu
                       style={{ backgroundColor: "rgba(10, 10, 10, 0.9)" }}
                     >
-                      <MDBDropdownItem href="#/portfolio-art" link>
+                      <MDBDropdownItem href={withBase(ARTS_PATH)} link>
                         <span className="text-secondary fw-bold">My Art</span>
                       </MDBDropdownItem>
-                      <MDBDropdownItem href="#/portfolio-code" link>
+                      <MDBDropdownItem href={withBase(CODE_PATH)} link>
                         <span className="text-secondary fw-bold">
                           My Projects
                         </span>
@@ -97,10 +112,10 @@ export default function NavComp() {
                     <MDBDropdownMenu
                       style={{ backgroundColor: "rgba(10, 10, 10, 0.9)" }}
                     >
-                      <MDBDropdownItem href="#/blog" link>
+                      <MDBDropdownItem href={withBase(BLOG_PATH)} link>
                         <span className="text-secondary fw-bold">Articles</span>
                       </MDBDropdownItem>
-                      <MDBDropdownItem href="#/elysiumbot" link>
+                      <MDBDropdownItem href={withBase(ELYSIAN_PATH)} link>
                         <span className="text-secondary fw-bold">Elysium</span>
                       </MDBDropdownItem>
                     </MDBDropdownMenu>

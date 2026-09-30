@@ -1,3 +1,7 @@
+"use client";
+
+import { withBase } from "@/lib/basePath";
+
 import {
   MDBCol,
   MDBContainer,
@@ -13,9 +17,9 @@ import {
   MDBListGroupItem,
 } from "mdb-react-ui-kit";
 import Avatar from "../assets/myavatar.jpg";
-import { SOCIAL_LINKS } from "../constants/mylinks.ts";
-import ExperienceCard from "./Cards/ExperienceCard.tsx";
-import EducationCard from "./Cards/EducationCard.tsx";
+import { SOCIAL_LINKS } from "../constants/mylinks";
+import ExperienceCard from "./Cards/ExperienceCard";
+import EducationCard from "./Cards/EducationCard";
 
 function SocialsInfo() {
   return (
@@ -55,7 +59,7 @@ export default function ProfileComp() {
               className="rounded-3 p-3 mb-4"
             >
               <MDBBreadcrumbItem>
-                <a href="#/" className="text-light">
+                <a href={withBase("/")} className="text-light">
                   Work
                 </a>
               </MDBBreadcrumbItem>
@@ -74,7 +78,7 @@ export default function ProfileComp() {
             >
               <MDBCardBody className="text-center">
                 <MDBCardImage
-                  src={Avatar}
+                  src={Avatar.src}
                   alt="avatar"
                   className="rounded-circle m-2"
                   style={{ width: "150px" }}

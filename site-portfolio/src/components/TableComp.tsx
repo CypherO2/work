@@ -1,3 +1,5 @@
+"use client";
+
 import { MDBTable, MDBTableBody, MDBTableHead } from "mdb-react-ui-kit";
 
 export default function TableComp() {

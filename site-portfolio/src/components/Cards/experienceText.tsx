@@ -1,3 +1,5 @@
+"use client";
+
 export interface experienceProps {
   dateStart: string;
   dateEnd: string;

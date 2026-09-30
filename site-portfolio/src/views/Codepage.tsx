@@ -1,0 +1,65 @@
+"use client";
+
+import Thumbnail from "../assets/SiteIcon.png";
+import { MDBContainer } from "mdb-react-ui-kit";
+import { Col, Row } from "react-bootstrap";
+import ContentCard from "../components/Cards/ContentCard";
+
+export default function Codepage() {
+  return (
+    <>
+      <div className="thumbnail">
+        <img src={Thumbnail.src} alt="" />
+      </div>
+      <h1
+        className="p-1 text-light text-center fw-bold my-2"
+        style={{ fontFamily: "monospace" }}
+      >
+        My Projects
+      </h1>
+      <MDBContainer>
+        <Row>
+          <Col>
+            <ContentCard
+              repoTitle="CypherO2/work"
+              repoDesc="This is the repository that this site is hosted out of with Github Pages."
+              repoLink="https://github.com/CypherO2/work"
+            />
+          </Col>
+          <Col>
+            <ContentCard
+              repoTitle="CypherO2/RZA-Project"
+              repoDesc="The 70 hours project where I planned, designed, built, documented and evaluated a Full-Stack Web App."
+              repoLink="https://github.com/CypherO2/rza-project"
+            />
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <ContentCard
+              repoTitle="CypherO2/Pokedex-python"
+              repoDesc="A respository for any random projects I may have, feel free to look around :D ❤ Ich Liebe Dich"
+              repoLink="https://github.com/CypherO2/Pokedex-python"
+            />
+          </Col>
+          <Col>
+            <ContentCard
+              repoTitle="CypherO2/LoginSystem"
+              repoDesc="College Winter Project based on using a react website to operate through a python + FLASK backend w/ an SQLite3 database for customer log-in/sign-up utilizing password encryption (Hashing)"
+              repoLink="https://github.com/CypherO2/LoginSystem"
+            />
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <ContentCard
+              repoTitle="CypherO2/GMC-Bury2024-CNCS "
+              repoDesc="The GMSkills repo that me and a team of two others won 3rd place in a web development contest."
+              repoLink="https://github.com/CypherO2/gmc-bury2024-cncs"
+            />
+          </Col>
+        </Row>
+      </MDBContainer>
+    </>
+  );
+}

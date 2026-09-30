@@ -1,3 +1,5 @@
+"use client";
+
 import { MDBContainer, MDBRow, MDBCol } from "mdb-react-ui-kit";
 import { CopyBlock, dracula } from "react-code-blocks";
 

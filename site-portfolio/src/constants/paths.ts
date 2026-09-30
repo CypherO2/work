@@ -1,14 +1,11 @@
 const INDEX_PATH = "/";
 const ABOUT_PATH = "/about";
-const UNKNOWN_PATH = "/*";
 const RESUME_PATH = "/resume";
 const ARTS_PATH = "/portfolio-art";
 const CODE_PATH = "/portfolio-code";
 const BLOG_PATH = "/blog";
-const ELYSIAN_PATH = "/ElysiumBot";
+const ELYSIAN_PATH = "/elysiumbot";
 
-//BLOG FORMAT VVVV
-// const *PURPOSE*_BLOG_PATH = "/*blog-title*"
 const ARTCODECURIOUSITY_PATH = "/blog/art-code-curiousity";
 const TLEVELEXPERIENCE_PATH = "/blog/t-level-experience";
 const HUNDREDSOFBEAVERS_PATH = "/blog/hundreds-of-beavers-review";
@@ -18,7 +15,6 @@ export {
   ABOUT_PATH,
   ARTS_PATH,
   RESUME_PATH,
-  UNKNOWN_PATH,
   CODE_PATH,
   BLOG_PATH,
   ELYSIAN_PATH,
