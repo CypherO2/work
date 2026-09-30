@@ -14,4 +14,4 @@ lint:
 	cd site-portfolio && pnpm lint
 
 deploy:
-	cd site-portfolio && pnpm deploy
+	cd site-portfolio && pnpm run deploy -- $(ARGS)
