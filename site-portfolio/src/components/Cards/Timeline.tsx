@@ -2,6 +2,7 @@
 
 import DetailModal from "../DetailModal";
 import type { Achievement, ContentLink } from "@/lib/about";
+import { formatDuration, formatPeriod } from "@/lib/duration";
 import { cardInteractive } from "@/lib/ui";
 
 export type TimelineEntry = {
@@ -47,6 +48,9 @@ export default function Timeline({ title, entries }: TimelineProps) {
             item.text.trim(),
           ).length;
 
+          const period = formatPeriod(entry.dateStart, entry.dateEnd);
+          const duration = formatDuration(entry.dateStart, entry.dateEnd);
+
           return (
             <DetailModal
               key={`${entry.workPlace}-${entry.jobRole}-${entry.dateStart}`}
@@ -54,7 +58,7 @@ export default function Timeline({ title, entries }: TimelineProps) {
               fields={{
                 title: entry.jobRole,
                 subtitle: entry.workPlace,
-                period: `${entry.dateStart} to ${entry.dateEnd}`,
+                period,
                 summary: entry.roleDesc,
                 mode: entry.mode,
                 location: entry.location,
@@ -69,6 +73,7 @@ export default function Timeline({ title, entries }: TimelineProps) {
               <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-muted">
                 <span>
                   {entry.dateStart} - {entry.dateEnd}
+                  {duration ? `, ${duration}` : ""}
                 </span>
                 {chips.map((chip) => (
                   <span

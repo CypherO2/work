@@ -1,6 +1,17 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useId, useState } from "react";
+import {
+  Code2,
+  Home,
+  Menu,
+  Newspaper,
+  Palette,
+  Sparkles,
+  User,
+  X,
+  type LucideIcon,
+} from "lucide-react";
 import Logo from "../../assets/SiteIcon.png";
 import {
   ABOUT_PATH,
@@ -13,103 +24,204 @@ import {
 import { withBase } from "@/lib/basePath";
 import { cx } from "@/lib/ui";
 
-type NavLink = { kind: "link"; label: string; href: string };
-type NavGroup = {
-  kind: "group";
+type NavLink = {
+  kind: "link";
   label: string;
-  items: { label: string; href: string }[];
+  href: string;
+  icon: LucideIcon;
 };
-type NavItem = NavLink | NavGroup;
+
+type NavSection = {
+  kind: "section";
+  label: string;
+  items: Array<{ label: string; href: string; icon: LucideIcon }>;
+};
+
+type NavItem = NavLink | NavSection;
 
 const NAV_ITEMS: NavItem[] = [
-  { kind: "link", label: "Home", href: INDEX_PATH },
-  { kind: "link", label: "About Me", href: ABOUT_PATH },
+  { kind: "link", label: "Home", href: INDEX_PATH, icon: Home },
+  { kind: "link", label: "About me", href: ABOUT_PATH, icon: User },
   {
-    kind: "group",
-    label: "My Portfolio",
+    kind: "section",
+    label: "Portfolio",
     items: [
-      { label: "My Art", href: ARTS_PATH },
-      { label: "My Projects", href: CODE_PATH },
+      { label: "Art", href: ARTS_PATH, icon: Palette },
+      { label: "Projects", href: CODE_PATH, icon: Code2 },
     ],
   },
   {
-    kind: "group",
+    kind: "section",
     label: "Extra",
     items: [
-      { label: "Articles", href: BLOG_PATH },
-      { label: "Elysium", href: ELYSIAN_PATH },
+      { label: "Articles", href: BLOG_PATH, icon: Newspaper },
+      { label: "Elysium", href: ELYSIAN_PATH, icon: Sparkles },
     ],
   },
 ];
 
+const linkClass =
+  "flex items-center gap-3 rounded-[0.35rem] px-3 py-2.5 text-sm font-bold text-ink transition-colors hover:bg-[rgba(61,184,197,0.12)] hover:text-accent";
+
+function NavList({ onNavigate }: { onNavigate?: () => void }) {
+  return (
+    <ul className="m-0 flex list-none flex-col gap-1 p-0">
+      {NAV_ITEMS.map((item) => {
+        if (item.kind === "link") {
+          const Icon = item.icon;
+          return (
+            <li key={item.href}>
+              <a
+                className={linkClass}
+                href={withBase(item.href)}
+                onClick={onNavigate}
+              >
+                <Icon className="h-4 w-4 shrink-0" aria-hidden />
+                {item.label}
+              </a>
+            </li>
+          );
+        }
+
+        return (
+          <li key={item.label} className="mt-3">
+            <p className="m-0 px-3 pb-1.5 text-[0.7rem] font-bold tracking-wide text-muted uppercase">
+              {item.label}
+            </p>
+            <ul className="m-0 list-none p-0">
+              {item.items.map((child) => {
+                const Icon = child.icon;
+                return (
+                  <li key={child.href}>
+                    <a
+                      className={linkClass}
+                      href={withBase(child.href)}
+                      onClick={onNavigate}
+                    >
+                      <Icon className="h-4 w-4 shrink-0" aria-hidden />
+                      {child.label}
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </li>
+        );
+      })}
+    </ul>
+  );
+}
+
 export default function NavComp() {
   const [open, setOpen] = useState(false);
+  const drawerId = useId();
+
+  useEffect(() => {
+    if (!open) return;
+
+    document.body.style.overflow = "hidden";
+
+    function onKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") setOpen(false);
+    }
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.body.style.removeProperty("overflow");
+      window.removeEventListener("keydown", onKeyDown);
+    };
+  }, [open]);
+
+  function close() {
+    setOpen(false);
+  }
 
   return (
-    <header className="sticky top-0 z-40 border-b border-panel-border bg-[rgba(4,8,14,0.72)] backdrop-blur-[10px]">
-      <div className="mx-auto flex min-h-14 w-[min(100%-2*clamp(1rem,3vw,1.75rem),70rem)] items-center gap-4">
-        <a href={withBase(INDEX_PATH)}>
+    <>
+      <header className="sticky top-0 z-40 flex min-h-14 items-center gap-3 border-b border-panel-border bg-[rgba(4,8,14,0.85)] px-[clamp(1rem,3vw,1.75rem)] backdrop-blur-[10px] lg:hidden">
+        <a href={withBase(INDEX_PATH)} className="shrink-0" onClick={close}>
           <img
             src={Logo.src}
             alt="CJ Presley site logo"
             className="block w-9"
           />
         </a>
+        <span className="truncate text-sm font-bold text-ink">CJ Presley</span>
         <button
           type="button"
-          className="ml-auto inline-flex h-10 w-10 cursor-pointer items-center justify-center rounded-[0.35rem] border border-panel-border bg-transparent text-ink lg:hidden"
+          className="ml-auto inline-flex h-10 w-10 cursor-pointer items-center justify-center rounded-[0.35rem] border border-panel-border bg-transparent text-ink hover:border-accent hover:text-accent"
           aria-expanded={open}
-          aria-controls="site-nav-menu"
-          aria-label="Toggle navigation"
+          aria-controls={drawerId}
+          aria-label={open ? "Close menu" : "Open menu"}
           onClick={() => setOpen((value) => !value)}
         >
-          <i className="fas fa-bars" aria-hidden="true" />
+          {open ? (
+            <X className="h-5 w-5" aria-hidden />
+          ) : (
+            <Menu className="h-5 w-5" aria-hidden />
+          )}
         </button>
-        <ul
-          id="site-nav-menu"
+      </header>
+
+      <aside className="fixed top-0 left-0 z-40 hidden h-dvh w-60 flex-col border-r border-panel-border bg-[rgba(4,8,14,0.92)] backdrop-blur-[12px] lg:flex">
+        <div className="flex items-center gap-3 border-b border-panel-border px-4 py-4">
+          <a href={withBase(INDEX_PATH)} className="shrink-0">
+            <img
+              src={Logo.src}
+              alt="CJ Presley site logo"
+              className="block w-9"
+            />
+          </a>
+          <div className="min-w-0">
+            <p className="m-0 truncate text-sm font-bold text-ink">CJ Presley</p>
+            <p className="m-0 truncate text-xs text-muted">Portfolio</p>
+          </div>
+        </div>
+        <nav className="flex-1 overflow-y-auto px-3 py-4" aria-label="Site">
+          <NavList />
+        </nav>
+      </aside>
+
+      <div
+        className={cx(
+          "fixed inset-0 z-50 lg:hidden",
+          open ? "pointer-events-auto" : "pointer-events-none",
+        )}
+        aria-hidden={!open}
+      >
+        <button
+          type="button"
+          tabIndex={open ? 0 : -1}
+          aria-label="Close menu"
           className={cx(
-            "m-0 w-full list-none gap-1.5 p-0 pb-4 lg:ml-auto lg:flex lg:w-auto lg:items-center lg:gap-3 lg:pb-0",
-            open ? "grid" : "hidden lg:flex",
+            "absolute inset-0 border-0 bg-black/55 transition-opacity duration-200",
+            open ? "opacity-100" : "opacity-0",
+          )}
+          onClick={close}
+        />
+        <aside
+          id={drawerId}
+          className={cx(
+            "absolute top-0 left-0 flex h-full w-[min(100%-3rem,17.5rem)] flex-col border-r border-panel-border bg-[rgba(6,10,16,0.98)] shadow-[12px_0_40px_rgba(0,0,0,0.45)] transition-transform duration-200 ease-out",
+            open ? "translate-x-0" : "-translate-x-full",
           )}
         >
-          {NAV_ITEMS.map((item) => {
-            if (item.kind === "link") {
-              return (
-                <li key={item.href}>
-                  <a
-                    className="block cursor-pointer px-1.5 py-1.5 font-bold text-ink hover:text-accent"
-                    href={withBase(item.href)}
-                  >
-                    {item.label}
-                  </a>
-                </li>
-              );
-            }
-
-            return (
-              <li key={item.label} className="relative">
-                <details className="group relative">
-                  <summary className="block cursor-pointer px-1.5 py-1.5 font-bold text-ink hover:text-accent">
-                    {item.label}
-                  </summary>
-                  <ul className="m-0 list-none py-1.5 pl-3 lg:absolute lg:top-full lg:left-0 lg:min-w-40 lg:rounded-[0.35rem] lg:border lg:border-panel-border lg:bg-[rgba(8,12,18,0.95)] lg:p-2">
-                    {item.items.map((child) => (
-                      <li key={child.href}>
-                        <a
-                          className="block py-1.5 font-bold text-muted hover:text-accent"
-                          href={withBase(child.href)}
-                        >
-                          {child.label}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </details>
-              </li>
-            );
-          })}
-        </ul>
+          <div className="flex min-h-14 items-center justify-between border-b border-panel-border px-4">
+            <span className="text-sm font-bold text-muted">Menu</span>
+            <button
+              type="button"
+              className="inline-flex h-10 w-10 cursor-pointer items-center justify-center rounded-[0.35rem] border border-panel-border bg-transparent text-ink hover:border-accent hover:text-accent"
+              aria-label="Close menu"
+              onClick={close}
+            >
+              <X className="h-5 w-5" aria-hidden />
+            </button>
+          </div>
+          <nav className="flex-1 overflow-y-auto px-3 py-4" aria-label="Site">
+            <NavList onNavigate={close} />
+          </nav>
+        </aside>
       </div>
-    </header>
+    </>
   );
 }

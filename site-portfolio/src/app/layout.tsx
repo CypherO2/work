@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Mono } from "next/font/google";
-import "@fortawesome/fontawesome-free/css/all.min.css";
 import "@/css/globals.css";
 import NavComp from "@/components/Core/NavbarComp";
-import FootComp from "@/components/Core/FooterComp";
 import Starfield from "@/components/Starfield";
 
 const plexMono = IBM_Plex_Mono({
@@ -32,11 +30,12 @@ export default function RootLayout({
     <html lang="en" className={plexMono.variable}>
       <body className={plexMono.className}>
         <Starfield />
-        <NavComp />
-        <main className="relative z-[1] block min-h-[calc(100vh-3.5rem-6rem)]">
-          {children}
-        </main>
-        <FootComp />
+        <div className="relative z-[1] flex min-h-dvh flex-col lg:block">
+          <NavComp />
+          <div className="flex min-h-dvh min-w-0 flex-1 flex-col lg:pl-60">
+            <main className="relative block flex-1">{children}</main>
+          </div>
+        </div>
       </body>
     </html>
   );

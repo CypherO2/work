@@ -1,6 +1,7 @@
 import Avatar from "../assets/myavatar.jpg";
 import { SOCIAL_LINKS, socialHref, socialLabel } from "../constants/mylinks";
 import { about } from "@/lib/about";
+import { socialIcon } from "@/lib/socialIcons";
 import BioPanel from "./BioPanel";
 import FocusTags from "./FocusTags";
 import Timeline from "./Cards/Timeline";
@@ -11,7 +12,7 @@ export default function ProfileComp() {
 
   return (
     <div className="grid gap-4 lg:grid-cols-[minmax(15rem,17.5rem)_minmax(0,1fr)] lg:items-start">
-      <aside className="grid gap-4 lg:sticky lg:top-20">
+      <aside className="grid gap-4 lg:sticky lg:top-4">
         <section
           className={`${panel} grid justify-items-center gap-2 px-4 py-7 text-center`}
         >
@@ -27,29 +28,31 @@ export default function ProfileComp() {
         <FocusTags tags={focus} />
 
         <ul className="m-0 grid list-none gap-2 p-0">
-          {SOCIAL_LINKS.map((social) => (
-            <li key={social.socialType}>
-              <a
-                href={socialHref(social.socialLink)}
-                target={
-                  social.socialLink.startsWith("mailto:") ? undefined : "_blank"
-                }
-                rel={
-                  social.socialLink.startsWith("mailto:")
-                    ? undefined
-                    : "noopener noreferrer"
-                }
-                title={social.socialText}
-                className="flex items-center justify-between gap-4 rounded-[0.35rem] border border-panel-border bg-panel px-4 py-3.5 text-ink hover:border-accent hover:text-accent"
-              >
-                <i
-                  className={`w-5 text-center ${social.socialIcon[1]} fa-${social.socialIcon[0]}`}
-                  aria-hidden="true"
-                />
-                <span>{socialLabel(social.socialText)}</span>
-              </a>
-            </li>
-          ))}
+          {SOCIAL_LINKS.map((social) => {
+            const Icon = socialIcon(social.socialType);
+            return (
+              <li key={social.socialType}>
+                <a
+                  href={socialHref(social.socialLink)}
+                  target={
+                    social.socialLink.startsWith("mailto:")
+                      ? undefined
+                      : "_blank"
+                  }
+                  rel={
+                    social.socialLink.startsWith("mailto:")
+                      ? undefined
+                      : "noopener noreferrer"
+                  }
+                  title={social.socialText}
+                  className="flex items-center justify-between gap-4 rounded-[0.35rem] border border-panel-border bg-panel px-4 py-3.5 text-ink hover:border-accent hover:text-accent"
+                >
+                  <Icon className="h-4 w-4 shrink-0" aria-hidden={true} />
+                  <span>{socialLabel(social.socialText)}</span>
+                </a>
+              </li>
+            );
+          })}
         </ul>
       </aside>
 

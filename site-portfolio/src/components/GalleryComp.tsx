@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useId, useRef, useState } from "react";
+import { X } from "lucide-react";
 import { withBase } from "@/lib/basePath";
 import { artPieces, artSrc, type ArtPiece } from "@/lib/art";
 import { masonry } from "@/lib/ui";
@@ -56,10 +57,10 @@ function ArtLightbox({
         <form method="dialog">
           <button
             type="submit"
-            className="inline-flex h-8 w-8 cursor-pointer items-center justify-center rounded-[0.35rem] border border-panel-border bg-transparent text-lg text-muted hover:border-accent hover:text-ink"
+            className="inline-flex h-8 w-8 cursor-pointer items-center justify-center rounded-[0.35rem] border border-panel-border bg-transparent text-muted hover:border-accent hover:text-ink"
             aria-label="Close"
           >
-            ×
+            <X className="h-4 w-4" aria-hidden={true} />
           </button>
         </form>
       </header>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useId, useRef, type ReactNode } from "react";
+import { X } from "lucide-react";
 import { btnAccent } from "@/lib/ui";
 import type { Achievement, ContentLink } from "@/lib/about";
 
@@ -126,10 +127,10 @@ export default function DetailModal({
             <form method="dialog">
               <button
                 type="submit"
-                className="inline-flex h-8 w-8 cursor-pointer items-center justify-center rounded-[0.35rem] border border-panel-border bg-transparent text-lg text-muted hover:border-accent hover:text-ink"
+                className="inline-flex h-8 w-8 cursor-pointer items-center justify-center rounded-[0.35rem] border border-panel-border bg-transparent text-muted hover:border-accent hover:text-ink"
                 aria-label="Close"
               >
-                ×
+                <X className="h-4 w-4" aria-hidden={true} />
               </button>
             </form>
           </header>
