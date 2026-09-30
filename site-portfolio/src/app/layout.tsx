@@ -26,9 +26,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        style={{
-          backgroundImage: `linear-gradient(to bottom right, rgba(10, 10, 10, 0.417), rgba(9, 70, 139, 0.184)), url(${basePath}/BGImg2.png)`,
-        }}
+        style={
+          {
+            ["--bg-url" as string]: `url(${basePath}/BGImg2.png)`,
+          }
+        }
       >
         <NavComp />
         <span style={{ backgroundColor: "rgb(10,10,10)" }}>{children}</span>
