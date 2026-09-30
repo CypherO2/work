@@ -13,7 +13,7 @@ export default function Homepage() {
   return (
     <>
       <MainBanner
-        titleText="CJ Presley"
+        titleText="Cassi Presley"
         subtitleText={about.profile.headline}
         firstButtonText="Work"
         firstRedirect={withBase(WORK_PATH)}

@@ -5,6 +5,7 @@ const WORK_PATH = "/work";
 const NOW_HASH = "/#now";
 const ARTS_PATH = "/portfolio-art";
 const CODE_PATH = "/portfolio-code";
+const A11Y_PATH = "/accessibility";
 
 export {
   INDEX_PATH,
@@ -13,4 +14,5 @@ export {
   NOW_HASH,
   ARTS_PATH,
   CODE_PATH,
+  A11Y_PATH,
 };

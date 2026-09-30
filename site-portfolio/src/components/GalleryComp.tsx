@@ -95,7 +95,7 @@ export default function GalleryComp() {
               decoding="async"
               className="block w-full rounded-[0.35rem] border border-panel-border transition-[border-color,transform] group-hover:border-accent group-focus-visible:border-accent"
             />
-            <span className="mt-1.5 block truncate px-0.5 text-sm text-muted group-hover:text-accent">
+            <span className="img-caption mt-1.5 block truncate px-0.5 text-sm text-muted group-hover:text-accent">
               {piece.title}
             </span>
           </button>

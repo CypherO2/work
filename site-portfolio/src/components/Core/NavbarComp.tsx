@@ -2,23 +2,23 @@
 
 import { useEffect, useId, useState } from "react";
 import {
+  Accessibility,
   Briefcase,
   Code2,
   Home,
   Menu,
   Palette,
-  Radar,
   User,
   X,
   type LucideIcon,
 } from "lucide-react";
 import Logo from "../../assets/SiteIcon.png";
 import {
+  A11Y_PATH,
   ABOUT_PATH,
   ARTS_PATH,
   CODE_PATH,
   INDEX_PATH,
-  NOW_HASH,
   WORK_PATH,
 } from "../../constants/paths";
 import { withBase } from "@/lib/basePath";
@@ -51,6 +51,7 @@ const NAV_ITEMS: NavItem[] = [
       { label: "Projects", href: CODE_PATH, icon: Code2 },
     ],
   },
+  { kind: "link", label: "Accessibility", href: A11Y_PATH, icon: Accessibility },
 ];
 
 const linkClass =
@@ -135,11 +136,11 @@ export default function NavComp() {
         <a href={withBase(INDEX_PATH)} className="shrink-0" onClick={close}>
           <img
             src={Logo.src}
-            alt="CJ Presley site logo"
+            alt="Cassi Presley site logo"
             className="block w-9"
           />
         </a>
-        <span className="truncate text-sm font-bold text-ink">CJ Presley</span>
+        <span className="truncate text-sm font-bold text-ink">Cassi Presley</span>
         <button
           type="button"
           className="ml-auto inline-flex h-10 w-10 cursor-pointer items-center justify-center rounded-[0.35rem] border border-panel-border bg-transparent text-ink hover:border-accent hover:text-accent"
@@ -166,7 +167,7 @@ export default function NavComp() {
             />
           </a>
           <div className="min-w-0">
-            <p className="m-0 truncate text-sm font-bold text-ink">CJ Presley</p>
+            <p className="m-0 truncate text-sm font-bold text-ink">Cassi Presley</p>
             <p className="m-0 truncate text-xs text-muted">Portfolio</p>
           </div>
         </div>
