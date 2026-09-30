@@ -1,62 +1,51 @@
 "use client";
 
-import { MDBContainer, MDBRipple, MDBBadge } from "mdb-react-ui-kit";
-import { Row, Col } from "react-bootstrap";
+import { btn, panel } from "@/lib/ui";
 
-interface BlogCardsProps {
-  image: string | { src: string };
+type BlogCardsProps = {
+  image: string;
   title: string;
   description: string;
   link: string;
-  tags: string[];
-}
+  tags: readonly string[];
+};
 
-export default function BlogCards(props: BlogCardsProps) {
-  const imageSrc =
-    typeof props.image === "string" ? props.image : props.image.src;
+export default function BlogCards({
+  image,
+  title,
+  description,
+  link,
+  tags,
+}: BlogCardsProps) {
   return (
-    <MDBContainer className="py-3">
-      <Row className="gx-5">
-        <Col md="4" className="mb-1">
-          <MDBRipple
-            className="bg-image hover-overlay ripple shadow-2-strong rounded-5"
-            rippleTag="div"
-            rippleColor="light"
-          >
-            <img src={imageSrc} className="img-fluid" alt="" />
-            <a href={props.link}>
-              <div
-                className="mask"
-                style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
-              ></div>
-            </a>
-          </MDBRipple>
-        </Col>
-        <Col md="6" className="mb-4">
-          <h4 className="text-light" style={{ fontFamily: "monospace" }}>
-            <strong>{props.title}</strong>
-          </h4>
-          <p className="text-light">
-            {props.description}{" "}
-            <MDBBadge color="danger" className="ms-2">
-              {props.tags[0]}
-            </MDBBadge>
-            <MDBBadge color="primary" className="ms-2">
-              {props.tags[1]}
-            </MDBBadge>
-            <MDBBadge color="success" className="ms-2">
-              {props.tags[2]}
-            </MDBBadge>
-          </p>
-          <a
-            className="btn btn-outline-light btn-lg m-1"
-            href={props.link}
-            role="button"
-          >
-            Read More
-          </a>
-        </Col>
-      </Row>
-    </MDBContainer>
+    <article className={`${panel} grid items-start gap-3.5`}>
+      <a
+        className="group block overflow-hidden rounded-[0.35rem] border border-panel-border"
+        href={link}
+      >
+        <img
+          src={image}
+          alt=""
+          className="block aspect-[4/3] w-full object-cover transition-transform duration-200 group-hover:scale-[1.03]"
+        />
+      </a>
+      <div>
+        <h2 className="mb-2 text-xl font-bold">{title}</h2>
+        <p className="mb-3 text-muted">{description}</p>
+        <div className="mb-3.5 inline-flex flex-wrap gap-1.5">
+          {tags.map((tag) => (
+            <span
+              className="inline-block rounded-full bg-accent/15 px-2 py-0.5 text-xs font-bold text-accent"
+              key={tag}
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+        <a className={btn} href={link}>
+          Read More
+        </a>
+      </div>
+    </article>
   );
 }

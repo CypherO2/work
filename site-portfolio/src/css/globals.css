@@ -1,9 +1,43 @@
-html,
-body {
-  background-color: #000;
-  background-image: none;
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #e6eef6;
+  --color-muted: #8fa3b8;
+  --color-accent: #3db8c5;
+  --color-accent-deep: #056d82;
+  --color-danger: #d65a5a;
+  --color-panel: rgba(8, 12, 18, 0.68);
+  --color-panel-border: rgba(140, 180, 210, 0.14);
+  --font-sans: var(--font-plex), "IBM Plex Mono", ui-monospace, Menlo, monospace;
 }
 
+@layer base {
+  html,
+  body {
+    @apply m-0 min-h-full bg-black text-ink antialiased;
+    background-image: none;
+    font-family: var(--font-sans);
+    line-height: 1.55;
+  }
+
+  a {
+    @apply text-accent no-underline hover:text-[#7ad4dc];
+  }
+
+  img {
+    @apply h-auto max-w-full;
+  }
+
+  summary {
+    list-style: none;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+}
+
+/* Ambient background only: animated image + color glows */
 html::before {
   content: "";
   position: fixed;
@@ -80,39 +114,19 @@ body::before {
   }
 }
 
-.thumbnail {
-  position: absolute;
-  top: 0;
-  z-index: -5000;
-  width: 0px;
-  height: 0px;
-}
-.thumbnail img {
-  object-fit: cover;
-  width: 0px;
-  height: 0px;
-}
-/* Simple responsive masonry layout */
-.masonry-gallery {
-  column-count: 3;
-  column-gap: 15px;
+/* Blog post body: keep descendant styling so long posts stay lean */
+.article h3 {
+  @apply mb-3 mt-7 text-xl font-bold;
 }
 
-/* Media queries for responsiveness */
-@media (max-width: 992px) {
-  .masonry-gallery {
-    column-count: 2;
-  }
+.article p {
+  @apply mb-4 text-base font-normal leading-relaxed;
 }
 
-@media (max-width: 576px) {
-  .masonry-gallery {
-    column-count: 1;
-  }
+.article figure {
+  @apply mb-4;
 }
 
-/* Prevent image breaking */
-.masonry-item {
-  break-inside: avoid;
-  margin-bottom: 15px;
+.article figcaption {
+  @apply text-sm text-muted;
 }

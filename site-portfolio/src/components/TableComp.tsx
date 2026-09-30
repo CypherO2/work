@@ -1,42 +1,46 @@
 "use client";
 
-import { MDBTable, MDBTableBody, MDBTableHead } from "mdb-react-ui-kit";
+import { panel } from "@/lib/ui";
 
 export default function TableComp() {
   return (
-    <>
-      <MDBTable responsive className="text-light py-auto">
-        <MDBTableHead className="fw-bold fs-4">
+    <div className={panel}>
+      <table className="w-full border-collapse text-ink">
+        <thead>
           <tr>
-            <th scope="col">Command(s)</th>
-            <th scope="col">Description</th>
+            <th
+              scope="col"
+              className="border-b border-panel-border px-3.5 py-3 text-left align-top text-[1.05rem]"
+            >
+              Command(s)
+            </th>
+            <th
+              scope="col"
+              className="border-b border-panel-border px-3.5 py-3 text-left align-top text-[1.05rem]"
+            >
+              Description
+            </th>
           </tr>
-        </MDBTableHead>
-        <MDBTableBody className="fs-6">
+        </thead>
+        <tbody>
           <tr>
-            <td>/help</td>
-            <td>Displays the help menu - contains a list of commands.</td>
-          </tr>
-          <tr>
-            <td>/runtime</td>
-            <td>Shows how long the bot has been online.</td>
-          </tr>
-          {/* <tr>
-            <td>/watchlist_add {"{streamer_name}"}</td>
-            <td>
-              Adds a Twitch streamer to the list of streamers to alert when they
-              go Live.
+            <td className="whitespace-nowrap border-b border-panel-border px-3.5 py-3 align-top font-bold text-accent">
+              /help
+            </td>
+            <td className="border-b border-panel-border px-3.5 py-3 align-top text-[0.92rem] text-muted">
+              Displays the help menu - contains a list of commands.
             </td>
           </tr>
           <tr>
-            <td>/watchlist_remove {"{streamer_name}"}</td>
-            <td>
-              Removes a Twitch streamer from the list of streamers to alert when
-              they go Live.
+            <td className="whitespace-nowrap border-b border-panel-border px-3.5 py-3 align-top font-bold text-accent">
+              /runtime
             </td>
-          </tr> */}
-        </MDBTableBody>
-      </MDBTable>
-    </>
+            <td className="border-b border-panel-border px-3.5 py-3 align-top text-[0.92rem] text-muted">
+              Shows how long the bot has been online.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   );
 }

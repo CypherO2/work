@@ -1,118 +1,98 @@
 "use client";
 
-import { withBase } from "@/lib/basePath";
-
-import {
-  MDBCol,
-  MDBContainer,
-  MDBRow,
-  MDBCard,
-  MDBCardText,
-  MDBCardBody,
-  MDBCardImage,
-  MDBBreadcrumb,
-  MDBBreadcrumbItem,
-  MDBIcon,
-  MDBListGroup,
-  MDBListGroupItem,
-} from "mdb-react-ui-kit";
 import Avatar from "../assets/myavatar.jpg";
-import { SOCIAL_LINKS } from "../constants/mylinks";
-import ExperienceCard from "./Cards/ExperienceCard";
-import EducationCard from "./Cards/EducationCard";
+import { SOCIAL_LINKS, socialHref } from "../constants/mylinks";
+import { EMPLOYMENT_INFO } from "../constants/jobdesc";
+import Timeline from "./Cards/Timeline";
+import { masonry2, panel } from "@/lib/ui";
 
-function SocialsInfo() {
-  return (
-    <>
-      {SOCIAL_LINKS.map((social, index) => {
-        return (
-          <MDBListGroupItem
-            key={index}
-            style={{ backgroundColor: "rgba(10,10,10,0.7)" }}
-            className="text-light d-flex justify-content-between align-items-center p-3"
-          >
-            {social.socialIcon[1] == "fab" && (
-              <MDBIcon fab icon={social.socialIcon[0] + " fa-lg text-light"} />
-            )}
-            {social.socialIcon[1] == "fas" && (
-              <MDBIcon fas icon={social.socialIcon[0] + " fa-lg text-light"} />
-            )}
-            <MDBCardText>{social.socialText}</MDBCardText>
-          </MDBListGroupItem>
-        );
-      })}
-    </>
-  );
-}
+const EDUCATION = [
+  {
+    dateStart: "April 2025",
+    dateEnd: "Present",
+    jobRole: "Software Engineering",
+    workPlace: "The Open University",
+    roleDesc: "HTQ Diploma of Higher Education in Software Development.",
+  },
+  {
+    dateStart: "Sept 2022",
+    dateEnd: "July 2024",
+    jobRole: "T-Level",
+    workPlace: "Salford City College",
+    roleDesc: "T-Level in Digital Production, Design and Development.",
+  },
+  {
+    dateStart: "Sept 2017",
+    dateEnd: "July 2022",
+    jobRole: "GCSEs",
+    workPlace: "The Albion Academy",
+    roleDesc:
+      "Mathematics, English Literature, English Languages, Combined Science: Trilogy.",
+  },
+  {
+    dateStart: "Sept 2017",
+    dateEnd: "July 2022",
+    jobRole: "BTECs",
+    workPlace: "The Albion Academy",
+    roleDesc:
+      "Art, Craft and Design (3D Design), Art, Craft and Design, Creative iMedia.",
+  },
+] as const;
 
 export default function ProfileComp() {
   return (
-    <>
-      <MDBContainer className="py-3">
-        <MDBRow>
-          <MDBCol>
-            <MDBBreadcrumb
-              style={{
-                backgroundColor: "rgba(10,10,10,0.7)",
-                fontFamily: "monospace",
-              }}
-              className="rounded-3 p-3 mb-4"
-            >
-              <MDBBreadcrumbItem>
-                <a href={withBase("/")} className="text-light">
-                  Work
-                </a>
-              </MDBBreadcrumbItem>
-              <MDBBreadcrumbItem className="text-light" active>
-                About Me
-              </MDBBreadcrumbItem>
-            </MDBBreadcrumb>
-          </MDBCol>
-        </MDBRow>
+    <div className={masonry2}>
+      <section
+        className={`${panel} grid justify-items-center gap-2 px-4 py-7 text-center`}
+      >
+        <img
+          src={Avatar.src}
+          alt="CJ Presley"
+          className="h-[9.5rem] w-[9.5rem] rounded-full border-2 border-panel-border object-cover"
+        />
+        <h1 className="mt-1.5 text-[1.05rem] font-bold">
+          Junior Developer @ Citizens Advice SORT
+        </h1>
+        <p className="m-0 text-muted">Manchester, England, UK</p>
+      </section>
 
-        <MDBRow>
-          <MDBCol lg="4">
-            <MDBCard
-              style={{ backgroundColor: "rgba(10,10,10,0.7)" }}
-              className="mb-3"
+      <ul className="m-0 grid list-none gap-2 p-0">
+        {SOCIAL_LINKS.map((social) => (
+          <li key={social.socialType}>
+            <a
+              href={socialHref(social.socialLink)}
+              target={
+                social.socialLink.startsWith("mailto:") ? undefined : "_blank"
+              }
+              rel={
+                social.socialLink.startsWith("mailto:")
+                  ? undefined
+                  : "noopener noreferrer"
+              }
+              className="flex items-center justify-between gap-4 rounded-[0.35rem] border border-panel-border bg-panel px-4 py-3.5 text-ink hover:border-accent hover:text-accent"
             >
-              <MDBCardBody className="text-center">
-                <MDBCardImage
-                  src={Avatar.src}
-                  alt="avatar"
-                  className="rounded-circle m-2"
-                  style={{ width: "150px" }}
-                  fluid
-                />
-                <h5 className="text-light mb-1 fw-bold">
-                  Junior Developer @ Citizens Advice SORT
-                </h5>
-                <p className="text-light mb-4">Manchester, England, UK</p>
-              </MDBCardBody>
-            </MDBCard>
-            <MDBRow className="mb-4">
-              <MDBCard
-                className="mb-3 mb-lg-0"
-                style={{ backgroundColor: "rgba(10,10,10,0)" }}
-              >
-                <MDBCardBody className="p-0">
-                  <MDBListGroup className="list-group-flush rounded-3">
-                    <SocialsInfo />
-                  </MDBListGroup>
-                </MDBCardBody>
-              </MDBCard>
-            </MDBRow>
-          </MDBCol>
-          <MDBCol>
-            <MDBRow>
-              <ExperienceCard />
-            </MDBRow>
-          </MDBCol>
-        </MDBRow>
-        <MDBRow>
-          <EducationCard />
-        </MDBRow>
-      </MDBContainer>
-    </>
+              <i
+                className={`w-5 text-center ${social.socialIcon[1]} fa-${social.socialIcon[0]}`}
+                aria-hidden="true"
+              />
+              <span>{social.socialText}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+
+      <Timeline
+        title="My Experience"
+        entries={EMPLOYMENT_INFO.map((job) => ({
+          dateStart: job.startDate,
+          dateEnd: job.endDate,
+          jobRole: job.jobRole,
+          workPlace: job.companyName,
+          roleDesc: job.roleDesc,
+        }))}
+      />
+
+      <Timeline title="My Education" entries={[...EDUCATION]} />
+    </div>
   );
 }

@@ -2,39 +2,31 @@
 
 import { withBase } from "@/lib/basePath";
 
-import { MDBCol, MDBContainer, MDBRow } from "mdb-react-ui-kit";
-// import { DISCORD_LINK } from "../../constants/mylinks";
 import Thumbnail from "../../assets/SiteIcon.png";
 
 export default function ArtCodeCuriousityPage() {
   return (
     <>
-      <MDBContainer className="my-4 px-3 text-light">
-        <div className="thumbnail">
-          <img src={Thumbnail.src} alt="" />
+      <article className="article relative z-[1] mx-auto w-[min(100%-2*clamp(1rem,3vw,1.75rem),46rem)] py-6 pb-12">
+        <div className="absolute top-0 -z-[5000] h-0 w-0">
+          <img src={Thumbnail.src} alt="" className="h-0 w-0 object-cover" />
         </div>
-        <MDBRow>
-          <MDBCol>
-            <h1 className="text-center text-light fw-bold pb-2">
+        <h1 className="mb-3 text-center text-[clamp(1.5rem,3.5vw,2.1rem)] leading-snug font-bold">
               Welcome to My World:
               <br />
               Blending Art, Code and Curiousity
             </h1>
-            <div className="border-bottom border-secondary mb-3" />
-          </MDBCol>
-        </MDBRow>
-        <div className="px-5">
-          <MDBRow className="my-2">
-            <MDBCol>
-              <h6 className="text-light fw-light fw-italic">
+            <hr className="mb-5 h-px border-0 bg-panel-border" />
+        
+          <p className="mb-3 text-sm italic text-muted [&_a]:font-bold [&_a]:not-italic [&_a]:text-ink">
                 By{" "}
-                <a className="text-light" href={withBase("/about")}>
+                <a href={withBase("/about")}>
                   CJ PRESLEY
                 </a>{" "}
                 [ 24-05-2-24 - 22:51 ]
-              </h6>
-              <h3 className="fw-bold">Introduction</h3>
-              <h5 className="px-5">
+              </p>
+              <h3>Introduction</h3>
+              <p>
                 Welcome to my first blog, as a bit of an explanation as to why I
                 started this: I was bored. Anyways! My name is CJ, you can call
                 me that or by my online pseudonym 'Cassi'. I am a chronically
@@ -52,13 +44,9 @@ export default function ArtCodeCuriousityPage() {
                 adopting the name and calling me by it. At the time, I was known
                 as "Cypher", a name I had been known as since my early days on
                 YouTube.
-              </h5>
-            </MDBCol>
-          </MDBRow>
-          <MDBRow className="my-2">
-            <MDBCol>
-              <h3 className="fw-bold">The Artistic Journey</h3>
-              <h5 className="px-5">
+              </p>
+          <h3>The Artistic Journey</h3>
+              <p>
                 Since my early days in primary school talking with my friends, I
                 was enamored with art. At first, it was something I did to prove
                 I was as good as others, a product of my insecurities after
@@ -81,13 +69,9 @@ export default function ArtCodeCuriousityPage() {
                 these courses, I thrived, building the base upon which my future
                 would be built; learning from professionals and building
                 portfolios for examinations.
-              </h5>
-            </MDBCol>
-          </MDBRow>
-          <MDBRow className="my-2">
-            <MDBCol>
-              <h3 className="fw-bold">The Binary Pilgrimage</h3>
-              <h5 className="px-5">
+              </p>
+          <h3>The Binary Pilgrimage</h3>
+              <p>
                 I began my journey into the hell that is coding just a few short
                 years ago, when I first started at my college on my T-Level
                 Course: Digital Production, Design, and Development. I started
@@ -122,13 +106,9 @@ export default function ArtCodeCuriousityPage() {
                 only had limited time to complete each section; 20 hours in
                 Planning, 30 hours in actual coding, 20 hours in Feedback and 2
                 hours in Evaluation.
-              </h5>
-            </MDBCol>
-          </MDBRow>
-          <MDBRow className="my-2">
-            <MDBCol>
-              <h3 className="fw-bold">Beyond Powershells and Pencils</h3>
-              <h5 className="px-5">
+              </p>
+          <h3>Beyond Powershells and Pencils</h3>
+              <p>
                 Coding and Art aren't my only interests. Outside of them, I have
                 a vested interest in video games and general content creation,
                 especially when either are carried out with my friends. In my
@@ -147,23 +127,15 @@ export default function ArtCodeCuriousityPage() {
                 group helping to manage magazine creation, joining in on
                 projects and events, and helping with the planning and/or
                 function of events.
-              </h5>
-            </MDBCol>
-          </MDBRow>
-          <MDBRow className="my-2">
-            <MDBCol>
-              <h3 className="fw-bold">The Path Ahead</h3>
-              <h5 className="px-5">
+              </p>
+          <h3>The Path Ahead</h3>
+              <p>
                 Going forward you can expect anything from critical reviews to
                 promotional/accompanying video essays and blogs on anything from
                 art to code and anything else that catches my interest.
-              </h5>
-            </MDBCol>
-          </MDBRow>
-          <MDBRow className="my-2">
-            <MDBCol>
-              <h3 className="fw-bold">Beyond Powershells and Pencils</h3>
-              <h5 className="px-5">
+              </p>
+          <h3>Beyond Powershells and Pencils</h3>
+              <p>
                 Coding and Art aren't my only interests. Outside of them, I have
                 a vested interest in video games and general content creation,
                 especially when either are carried out with my friends. In my
@@ -182,20 +154,13 @@ export default function ArtCodeCuriousityPage() {
                 group helping to manage magazine creation, joining in on
                 projects and events, and helping with the planning and/or
                 function of events.
-              </h5>
-            </MDBCol>
-          </MDBRow>
-          <MDBRow className="my-2">
-            <MDBCol>
-              <h3 className="fw-bold">Join the Discussion</h3>
-              <h5 className="px-5">
+              </p>
+          <h3>Join the Discussion</h3>
+              <p>
                 Want to join the conversation? Join the{" "}
                 <a href="#">discord server</a>!
-              </h5>
-            </MDBCol>
-          </MDBRow>
-        </div>
-      </MDBContainer>
+              </p>
+      </article>
     </>
   );
 }

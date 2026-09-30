@@ -1,13 +1,15 @@
 "use client";
 
-export interface BannerProps {
+import { btn } from "@/lib/ui";
+
+export type BannerProps = {
   titleText: string;
   subtitleText: string;
   firstButtonText?: string;
   firstRedirect?: string;
   secondButtonText?: string;
   secondRedirect?: string;
-}
+};
 
 export default function MainBanner({
   titleText,
@@ -18,43 +20,29 @@ export default function MainBanner({
   secondRedirect,
 }: BannerProps) {
   return (
-    <div
-      className="p-5 text-center bg-image"
-      style={{
-        height: 450,
-      }}
-    >
-      <div className="mask">
-        <div className="d-flex justify-content-center align-items-center h-100">
-          <div className="text-white">
-            <h1 className="mb-3 fw-bold" style={{ fontFamily: "monospace" }}>
-              {titleText}
-            </h1>
-            <h4 className="mb-3 fw-bold" style={{ fontFamily: "monospace" }}>
-              {subtitleText}
-            </h4>
-            {/* {firstButtonText && firstButtonText.length > 0 && (<a>test</a>)} */}
-            {firstButtonText && firstButtonText.length > 0 && (
-              <a
-                className="btn btn-outline-light btn-lg m-1 fw-bold"
-                href={firstRedirect}
-                role="button"
-              >
+    <section className="relative z-[1] grid min-h-[min(70vh,28rem)] place-items-center px-[clamp(1rem,3vw,1.75rem)] py-12 text-center">
+      <div>
+        <h1 className="mb-3 text-[clamp(2.4rem,7vw,4.2rem)] leading-[1.05] font-bold tracking-wider">
+          {titleText}
+        </h1>
+        <p className="mb-6 text-[clamp(1rem,2.4vw,1.25rem)] font-semibold text-muted">
+          {subtitleText}
+        </p>
+        {(firstButtonText || secondButtonText) && (
+          <div className="flex flex-wrap justify-center gap-1.5">
+            {firstButtonText && firstRedirect && (
+              <a className={btn} href={firstRedirect}>
                 {firstButtonText}
               </a>
             )}
-            {secondButtonText && secondButtonText.length > 0 && (
-              <a
-                className="btn btn-outline-light btn-lg m-1 fw-bold"
-                href={secondRedirect}
-                role="button"
-              >
+            {secondButtonText && secondRedirect && (
+              <a className={btn} href={secondRedirect}>
                 {secondButtonText}
               </a>
             )}
           </div>
-        </div>
+        )}
       </div>
-    </div>
+    </section>
   );
 }

@@ -2,70 +2,45 @@
 
 import { withBase } from "@/lib/basePath";
 
-import { MDBContainer, MDBRow, MDBCol } from "mdb-react-ui-kit";
 import Thumbnail from "../../assets/SiteIcon.png";
-// import {
-//   DISCORD_LINK,
-//   TLEVELREF1,
-//   TLEVELREF2,
-//   TLEVELREF3,
-//   TLEVELREF4,
-//   TLEVELREF5,
-//   TLEVELREF6,
-//   TLEVELREF7,
-//   TLEVELREF8,
-//   TLEVELREF9,
-// } from "../../constants/mylinks";
-import TLevelImage1 from "../../assets/T-Levels.jpg";
 
 export default function TLevelExperiencePage() {
   return (
     <>
-      <MDBContainer className="my-4 px-3 text-light">
-        <div className="thumbnail">
-          <img src={Thumbnail.src} alt="" />
+      <article className="article relative z-[1] mx-auto w-[min(100%-2*clamp(1rem,3vw,1.75rem),46rem)] py-6 pb-12">
+        <div className="absolute top-0 -z-[5000] h-0 w-0">
+          <img src={Thumbnail.src} alt="" className="h-0 w-0 object-cover" />
         </div>
-        <MDBRow>
-          <MDBCol>
-            <h1 className="text-center text-light fw-bold pb-2">
+        <h1 className="mb-3 text-center text-[clamp(1.5rem,3.5vw,2.1rem)] leading-snug font-bold">
               The T-Level Course:
               <br />
               My Experience
             </h1>
-            <div className="border-bottom border-secondary mb-3" />
-          </MDBCol>
-        </MDBRow>
-        <div className="px-5">
-          <MDBRow className="my-2">
-            <MDBCol>
-              <h6 className="text-light fw-light fw-italic">
+            <hr className="mb-5 h-px border-0 bg-panel-border" />
+        
+          <p className="mb-3 text-sm italic text-muted [&_a]:font-bold [&_a]:not-italic [&_a]:text-ink">
                 By{" "}
-                <a className="text-light" href={withBase("/about")}>
+                <a href={withBase("/about")}>
                   CJ PRESLEY
                 </a>{" "}
                 [ 28-05-2-24 - 14:20 ]
-              </h6>
-              <h6 className="text-danger fw-bold">
+              </p>
+              <p className="mb-5 text-sm font-bold text-danger">
                 DISCLAIMER: This is my experience, anything stated in this must
                 be taken with a grain of salt as my opinion is not fact!
-              </h6>
-              <h3 className="fw-bold">Introduction</h3>
-              <MDBRow className="px-5">
-                <MDBCol className="">
-                  <figure className="figure">
+              </p>
+              <h3>Introduction</h3>
+              <figure>
                     <img
-                      src={TLevelImage1.src}
-                      className="img-fluid rounded shadow-1 mb-1"
-                      style={{ width: "20rem" }}
+                      src={withBase("/blog/t-levels-campaign.jpg")}
+                      className="mb-2 w-80 max-w-full rounded-[0.35rem] border border-panel-border"
                       alt="image from T-level learner campaign"
                     />
-                    <figcaption className="figure-caption">
+                    <figcaption>
                       An image from the T-level learner campaign.
                     </figcaption>
                   </figure>
-                </MDBCol>
-                <MDBCol lg={8} className="">
-                  <h5 className="">
+                <p>
                     The T-Level course was meant to be Britain's solution to an
                     all-encompassing qualification that would help people get
                     into work straight out of college. It was originally backed
@@ -88,30 +63,22 @@ export default function TLevelExperiencePage() {
                     developed skills. The course's aim was to offer a mixed
                     learning experience; classroom learning, on the job learning
                     and examinations.
-                  </h5>
-                </MDBCol>
-              </MDBRow>
-              <MDBRow className="px-5">
-                <h5>
+                  </p>
+              <p>
                   In this blog I will detail my personal experience with this
-                  course, each of its aspects—as they relate to the Digital
+                  course, each of its aspects, as they relate to the Digital
                   Production, Design, and Development Course
                   <a href={"TLEVELREF3"}>
                     <sup>[3]</sup>
                   </a>
                   {". "}
-                  —and the guidance given by staff at the educational
+                  and the guidance given by staff at the educational
                   institution I attended.
-                </h5>
-              </MDBRow>
-            </MDBCol>
-          </MDBRow>
-          <MDBRow className="my-2">
-            <MDBCol>
-              <h3 className="fw-bold">
+                </p>
+          <h3>
                 The Prologue: How the Course Lures you in!
               </h3>
-              <h5 className="px-5">
+              <p>
                 The primary problem with the T Level course, or more
                 specifically, its practices, lies in how they attract new
                 learners. Promising top-tier education and a pathway into the
@@ -133,13 +100,9 @@ export default function TLevelExperiencePage() {
                 course. Note: this pressure was due to my timidity at the time;
                 it was more like typical recruitment tactics. I ended up being
                 one of seven students in the course.
-              </h5>
-            </MDBCol>
-          </MDBRow>
-          <MDBRow className="my-2">
-            <MDBCol>
-              <h3 className="fw-bold">The Core Exams</h3>
-              <h5 className="px-5">
+              </p>
+          <h3>The Core Exams</h3>
+              <p>
                 As is typical for any course, the first year was dedicated to
                 lessons, covering the basics and outlining expectations for
                 learners. This was in preparation for the first of four sections
@@ -156,13 +119,9 @@ export default function TLevelExperiencePage() {
                 <br />
                 <br />I did end out taking this exam twice as the course allowed
                 us to take the highest grade from the lot.
-              </h5>
-            </MDBCol>
-          </MDBRow>
-          <MDBRow className="my-2">
-            <MDBCol>
-              <h3 className="fw-bold">"Employer Set" Project - The ESP</h3>
-              <h5 className="px-5">
+              </p>
+          <h3>"Employer Set" Project - The ESP</h3>
+              <p>
                 This is where the course starts to become confusing. During my
                 first year, my class had to complete the Employer Set Project
                 (ESP)
@@ -190,17 +149,13 @@ export default function TLevelExperiencePage() {
                 mean to a higher grade, something I took, it operated similarly
                 to the Core aspect with us being granted the higher of the 2
                 grades.
-              </h5>
-            </MDBCol>
-          </MDBRow>
-          <MDBRow className="my-2">
-            <MDBCol>
-              <h3 className="fw-bold">Occupational Specialism - OccSpec</h3>
-              <h5 className="px-5">
+              </p>
+          <h3>Occupational Specialism - OccSpec</h3>
+              <p>
                 For those familiar with me from my GitHub projects or the
                 various programming Discord communities I'm part of, you may
                 know that in 2024, I requested help on a project. This project
-                was set by Pearson—as I will discuss more later—as a kind of
+                was set by Pearson, as I will discuss more later, as a kind of
                 final project for the course. The issue, as noted by my teacher
                 and others who had attended university at my college, was that
                 the project exceeded the expectations of a university
@@ -231,14 +186,10 @@ export default function TLevelExperiencePage() {
                 <br />
                 The very same people who pushed for the course in the first
                 place - benefited from it the most.
-              </h5>
-            </MDBCol>
-          </MDBRow>
-          <MDBRow className="my-2">
-            <MDBCol>
-              <h3 className="fw-bold">Work Experience - Hell on Earth</h3>
-              <h5 className="px-5">
-                <span className="fw-bold text-danger fs-4">
+              </p>
+          <h3>Work Experience - Hell on Earth</h3>
+              <p>
+                <span className="mb-5 text-sm font-bold text-danger">
                   DISCLAIMER: My experience here is not reflective of other
                   people's experience!
                 </span>
@@ -246,9 +197,9 @@ export default function TLevelExperiencePage() {
                 The hell that is work experience began from my very first year.
                 This period was exceptionally challenging for me as I was
                 grappling with the emotional rollercoaster of having a family
-                member—my grandmother—battling cancer, ultimately leading to her
+                member, my grandmother, battling cancer, ultimately leading to her
                 passing. As a result of this, I declined a placement recommended
-                by the college's careers advisor, which was within the NHS—a
+                by the college's careers advisor, which was within the NHS, a
                 work environment I didn't feel comfortable in at the time.
                 <br />
                 <br />
@@ -262,8 +213,8 @@ export default function TLevelExperiencePage() {
                 <br />
                 <br />
                 My hell didn't end here, once I found a placement, it was less
-                than ideal—especially since it was almost entirely irrelevant to
-                my course, my first task being to redesign their logo—I worked
+                than ideal, especially since it was almost entirely irrelevant to
+                my course, my first task being to redesign their logo, I worked
                 out of a café and only ever saw the person I was to work with
                 once, for 10 minutes.
                 <br />
@@ -271,13 +222,9 @@ export default function TLevelExperiencePage() {
                 Luckily, I was saved from this by the placement I am on
                 currently, I am working with The Training Brokers Ltd as a Data,
                 CRM and Site Administrator.
-              </h5>
-            </MDBCol>
-          </MDBRow>
-          <MDBRow className="my-2">
-            <MDBCol>
-              <h3 className="fw-bold">Pearson: The Controversial Exam Board</h3>
-              <h5 className="px-5">
+              </p>
+          <h3>Pearson: The Controversial Exam Board</h3>
+              <p>
                 Pearson, the education company that runs many of the course in
                 Britain and around the world, from GCSE's to A-Levels and even
                 the T-Levels. It is the centre of a lot of controversy, namely
@@ -318,20 +265,13 @@ export default function TLevelExperiencePage() {
                 contradicting the tutor's claim. This lack of clarity and
                 support only heightened the frustration of navigating the course
                 requirements.
-              </h5>
-            </MDBCol>
-          </MDBRow>
-          <MDBRow className="my-2">
-            <MDBCol>
-              <h3 className="fw-bold">Join the Discussion</h3>
-              <h5 className="px-5">
+              </p>
+          <h3>Join the Discussion</h3>
+              <p>
                 Want to join the conversation? Join the{" "}
                 <a href={"DISCORD_LINK"}>discord server</a>!
-              </h5>
-            </MDBCol>
-          </MDBRow>
-        </div>
-      </MDBContainer>
+              </p>
+      </article>
     </>
   );
 }

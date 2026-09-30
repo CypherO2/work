@@ -1,9 +1,15 @@
 import type { Metadata } from "next";
-import "mdb-react-ui-kit/dist/css/mdb.min.css";
+import { IBM_Plex_Mono } from "next/font/google";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import "@/css/core.css";
+import "@/css/globals.css";
 import NavComp from "@/components/Core/NavbarComp";
 import FootComp from "@/components/Core/FooterComp";
+
+const plexMono = IBM_Plex_Mono({
+  weight: ["400", "600", "700"],
+  subsets: ["latin"],
+  variable: "--font-plex",
+});
 
 const basePath = process.env.NODE_ENV === "production" ? "/work" : "";
 
@@ -26,15 +32,18 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      className={plexMono.variable}
       style={
         {
           ["--bg-url" as string]: `url(${basePath}/BGImg2.png)`,
         }
       }
     >
-      <body>
+      <body className={plexMono.className}>
         <NavComp />
-        <span style={{ backgroundColor: "rgb(10,10,10)" }}>{children}</span>
+        <main className="relative z-[1] block min-h-[calc(100vh-3.5rem-6rem)]">
+          {children}
+        </main>
         <FootComp />
       </body>
     </html>

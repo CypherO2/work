@@ -1,12 +1,10 @@
 "use client";
 
 import { withBase } from "@/lib/basePath";
-
-import { MDBContainer } from "mdb-react-ui-kit";
-import { Row } from "react-bootstrap";
 import MainBanner from "../components/Banner/BannerComp";
 import QuoteComp from "../components/QuoteComp";
 import ContentCard from "../components/Cards/ContentCard";
+import { cx, masonry2, page } from "@/lib/ui";
 
 export default function Homepage() {
   return (
@@ -19,25 +17,17 @@ export default function Homepage() {
         secondButtonText="Code"
         secondRedirect={withBase("/portfolio-code")}
       />
-      <MDBContainer>
-        <Row>
-          <QuoteComp
-            quoteText="The reason we call them the tickle monster and not another creature is because only a monster would tickle someone"
-            quoteAuthor="CJ Presley"
-          />
-        </Row>
-        <Row>
-          <ContentCard
-            repoTitle="Sgàthach Discord Bot"
-            repoDesc="Sgàthach is a versatile Python-based Discord bot designed to enhance
-            your server's functionality and user experience. With a wide range
-            of features tailored to streamline moderation, engagement, and
-            community management, Sgàthach offers an all-in-one solution for
-            Discord server administration."
-            repoLink="https://github.com/CypherO2/Sg-thach-Discord-Bot"
-          />
-        </Row>
-      </MDBContainer>
+      <div className={cx(page, masonry2)}>
+        <QuoteComp
+          quoteText="The reason we call them the tickle monster and not another creature is because only a monster would tickle someone"
+          quoteAuthor="CJ Presley"
+        />
+        <ContentCard
+          repoTitle="Sgàthach Discord Bot"
+          repoDesc="Sgàthach is a Python Discord bot for moderation, engagement, and community management."
+          repoLink="https://github.com/CypherO2/Sg-thach-Discord-Bot"
+        />
+      </div>
     </>
   );
 }

@@ -3,35 +3,34 @@ import {
   TLEVELEXPERIENCE_PATH,
   HUNDREDSOFBEAVERS_PATH,
 } from "./paths";
-import blogImage1 from "../assets/pexels-pixabay-276452.jpg";
-import blogImage2 from "../assets/pexels-marian-havenga-531055927-18941446.jpg";
-import blogImage3 from "../assets/pexels-dariuskrs-2228183.jpg";
 
 const BLOG_INFO = [
   {
-    blogImage: blogImage1,
+    blogImage: "/blog/art-code-curiosity.jpg",
     blogTitle: "Art, Code and Curiousity",
     blogDesc:
-      "Join me on an exciting journey where creativity meets technology. Discover my passion for art, dive into coding adventures, and explore a world of endless curiosities. Let's inspire and learn together!",
+      "Why I write here, how Cassi started, and what art and code look like when they share a desk.",
     blogLink: ARTCODECURIOUSITY_PATH,
     blogTags: ["art", "code", "other"],
   },
   {
-    blogImage: blogImage2,
+    blogImage: "/blog/hundreds-of-beavers.jpg",
     blogTitle: "Mike Cheslik's Beaver Dream",
     blogDesc:
-      "In my latest blog post, I dive into Mike Cheslik’s 2022 black-and-white slapstick comedy, Hundreds of Beavers. Explore the film’s homage to 1920s-1930s silent cinema, its unique storytelling, and masterful direction. Join me as I analyze its themes, characters, and overall impact, offering a fresh perspective on this nostalgic yet innovative film.",
+      "A look at Hundreds of Beavers: silent-era slapstick, odd storytelling choices, and why the film stuck with me.",
     blogLink: HUNDREDSOFBEAVERS_PATH,
     blogTags: ["film", "comedy", "silent"],
   },
   {
-    blogImage: blogImage3,
+    blogImage: "/blog/t-level-experience.jpg",
     blogTitle: "My T-Level Experience",
     blogDesc:
-      "My experience with the English Governement's Pride and Joy, the T-Level Course, the highs, the lows and the hellish.",
+      "What taking the Digital Production T-Level was actually like: the highs, the lows, and the mess in between.",
     blogLink: TLEVELEXPERIENCE_PATH,
     blogTags: ["t-level", "code", "other"],
   },
-];
+] as const;
+
+export type BlogInfo = (typeof BLOG_INFO)[number];
 
 export { BLOG_INFO };

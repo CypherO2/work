@@ -1,7 +1,7 @@
 "use client";
 
-import "../css/core.css";
 import { withBase } from "@/lib/basePath";
+import { masonry } from "@/lib/ui";
 
 const ART_FILES = [
   "3dModal-Arcadia1.png",
@@ -47,13 +47,13 @@ const ART_FILES = [
 
 export default function GalleryComp() {
   return (
-    <div className="masonry-gallery">
+    <div className={masonry}>
       {ART_FILES.map((file, index) => (
-        <div key={file} className="masonry-item">
+        <div key={file} className="mb-4 w-full break-inside-avoid">
           <img
             src={withBase(`/MyArt/${encodeURIComponent(file)}`)}
-            className="w-100 shadow-1-strong rounded"
-            alt={`Image ${index + 1}`}
+            alt={`Artwork ${index + 1}`}
+            className="block w-full rounded-[0.35rem] border border-panel-border"
           />
         </div>
       ))}

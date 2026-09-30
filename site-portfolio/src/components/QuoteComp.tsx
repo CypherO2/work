@@ -1,53 +1,27 @@
 "use client";
 
-import {
-  MDBCard,
-  MDBCardBody,
-  MDBCol,
-  MDBContainer,
-  MDBRow,
-} from "mdb-react-ui-kit";
+import { panel } from "@/lib/ui";
 
-export interface QuoteCompProps {
+export type QuoteCompProps = {
   quoteText: string;
   quoteAuthor: string;
-}
+};
 
 export default function QuoteComp({ quoteText, quoteAuthor }: QuoteCompProps) {
   return (
-    <MDBContainer className="py-5 h-100">
-      <MDBRow className="justify-content-center align-items-center h-100">
-        <MDBCol lg="6" xl="12">
-          <MDBCard
-            className="text-white py-auto"
-            style={{ height: "20rem", backgroundColor: "rgba(10,10,10,0.75)" }}
-          >
-            <MDBCardBody className="d-flex align-items-baseline m-auto">
-              <h2
-                style={{ fontFamily: "monospace" }}
-                className="fw-bold text-center d-block m-auto py-auto"
-              >
-                <span
-                  style={{ color: "rgba(5, 109, 130, 1)" }}
-                  className="fw-bold fs-1"
-                >
-                  "
-                </span>
-                {quoteText}
-                <span
-                  style={{ color: "rgb(5, 109, 130, 1)" }}
-                  className="fw-bold fs-1"
-                >
-                  "
-                </span>
-                <span className="fs-4 text-muted">
-                  <br />- {quoteAuthor}
-                </span>
-              </h2>
-            </MDBCardBody>
-          </MDBCard>
-        </MDBCol>
-      </MDBRow>
-    </MDBContainer>
+    <blockquote className={`${panel} m-0`}>
+      <p className="m-0 text-center text-[clamp(1.1rem,2.2vw,1.45rem)] leading-snug font-bold">
+        <span className="text-[1.6em] text-accent-deep" aria-hidden="true">
+          &quot;
+        </span>
+        {quoteText}
+        <span className="text-[1.6em] text-accent-deep" aria-hidden="true">
+          &quot;
+        </span>
+        <cite className="mt-4 block text-[0.95rem] font-semibold text-muted not-italic">
+          - {quoteAuthor}
+        </cite>
+      </p>
+    </blockquote>
   );
 }

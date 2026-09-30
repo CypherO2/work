@@ -2,19 +2,16 @@
 
 import GalleryComp from "../components/GalleryComp";
 import Thumbnail from "../assets/SiteIcon.png";
-import { MDBContainer } from "mdb-react-ui-kit";
-
+import { page, pageTitle, thumbnail } from "@/lib/ui";
 
 export default function Artpage() {
   return (
-    <>
-      <div className="thumbnail">
-        <img src={Thumbnail.src} alt="" />
+    <div className={page}>
+      <div className={thumbnail}>
+        <img src={Thumbnail.src} alt="" className="h-0 w-0 object-cover" />
       </div>
-      <h1 className="p-1 text-light text-center fw-bold my-2" style={{fontFamily:"monospace"}}>Art Gallery</h1>
-      <MDBContainer>
-        <GalleryComp />
-      </MDBContainer>
-    </>
+      <h1 className={pageTitle}>Art Gallery</h1>
+      <GalleryComp />
+    </div>
   );
 }
