@@ -1,0 +1,120 @@
+{
+  "profile": {
+    "name": "CJ Presley",
+    "headline": "Junior Developer @ Citizens Advice SORT",
+    "location": "Manchester, England, UK",
+    "bio": "I build digital tools with TypeScript, Next.js, Python, and FastAPI. Day to day I work with developers and non-developers at Citizens Advice SORT. Outside work I study software engineering, make art, and write."
+  },
+  "focus": [
+    "TypeScript",
+    "Next.js",
+    "Python",
+    "FastAPI",
+    "Graphic design",
+    "Copywriting"
+  ],
+  "experience": [
+    {
+      "company": "Citizens Advice SORT",
+      "role": "Junior Developer",
+      "start": "Aug 2025",
+      "end": "Present",
+      "summary": "Part of a team building and shipping digital solutions with TypeScript, Next.js, Python, and FastAPI.",
+      "highlights": [
+        "Build and ship digital tools with the team",
+        "",
+        ""
+      ],
+      "stack": ["TypeScript", "Next.js", "Python", "FastAPI", ""],
+      "link": "",
+      "notes": ""
+    },
+    {
+      "company": "The Training Brokers Ltd",
+      "role": "Fixed-Term CRM/Web Administrator",
+      "start": "May 2024",
+      "end": "July 2024",
+      "summary": "Supported staff with CRM and site issues, set up an online tutor schedule, and handled marketing tasks and hardware upkeep.",
+      "highlights": [
+        "Set up an online tutor schedule",
+        "",
+        ""
+      ],
+      "stack": ["CRM", "Web admin", ""],
+      "link": "",
+      "notes": ""
+    },
+    {
+      "company": "LKYPCG",
+      "role": "Copywriter & Graphic Designer",
+      "start": "Mar 2024",
+      "end": "July 2024",
+      "summary": "Volunteer work on a print magazine for the group's 20th anniversary: designed assets and edited copy for readability.",
+      "highlights": [
+        "Designed print assets for the anniversary magazine",
+        "",
+        ""
+      ],
+      "stack": ["Graphic design", "Copywriting", ""],
+      "link": "",
+      "notes": ""
+    },
+    {
+      "company": "McDonalds",
+      "role": "Team Member",
+      "start": "Nov 2022",
+      "end": "Dec 2022",
+      "summary": "Prepared and served food, including drive-thru delivery, plus standard cleaning duties.",
+      "highlights": ["", "", ""],
+      "stack": [""],
+      "link": "",
+      "notes": ""
+    }
+  ],
+  "education": [
+    {
+      "place": "The Open University",
+      "program": "Software Engineering",
+      "start": "April 2025",
+      "end": "Present",
+      "summary": "HTQ Diploma of Higher Education in Software Development.",
+      "highlights": ["", "", ""],
+      "stack": ["Software development", ""],
+      "link": "",
+      "notes": ""
+    },
+    {
+      "place": "Salford City College",
+      "program": "T-Level",
+      "start": "Sept 2022",
+      "end": "July 2024",
+      "summary": "T-Level in Digital Production, Design and Development.",
+      "highlights": ["", "", ""],
+      "stack": ["Digital production", "Design", "Development", ""],
+      "link": "",
+      "notes": ""
+    },
+    {
+      "place": "The Albion Academy",
+      "program": "GCSEs",
+      "start": "Sept 2017",
+      "end": "July 2022",
+      "summary": "Mathematics, English Literature, English Language, Combined Science: Trilogy.",
+      "highlights": ["", "", ""],
+      "stack": [""],
+      "link": "",
+      "notes": ""
+    },
+    {
+      "place": "The Albion Academy",
+      "program": "BTECs",
+      "start": "Sept 2017",
+      "end": "July 2022",
+      "summary": "Art, Craft and Design (3D Design), Art, Craft and Design, Creative iMedia.",
+      "highlights": ["", "", ""],
+      "stack": ["Art", "3D design", "Creative iMedia", ""],
+      "link": "",
+      "notes": ""
+    }
+  ]
+}

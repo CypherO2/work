@@ -37,32 +37,65 @@
   }
 }
 
-/* Ambient background only: animated image + color glows */
-html::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background: var(--bg-url) center / cover no-repeat;
-  animation: image-fade 17s ease-in-out infinite;
-}
-
 @property --glow-a {
   syntax: "<color>";
   inherits: false;
-  initial-value: rgba(9, 70, 139, 0.28);
+  initial-value: rgba(9, 70, 139, 0.22);
 }
 
 @property --glow-b {
   syntax: "<color>";
   inherits: false;
-  initial-value: rgba(9, 50, 100, 0.16);
+  initial-value: rgba(9, 50, 100, 0.12);
+}
+
+@property --sky-glow-a {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: rgba(35, 70, 120, 0.4);
+}
+
+@property --sky-glow-mid {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: rgba(12, 28, 55, 0.18);
+}
+
+@property --sky-glow-b {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: rgba(20, 55, 90, 0.28);
+}
+
+@property --star-halo {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: rgba(120, 210, 230, 0.5);
+}
+
+@property --star-mid {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: rgba(180, 235, 245, 0.32);
+}
+
+@property --star-core {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #f2fbff;
+}
+
+@property --star-line {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: rgba(61, 184, 197, 0.35);
 }
 
 body::before {
   content: "";
   position: fixed;
   inset: -15%;
+  z-index: 0;
   pointer-events: none;
   background:
     radial-gradient(
@@ -78,39 +111,101 @@ body::before {
   animation: gradient-fade 28s ease-in-out infinite;
 }
 
-@keyframes image-fade {
+.starfield-svg {
+  animation: gradient-fade 28s ease-in-out infinite;
+}
+
+.star-bright .star-halo {
+  fill: var(--star-halo);
+}
+
+.star-bright .star-mid {
+  fill: var(--star-mid);
+}
+
+.star-bright .star-core {
+  fill: var(--star-core);
+}
+
+.star-dim .star-halo {
+  fill: color-mix(in srgb, var(--star-halo) 55%, transparent);
+}
+
+.star-dim .star-mid {
+  fill: color-mix(in srgb, var(--star-mid) 50%, transparent);
+}
+
+.star-dim .star-core {
+  fill: color-mix(in srgb, var(--star-core) 70%, #8fa3b8);
+}
+
+.constellation-line {
+  stroke: var(--star-line);
+  fill: none;
+}
+
+.constellation-line-glow {
+  stroke: color-mix(in srgb, var(--star-line) 70%, transparent);
+  fill: none;
+  opacity: 0.55;
+}
+
+.star-twinkle {
+  animation: twinkle 4.5s ease-in-out infinite;
+}
+
+.star-twinkle-slow {
+  animation: twinkle 7s ease-in-out infinite;
+  animation-delay: 1.2s;
+}
+
+@keyframes twinkle {
   0%,
   100% {
     opacity: 0.45;
   }
-  40% {
-    opacity: 0.85;
-  }
-  70% {
-    opacity: 0.55;
+  50% {
+    opacity: 1;
   }
 }
 
 @keyframes gradient-fade {
   0%,
   100% {
-    --glow-a: rgba(9, 70, 139, 0.28);
-    --glow-b: rgba(9, 50, 100, 0.16);
+    --glow-a: rgba(9, 70, 139, 0.22);
+    --glow-b: rgba(9, 50, 100, 0.12);
+    --sky-glow-a: rgba(35, 70, 120, 0.4);
+    --sky-glow-mid: rgba(12, 28, 55, 0.18);
+    --sky-glow-b: rgba(20, 55, 90, 0.28);
+    --star-halo: rgba(120, 210, 230, 0.5);
+    --star-mid: rgba(180, 235, 245, 0.32);
+    --star-core: #f2fbff;
+    --star-line: rgba(61, 184, 197, 0.35);
   }
   50% {
-    --glow-a: rgba(100, 45, 150, 0.28);
-    --glow-b: rgba(120, 55, 165, 0.18);
+    --glow-a: rgba(20, 90, 130, 0.26);
+    --glow-b: rgba(40, 70, 120, 0.14);
+    --sky-glow-a: rgba(45, 95, 145, 0.42);
+    --sky-glow-mid: rgba(18, 40, 70, 0.2);
+    --sky-glow-b: rgba(30, 75, 115, 0.3);
+    --star-halo: rgba(150, 200, 240, 0.55);
+    --star-mid: rgba(200, 225, 250, 0.36);
+    --star-core: #eaf4ff;
+    --star-line: rgba(90, 170, 210, 0.4);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html::before,
-  body::before {
+  body::before,
+  .starfield-svg,
+  .star-twinkle,
+  .star-twinkle-slow {
     animation: none;
   }
 
-  html::before {
-    opacity: 0.7;
+  .star-twinkle,
+  .star-twinkle-slow {
+    opacity: 0.85;
   }
 }
 

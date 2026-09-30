@@ -4,14 +4,13 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import "@/css/globals.css";
 import NavComp from "@/components/Core/NavbarComp";
 import FootComp from "@/components/Core/FooterComp";
+import Starfield from "@/components/Starfield";
 
 const plexMono = IBM_Plex_Mono({
   weight: ["400", "600", "700"],
   subsets: ["latin"],
   variable: "--font-plex",
 });
-
-const basePath = process.env.NODE_ENV === "production" ? "/work" : "";
 
 export const metadata: Metadata = {
   title: "Cj Presley | Home",
@@ -30,16 +29,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={plexMono.variable}
-      style={
-        {
-          ["--bg-url" as string]: `url(${basePath}/BGImg2.png)`,
-        }
-      }
-    >
+    <html lang="en" className={plexMono.variable}>
       <body className={plexMono.className}>
+        <Starfield />
         <NavComp />
         <main className="relative z-[1] block min-h-[calc(100vh-3.5rem-6rem)]">
           {children}

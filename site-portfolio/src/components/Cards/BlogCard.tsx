@@ -30,7 +30,7 @@ export default function BlogCards({
         />
       </a>
       <div className="flex min-h-0 flex-1 flex-col">
-        <h2 className="mb-2 line-clamp-2 text-xl font-bold">{title}</h2>
+        <h2 className="mb-2 truncate text-xl font-bold">{title}</h2>
         <p className="mb-3 line-clamp-3 flex-1 text-muted">{description}</p>
         <div className="mb-3.5 inline-flex flex-wrap gap-1.5">
           {tags.map((tag) => (

@@ -1,0 +1,82 @@
+{
+  "projects": [
+    {
+      "title": "Sgàthach Discord Bot",
+      "summary": "Python Discord bot for moderation, engagement, and community management.",
+      "link": "https://github.com/CypherO2/Sg-thach-Discord-Bot",
+      "featured": true,
+      "role": "Solo developer",
+      "stack": ["Python", "Discord.py", ""],
+      "highlights": [
+        "Moderation and engagement commands",
+        "",
+        ""
+      ],
+      "notes": ""
+    },
+    {
+      "title": "CypherO2/work",
+      "summary": "This site, hosted from GitHub Pages.",
+      "link": "https://github.com/CypherO2/work",
+      "featured": true,
+      "role": "Solo developer",
+      "stack": ["Next.js", "TypeScript", "Tailwind", ""],
+      "highlights": [
+        "Static export for GitHub Pages",
+        "",
+        ""
+      ],
+      "notes": ""
+    },
+    {
+      "title": "CypherO2/RZA-Project",
+      "summary": "70-hour project: planned, designed, built, documented, and evaluated a full-stack web app.",
+      "link": "https://github.com/CypherO2/rza-project",
+      "featured": true,
+      "role": "",
+      "stack": ["", "", ""],
+      "highlights": ["", "", ""],
+      "notes": ""
+    },
+    {
+      "title": "CypherO2/Pokedex-python",
+      "summary": "Small Python projects and experiments.",
+      "link": "https://github.com/CypherO2/Pokedex-python",
+      "featured": false,
+      "role": "",
+      "stack": ["Python", ""],
+      "highlights": ["", "", ""],
+      "notes": ""
+    },
+    {
+      "title": "CypherO2/LoginSystem",
+      "summary": "College winter project: React front end, Flask back end, SQLite auth with password hashing.",
+      "link": "https://github.com/CypherO2/LoginSystem",
+      "featured": false,
+      "role": "",
+      "stack": ["React", "Flask", "SQLite", ""],
+      "highlights": ["", "", ""],
+      "notes": ""
+    },
+    {
+      "title": "CypherO2/GMC-Bury2024-CNCS",
+      "summary": "GMSkills contest site. Team of three, 3rd place in web development.",
+      "link": "https://github.com/CypherO2/gmc-bury2024-cncs",
+      "featured": false,
+      "role": "",
+      "stack": ["", "", ""],
+      "highlights": ["", "", ""],
+      "notes": ""
+    },
+    {
+      "title": "CypherO2/Elysium_DiscordBot",
+      "summary": "Multi-purpose Discord bot with a wide command set.",
+      "link": "https://github.com/CypherO2/Elysium_DiscordBot",
+      "featured": false,
+      "role": "",
+      "stack": ["Python", ""],
+      "highlights": ["", "", ""],
+      "notes": ""
+    }
+  ]
+}

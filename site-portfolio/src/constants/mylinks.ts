@@ -44,4 +44,11 @@ export function socialHref(link: string): string {
   return `https://${link}`;
 }
 
+const SOCIAL_LABEL_MAX = 14;
+
+export function socialLabel(text: string, max = SOCIAL_LABEL_MAX): string {
+  if (text.length <= max) return text;
+  return `${text.slice(0, max - 1)}…`;
+}
+
 export { SOCIAL_LINKS };

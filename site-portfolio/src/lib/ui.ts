@@ -20,6 +20,13 @@ export const masonry =
 export const masonry2 =
   "columns-1 gap-4 sm:columns-2 [&>*]:mb-4 [&>*]:w-full [&>*]:break-inside-avoid";
 
+/** Equal-height project cards. Prefer this over masonry for text cards. */
+export const cardGrid =
+  "grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 [&>*]:h-full";
+
+export const cardInteractive =
+  "rounded-[0.35rem] border border-panel-border bg-panel p-5 text-left transition-[border-color,background-color,transform] hover:border-accent hover:bg-[rgba(12,18,26,0.82)] focus-visible:border-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
+
 export const pageTitle =
   "mb-5 text-center text-[clamp(1.5rem,3vw,2rem)] font-bold tracking-wide";
 

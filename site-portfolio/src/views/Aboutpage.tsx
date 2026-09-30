@@ -1,5 +1,3 @@
-"use client";
-
 import ProfileComp from "../components/ProfileComp";
 import Thumbnail from "../assets/SiteIcon.png";
 import { page, thumbnail } from "@/lib/ui";
