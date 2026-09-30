@@ -1,0 +1,22 @@
+{
+  "updated": "Sept 2026",
+  "headline": "What I'm doing now",
+  "items": [
+    {
+      "title": "Software engineering at Citizens Advice SORT",
+      "detail": "Building digital tools with TypeScript, Next.js, Python, and FastAPI for advice services."
+    },
+    {
+      "title": "HTQ Software Development at The Open University",
+      "detail": "Studying part-time alongside full-time work."
+    },
+    {
+      "title": "This site",
+      "detail": "Keeping the portfolio content-driven so about, projects, and art stay easy to update on GitHub Pages."
+    },
+    {
+      "title": "Art and writing",
+      "detail": "Drawing, 3D work, and copy when there's spare time."
+    }
+  ]
+}

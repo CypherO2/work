@@ -3,7 +3,7 @@
 import { useEffect, useId, useRef, type ReactNode } from "react";
 import { X } from "lucide-react";
 import { btnAccent } from "@/lib/ui";
-import type { Achievement, ContentLink } from "@/lib/about";
+import type { Achievement, ContentLink, Grade } from "@/lib/about";
 
 export type DetailFields = {
   title: string;
@@ -17,6 +17,8 @@ export type DetailFields = {
   year?: string;
   status?: string;
   achievements?: Achievement[];
+  /** Education only: subject + grade rows. */
+  grades?: Grade[];
   /** Tags: tools for work, courses for school. */
   tags?: string[];
   tagsLabel?: string;
@@ -42,6 +44,12 @@ function filledLinks(list?: ContentLink[]) {
   return (list ?? []).filter((item) => item.href.trim() && item.label.trim());
 }
 
+function filledGrades(list?: Grade[]) {
+  return (list ?? []).filter(
+    (item) => item.subject.trim() && item.grade.trim(),
+  );
+}
+
 function MetaChip({ children }: { children: ReactNode }) {
   return (
     <span className="rounded-[0.35rem] border border-panel-border px-2 py-0.5 text-xs text-muted">
@@ -58,6 +66,7 @@ export default function DetailModal({
   const dialogRef = useRef<HTMLDialogElement>(null);
   const titleId = useId();
   const achievements = filledAchievements(fields.achievements);
+  const grades = filledGrades(fields.grades);
   const tags = filledTags(fields.tags);
   const links = filledLinks(fields.links);
   const notes = fields.notes?.trim();
@@ -163,6 +172,27 @@ export default function DetailModal({
                       ) : (
                         item.text
                       )}
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ) : null}
+
+            {grades.length > 0 ? (
+              <section className="mb-4">
+                <h3 className="mb-2 text-sm font-bold tracking-wide text-ink">
+                  Grades
+                </h3>
+                <ul className="m-0 grid list-none gap-2 p-0">
+                  {grades.map((item) => (
+                    <li
+                      key={`${item.subject}-${item.grade}`}
+                      className="flex items-baseline justify-between gap-4 border-b border-panel-border pb-2 text-[0.92rem] last:border-b-0 last:pb-0"
+                    >
+                      <span className="text-muted">{item.subject}</span>
+                      <span className="shrink-0 font-semibold text-ink">
+                        {item.grade}
+                      </span>
                     </li>
                   ))}
                 </ul>

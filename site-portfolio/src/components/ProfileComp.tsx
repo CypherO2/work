@@ -90,6 +90,7 @@ export default function ProfileComp() {
             studyType: item.studyType,
             score: item.score,
             achievements: item.achievements,
+            grades: item.grades,
             tags: item.courses,
             tagsLabel: "Courses",
             url: item.url,

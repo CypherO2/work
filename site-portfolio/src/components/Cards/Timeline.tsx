@@ -1,7 +1,7 @@
 "use client";
 
 import DetailModal from "../DetailModal";
-import type { Achievement, ContentLink } from "@/lib/about";
+import type { Achievement, ContentLink, Grade } from "@/lib/about";
 import { formatDuration, formatPeriod } from "@/lib/duration";
 import { cardInteractive } from "@/lib/ui";
 
@@ -16,6 +16,7 @@ export type TimelineEntry = {
   studyType?: string;
   score?: string;
   achievements?: Achievement[];
+  grades?: Grade[];
   tags?: string[];
   tagsLabel?: string;
   url?: string;
@@ -65,6 +66,7 @@ export default function Timeline({ title, entries }: TimelineProps) {
                 studyType: entry.studyType,
                 score: entry.score,
                 achievements: entry.achievements,
+                grades: entry.grades,
                 tags: entry.tags,
                 tagsLabel: entry.tagsLabel,
                 links,

@@ -3,14 +3,18 @@
     "name": "Cassiopeia J P",
     "headline": "Software Engineer @ Citizens Advice SORT",
     "location": "Manchester, England, UK",
-    "bio": "I build digital tools with TypeScript, Next.js, Python, and FastAPI. Day to day I work with developers and non-developers at Citizens Advice SORT. Outside work I study software engineering, make art, and write."
+    "bio": "I'm a software engineer passionate about creating impactful digital solutions — from full-stack web apps and AI-powered tools to accessible design and engaging visuals. Currently part of the Citizens Advice SORT team in Manchester, I combine technical expertise in TypeScript, Python, and cloud architecture with an eye for design and clear communication."
   },
   "focus": [
     "TypeScript",
     "Next.js",
     "Python",
     "FastAPI",
-    "Graphic design",
+    "React",
+    "Cloud (AWS, GCP)",
+    "Web/App Design",
+    "Accessibility",
+    "Graphic Design",
     "Copywriting"
   ],
   "experience": [
@@ -75,13 +79,13 @@
       "location": "UK",
       "start": "May 2024",
       "end": "July 2024",
-      "summary": "Supported staff with CRM and site issues, set up an online tutor schedule, and handled marketing tasks and hardware upkeep.",
+      "summary": "Supported staff with CRM and site issues, set up an online tutor schedule, and handled marketing tasks and hardware upkeep. Worked in a team to ensure the store was running smoothly and efficiently, whilst fostering a positive and supportive work environment.",
       "achievements": [
-        { "text": "Set up an online tutor schedule" },
-        { "text": "Helped staff with CRM and site issues" },
-        { "text": "Handled marketing tasks and hardware upkeep" }
+        { "text": "Helped handle the research and outreach to potential clients, as well as the setup and management of the online tutor schedule."},
+        { "text": "Handled the CRM and site updates, as well as the general upkeep of the website and CRM system."},
+        { "text": "Handled marketing tasks, such as advert design and coordinated with the marketing manager to push to distribution channels." }
       ],
-      "stack": ["CRM", "Web admin", "Scheduling"],
+      "stack": ["CRM", "Web admin", "Scheduling", "Hardware upkeep", "Marketing", "Teamwork", "Communication", "Customer service", "Telephone etiquette"],
       "url": "",
       "links": []
     },
@@ -94,11 +98,11 @@
       "end": "July 2024",
       "summary": "Volunteer work on a print magazine for the group's 20th anniversary: designed assets and edited copy for readability.",
       "achievements": [
-        { "text": "Designed print assets for the 20th anniversary magazine" },
-        { "text": "Edited copy for clearer reading" },
-        { "text": "Worked with a volunteer group through to print" }
+        { "text": "Designed print assets for the 20th anniversary magazine, including the cover, layout, and content." },
+        { "text": "Drafted and edited copy for clearer reading, ensuring the content was engaging, informative and truthful." },
+        { "text": "Worked with a volunteer group through to print, ensuring the magazine was produced to a high standard and on time." }
       ],
-      "stack": ["Graphic design", "Copywriting", "Print layout"],
+      "stack": ["Graphic design", "Copywriting", "Print layout", "Print design", "Print production", "Print management", "Printing", "Printing techniques", "Printing materials", "Printing processes"],
       "url": "",
       "links": []
     },
@@ -111,11 +115,10 @@
       "end": "Dec 2022",
       "summary": "Prepared and served food, including drive-thru delivery, plus standard cleaning duties.",
       "achievements": [
-        { "text": "Food prep and packaging" },
-        { "text": "Drive-thru service" },
-        { "text": "Shared cleaning duties" }
+        { "text": "Prepared and served food, primarily focusing on bad of house work such as fry cooking, plus standard cleaning duties." },
+        { "text": "Worked in a team to ensure the store was running smoothly and efficiently, whilst fostering a positive and supportive work environment." }
       ],
-      "stack": ["Customer service", "Teamwork"],
+      "stack": ["Customer service", "Teamwork", "Communication", "Food preparation", "Food service", "Cleaning", "Time Management", "Multi-tasking", "Problem Solving", "Adaptability"],
       "url": "",
       "links": []
     }
@@ -126,26 +129,12 @@
       "program": "Software Engineering",
       "studyType": "HTQ Diploma of Higher Education",
       "mode": "Part-time",
-      "location": "Distance learning, UK",
+      "location": "",
       "start": "April 2025",
-      "end": "Present",
-      "summary": "Software Development pathway while working full-time.",
+      "end": "Feb 2026",
+      "summary": "Software Development pathway while working full-time, studying part-time and working full-time. Dropped out when I realised I was not learning as much as I would have liked to and wanted to focus on building my own projects and skills.",
       "score": "",
-      "courses": ["Software development", "Software engineering"],
-      "achievements": [
-        {
-          "text": "HTQ Diploma of Higher Education in Software Development",
-          "link": "https://www.open.ac.uk/"
-        },
-        { "text": "Studying alongside full-time work" }
-      ],
-      "url": "https://www.open.ac.uk/",
-      "links": [
-        {
-          "label": "Open University",
-          "href": "https://www.open.ac.uk/"
-        }
-      ]
+      "courses": ["Software development", "Software engineering"]
     },
     {
       "place": "Salford City College",
@@ -155,20 +144,39 @@
       "location": "Salford, UK",
       "start": "Sept 2022",
       "end": "July 2024",
-      "summary": "Two-year technical qualification with industry placement and project work.",
+      "summary": "Two-year technical qualification with industry placement and project work, focusing on digital production, design and development culminating in a 70hr project based on a real client's needs including a full stack website and documentation.",
       "score": "",
-      "courses": ["Digital production", "Design", "Web development"],
+      "courses": [
+        "Digital production",
+        "Design",
+        "Web development",
+        "Database Management Systems",
+        "SQLite",
+        "React",
+        "Node.js",
+        "Python",
+        "Flask",
+        "HTML",
+        "CSS",
+        "TypeScript",
+        "C#",
+        "VSCode",
+        "Version Control",
+        "Git",
+        "GitHub"
+      ],
       "achievements": [
         {
-          "text": "Completed T-Level in Digital Production, Design and Development"
+          "text": "Completed T-Level in Digital Production, Design and Development with passing grades in all modules."
         },
         {
-          "text": "RZA full-stack project from plan through evaluation",
-          "link": "https://github.com/CypherO2/rza-project"
+          "text": "Completed a 70hr project based on a real client's needs including a full stack website and documentation. gaining a passing grade in the project."
         },
         {
-          "text": "LoginSystem winter project (React, Flask, SQLite)",
-          "link": "https://github.com/CypherO2/LoginSystem"
+          "text": "Learnt the basics of HTML, CSS, TypeScript, React, Node.js, Python Database Management Systems and SQLite."
+        },
+        {
+          "text": "Completed 360hrs of industry placement in a real client's business, gaining valuable experience and insights into the industry."
         }
       ],
       "url": "",
@@ -176,6 +184,10 @@
         {
           "label": "RZA project",
           "href": "https://github.com/CypherO2/rza-project"
+        },
+        {
+          "label": "LoginSystem",
+          "href": "https://github.com/CypherO2/LoginSystem"
         }
       ]
     },
@@ -187,13 +199,19 @@
       "location": "Manchester, UK",
       "start": "Sept 2017",
       "end": "July 2022",
-      "summary": "Core academic subjects.",
+      "summary": "Core academic subjects offered by the school, part of the required curriculum for schools in the UK.",
       "score": "",
       "courses": [
         "Mathematics",
         "English Literature",
         "English Language",
         "Combined Science: Trilogy"
+      ],
+      "grades": [
+        { "subject": "Mathematics", "grade": "7" },
+        { "subject": "English Literature", "grade": "6" },
+        { "subject": "English Language", "grade": "5" },
+        { "subject": "Combined Science: Trilogy", "grade": "7-7" }
       ],
       "achievements": [],
       "url": "",
@@ -202,21 +220,32 @@
     {
       "place": "The Albion Academy",
       "program": "Art and Creative Media",
-      "studyType": "BTEC",
+      "studyType": "BTEC & GCSE",
       "mode": "Full-time",
-      "location": "Manchester, UK",
+      "location": "Salford, UK",
       "start": "Sept 2017",
       "end": "July 2022",
-      "summary": "Creative subjects alongside GCSEs.",
+      "summary": "Creative subjects alongside GCSEs offered by the school, part of the elective curriculums offered by schools in the UK.",
       "score": "",
       "courses": [
         "Art, Craft and Design (3D Design)",
         "Art, Craft and Design",
         "Creative iMedia"
       ],
+      "grades": [
+        { "subject": "Art, Craft and Design (3D Design)", "grade": "Pass" },
+        { "subject": "Art, Craft and Design", "grade": "4" },
+        { "subject": "Creative iMedia", "grade": "Distinction at Level 2" }
+      ],
       "achievements": [
         {
-          "text": "Creative iMedia and 3D design coursework"
+          "text": "Completed the Creative iMedia course work within the 1st 6 months of the 2 year course, whilst still gaining a distinction at level 2."
+        },
+        {
+          "text": "Handled the Art, Craft and Design (3D Design) course work, including the planning and creation of a physical model of the planned product despite having our teacher be injured early into the course and being missing for a majority of the course."
+        },
+        {
+          "text": "Completed the Art, Craft and Design course work, gaining a grade 4, with a focus on multi-media production and design."
         }
       ],
       "url": "",

@@ -10,6 +10,11 @@ export type ContentLink = {
   href: string;
 };
 
+export type Grade = {
+  subject: string;
+  grade: string;
+};
+
 /** Shared optional fields. Shape follows JSON Resume work/education closely. */
 export type DetailSlots = {
   mode?: string;
@@ -47,6 +52,7 @@ export type AboutContent = {
       start: string;
       end: string;
       summary: string;
+      grades?: Grade[];
     } & DetailSlots
   >;
 };

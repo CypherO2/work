@@ -4,10 +4,10 @@ import { useEffect, useId, useState } from "react";
 import {
   Code2,
   Home,
+  Mail,
   Menu,
-  Newspaper,
   Palette,
-  Sparkles,
+  Radar,
   User,
   X,
   type LucideIcon,
@@ -16,10 +16,10 @@ import Logo from "../../assets/SiteIcon.png";
 import {
   ABOUT_PATH,
   ARTS_PATH,
-  BLOG_PATH,
   CODE_PATH,
-  ELYSIAN_PATH,
+  CONTACT_PATH,
   INDEX_PATH,
+  NOW_PATH,
 } from "../../constants/paths";
 import { withBase } from "@/lib/basePath";
 import { cx } from "@/lib/ui";
@@ -42,6 +42,7 @@ type NavItem = NavLink | NavSection;
 const NAV_ITEMS: NavItem[] = [
   { kind: "link", label: "Home", href: INDEX_PATH, icon: Home },
   { kind: "link", label: "About me", href: ABOUT_PATH, icon: User },
+  { kind: "link", label: "Now", href: NOW_PATH, icon: Radar },
   {
     kind: "section",
     label: "Portfolio",
@@ -50,14 +51,7 @@ const NAV_ITEMS: NavItem[] = [
       { label: "Projects", href: CODE_PATH, icon: Code2 },
     ],
   },
-  {
-    kind: "section",
-    label: "Extra",
-    items: [
-      { label: "Articles", href: BLOG_PATH, icon: Newspaper },
-      { label: "Elysium", href: ELYSIAN_PATH, icon: Sparkles },
-    ],
-  },
+  { kind: "link", label: "Contact", href: CONTACT_PATH, icon: Mail },
 ];
 
 const linkClass =
