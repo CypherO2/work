@@ -43,16 +43,37 @@
     font-size: 125%;
   }
 
-  html[data-font-family="mono"] {
+  html[data-font-family="default"] {
     --font-sans: var(--font-plex), "IBM Plex Mono", ui-monospace, Menlo, monospace;
   }
 
-  html[data-font-family="sans"] {
-    --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  html[data-font-family="lexend"] {
+    --font-sans: var(--font-lexend), Lexend, system-ui, sans-serif;
+    letter-spacing: 0.02em;
+    word-spacing: 0.04em;
   }
 
-  html[data-font-family="serif"] {
-    --font-sans: Georgia, "Times New Roman", serif;
+  html[data-font-family="atkinson"] {
+    --font-sans: var(--font-atkinson), "Atkinson Hyperlegible", system-ui, sans-serif;
+    letter-spacing: 0.015em;
+    word-spacing: 0.03em;
+  }
+
+  html[data-font-family="opendyslexic"] {
+    --font-sans: "OpenDyslexic", sans-serif;
+    letter-spacing: 0.03em;
+    word-spacing: 0.06em;
+    line-height: 1.7;
+  }
+
+  html[data-theme="starless"] {
+    color-scheme: dark;
+    --page-bg: rgb(4, 8, 14);
+    --surface-chrome: rgb(4, 8, 14);
+    --surface-sidebar: rgb(4, 8, 14);
+    --surface-drawer: rgb(4, 8, 14);
+    --surface-overlay: rgb(8, 12, 18);
+    --scrollbar-track: rgb(4, 8, 14);
   }
 
   html[data-theme="light"] {
@@ -169,7 +190,9 @@
   }
 
   html[data-theme="light"] .starfield-svg,
-  html[data-theme="light"] body::before {
+  html[data-theme="light"] body::before,
+  html[data-theme="starless"] .starfield-svg,
+  html[data-theme="starless"] body::before {
     opacity: 0;
     pointer-events: none;
   }

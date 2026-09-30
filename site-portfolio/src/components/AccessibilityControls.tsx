@@ -18,7 +18,12 @@ const THEMES: Array<{ value: ThemePref; label: string; hint: string }> = [
     label: "Browser default",
     hint: "Follows your device light or dark setting.",
   },
-  { value: "dark", label: "Dark", hint: "Dark background, light text." },
+  { value: "dark", label: "Dark", hint: "Dark background with the starfield." },
+  {
+    value: "starless",
+    label: "Starless",
+    hint: "Dark theme with no starfield. Page matches the sidebar colour.",
+  },
   { value: "light", label: "Light", hint: "Light background, dark text." },
 ];
 
@@ -30,9 +35,26 @@ const SIZES: Array<{ value: FontSizePref; label: string }> = [
 ];
 
 const FAMILIES: Array<{ value: FontFamilyPref; label: string; hint: string }> = [
-  { value: "mono", label: "Monospace", hint: "IBM Plex Mono (site default)." },
-  { value: "sans", label: "Sans-serif", hint: "System UI font." },
-  { value: "serif", label: "Serif", hint: "Georgia and similar." },
+  {
+    value: "default",
+    label: "Site default",
+    hint: "IBM Plex Mono, the usual look for this site.",
+  },
+  {
+    value: "lexend",
+    label: "Lexend",
+    hint: "Built for reading ease. Free Google Font (OFL).",
+  },
+  {
+    value: "atkinson",
+    label: "Atkinson Hyperlegible",
+    hint: "Clear letter shapes from the Braille Institute. Free (OFL).",
+  },
+  {
+    value: "opendyslexic",
+    label: "OpenDyslexic",
+    hint: "Weighted bottoms to keep letters from flipping. Free (OFL).",
+  },
 ];
 
 function OptionRow({
@@ -148,7 +170,8 @@ export default function AccessibilityControls() {
             Font family
           </h2>
           <p className="m-0 mb-3 text-sm text-muted">
-            Swap the typeface used for body text.
+            Pick a typeface that is easier to read. All options here are free
+            to use on a personal site.
           </p>
           <div className="grid gap-2" role="radiogroup" aria-labelledby="a11y-family">
             {FAMILIES.map((item) => (

@@ -1,6 +1,11 @@
-export type ThemePref = "system" | "light" | "dark";
+export type ThemePref = "system" | "light" | "dark" | "starless";
 export type FontSizePref = "sm" | "md" | "lg" | "xl";
-export type FontFamilyPref = "mono" | "sans" | "serif";
+/** Free/open fonts safe for personal sites. */
+export type FontFamilyPref =
+  | "default"
+  | "lexend"
+  | "atkinson"
+  | "opendyslexic";
 
 export type A11yPrefs = {
   theme: ThemePref;
@@ -14,12 +19,23 @@ export const A11Y_STORAGE_KEY = "cj-a11y";
 export const A11Y_DEFAULTS = {
   theme: "system",
   fontSize: "md",
-  fontFamily: "mono",
+  fontFamily: "default",
   showAlts: true,
 } as const satisfies A11yPrefs;
 
+const LEGACY_FONT: Record<string, FontFamilyPref> = {
+  mono: "default",
+  sans: "atkinson",
+  serif: "lexend",
+};
+
 function isTheme(value: unknown): value is ThemePref {
-  return value === "system" || value === "light" || value === "dark";
+  return (
+    value === "system" ||
+    value === "light" ||
+    value === "dark" ||
+    value === "starless"
+  );
 }
 
 function isFontSize(value: unknown): value is FontSizePref {
@@ -29,7 +45,20 @@ function isFontSize(value: unknown): value is FontSizePref {
 }
 
 function isFontFamily(value: unknown): value is FontFamilyPref {
-  return value === "mono" || value === "sans" || value === "serif";
+  return (
+    value === "default" ||
+    value === "lexend" ||
+    value === "atkinson" ||
+    value === "opendyslexic"
+  );
+}
+
+function resolveFontFamily(value: unknown): FontFamilyPref {
+  if (isFontFamily(value)) return value;
+  if (typeof value === "string" && value in LEGACY_FONT) {
+    return LEGACY_FONT[value]!;
+  }
+  return A11Y_DEFAULTS.fontFamily;
 }
 
 export function parseA11yPrefs(raw: unknown): A11yPrefs {
@@ -38,9 +67,7 @@ export function parseA11yPrefs(raw: unknown): A11yPrefs {
   return {
     theme: isTheme(data.theme) ? data.theme : A11Y_DEFAULTS.theme,
     fontSize: isFontSize(data.fontSize) ? data.fontSize : A11Y_DEFAULTS.fontSize,
-    fontFamily: isFontFamily(data.fontFamily)
-      ? data.fontFamily
-      : A11Y_DEFAULTS.fontFamily,
+    fontFamily: resolveFontFamily(data.fontFamily),
     showAlts:
       typeof data.showAlts === "boolean"
         ? data.showAlts
@@ -74,4 +101,4 @@ export function writeA11yPrefs(prefs: A11yPrefs) {
 }
 
 /** Runs before paint so theme/font prefs do not flash. */
-export const A11Y_BOOT_SCRIPT = `(function(){try{var k=${JSON.stringify(A11Y_STORAGE_KEY)};var d=${JSON.stringify(A11Y_DEFAULTS)};var p=d;try{p=Object.assign({},d,JSON.parse(localStorage.getItem(k)||"null")||{});}catch(e){}var r=document.documentElement;r.dataset.theme=p.theme||d.theme;r.dataset.fontSize=p.fontSize||d.fontSize;r.dataset.fontFamily=p.fontFamily||d.fontFamily;r.dataset.showAlts=(p.showAlts===false?"off":"on");}catch(e){}})();`;
+export const A11Y_BOOT_SCRIPT = `(function(){try{var k=${JSON.stringify(A11Y_STORAGE_KEY)};var d=${JSON.stringify(A11Y_DEFAULTS)};var legacy={mono:"default",sans:"atkinson",serif:"lexend"};var p=d;try{p=Object.assign({},d,JSON.parse(localStorage.getItem(k)||"null")||{});}catch(e){}if(legacy[p.fontFamily])p.fontFamily=legacy[p.fontFamily];var r=document.documentElement;r.dataset.theme=p.theme||d.theme;r.dataset.fontSize=p.fontSize||d.fontSize;r.dataset.fontFamily=p.fontFamily||d.fontFamily;r.dataset.showAlts=(p.showAlts===false?"off":"on");}catch(e){}})();`;
