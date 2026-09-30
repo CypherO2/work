@@ -2,8 +2,8 @@
 
 import { useEffect, useId, useRef, type ReactNode } from "react";
 import { X } from "lucide-react";
-import { btnAccent } from "@/lib/ui";
 import type { Achievement, ContentLink, Grade } from "@/lib/about";
+import { btnAccent, cx, dialogShell } from "@/lib/ui";
 
 export type DetailFields = {
   title: string;
@@ -108,7 +108,10 @@ export default function DetailModal({
       <dialog
         ref={dialogRef}
         aria-labelledby={titleId}
-        className="fixed inset-0 z-[100] m-auto w-[min(100%-1.5rem,36rem)] max-h-[min(88vh,42rem)] rounded-[0.35rem] border border-panel-border bg-[rgba(8,12,18,0.98)] p-0 text-ink shadow-[0_20px_60px_rgba(0,0,0,0.55)] open:flex open:flex-col backdrop:bg-black/70 backdrop:backdrop-blur-[2px]"
+        className={cx(
+          dialogShell,
+          "w-[min(100%-1.5rem,36rem)] max-h-[min(88vh,42rem)]",
+        )}
         onClick={(event) => {
           if (event.target === dialogRef.current) dialogRef.current.close();
         }}
@@ -164,7 +167,7 @@ export default function DetailModal({
                           href={item.link.trim()}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-accent hover:text-[#7ad4dc]"
+                          className="text-accent hover:text-[var(--accent-hover)]"
                           onClick={(event) => event.stopPropagation()}
                         >
                           {item.text}

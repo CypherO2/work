@@ -4,7 +4,7 @@ import { useEffect, useId, useRef, useState } from "react";
 import { X } from "lucide-react";
 import { withBase } from "@/lib/basePath";
 import { artPieces, artSrc, type ArtPiece } from "@/lib/art";
-import { masonry } from "@/lib/ui";
+import { cx, dialogShell, masonry } from "@/lib/ui";
 
 function ArtLightbox({
   piece,
@@ -40,7 +40,10 @@ function ArtLightbox({
     <dialog
       ref={dialogRef}
       aria-labelledby={titleId}
-      className="fixed inset-0 z-[100] m-auto w-[min(100%-1.5rem,56rem)] max-h-[min(92vh,48rem)] rounded-[0.35rem] border border-panel-border bg-[rgba(8,12,18,0.98)] p-0 text-ink shadow-[0_20px_60px_rgba(0,0,0,0.55)] open:flex open:flex-col backdrop:bg-black/75 backdrop:backdrop-blur-[2px]"
+      className={cx(
+        dialogShell,
+        "w-[min(100%-1.5rem,56rem)] max-h-[min(92vh,48rem)]",
+      )}
       onClick={(event) => {
         if (event.target === dialogRef.current) dialogRef.current.close();
       }}

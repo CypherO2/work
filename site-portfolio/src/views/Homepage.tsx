@@ -45,7 +45,7 @@ export default function Homepage() {
           <div className="mb-4 flex flex-wrap items-end justify-between gap-3">
             <h2 className="m-0 text-[1.35rem] font-bold">Selected projects</h2>
             <a
-              className="text-sm font-bold text-accent hover:text-[#7ad4dc]"
+              className="text-sm font-bold text-accent hover:text-[var(--accent-hover)]"
               href={withBase(CODE_PATH)}
             >
               All projects
