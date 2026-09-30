@@ -1,0 +1,134 @@
+{
+  "projects": [
+    {
+      "title": "work",
+      "summary": "This site. About, projects, art, and accessibility controls, exported as static Next.js for GitHub Pages.",
+      "link": "https://github.com/CypherO2/work",
+      "demo": "https://cyphero2.github.io/work/",
+      "year": "2024",
+      "status": "Active",
+      "featured": true,
+      "role": "Solo developer",
+      "stack": ["Next.js", "TypeScript", "Tailwind", "React"],
+      "highlights": [
+        "Static export for GitHub Pages under /work",
+        "JSON-driven about, projects, now, work cases, and art gallery",
+        "Client accessibility prefs: themes, fonts including OpenDyslexic, contrast and motion"
+      ]
+    },
+    {
+      "title": "GoldGrapher",
+      "summary": "Money management dashboard: track income, set a budget, and log progress.",
+      "link": "https://github.com/CypherO2/GoldGrapher",
+      "year": "2025",
+      "status": "Active",
+      "featured": true,
+      "role": "Solo developer",
+      "stack": ["Next.js", "TypeScript", "Tailwind", "DaisyUI", "FastAPI", "Pydantic", "Firebase"],
+      "highlights": [
+        "Next.js front end with FastAPI and Pydantic on the back end",
+        "Firebase Admin for account and data storage",
+        "Poetry-managed Python package (midasaccount)"
+      ]
+    },
+    {
+      "title": "Elysium Discord Bot",
+      "summary": "Multi-purpose Discord bot. Main job is free Twitch live notifications, with moderation, utility, and music commands as well.",
+      "link": "https://github.com/CypherO2/Elysium_DiscordBot",
+      "year": "2025",
+      "status": "Active",
+      "featured": true,
+      "role": "Solo developer",
+      "stack": ["Python", "discord.py", "Twitch API", "yt-dlp", "Poetry"],
+      "highlights": [
+        "Twitch watchlist with custom live channel and ping message",
+        "Music playback in voice channels via yt-dlp (play, skip, queue, pause)",
+        "Slash commands for help, runtime, suggestions, and staff alerts",
+        "MIT licensed, discord.py 2.5+"
+      ],
+      "notes": "The instance I host is limited to a support server and a friend's server while features are still thin."
+    },
+    {
+      "title": "Riget Zoo Adventures",
+      "summary": "T-Level 2024 full-stack app for a combined zoo and hotel: room booking, tickets, memberships, and rewards.",
+      "link": "https://github.com/CypherO2/RZA-Project",
+      "year": "2024",
+      "status": "Coursework",
+      "featured": false,
+      "role": "Solo developer",
+      "stack": ["React", "TypeScript", "Vite", "Bootstrap", "Axios", "Flask", "SQLite"],
+      "highlights": [
+        "Room booking, zoo tickets, memberships, and rewards points",
+        "Vite + React Router front end with Bootstrap and MDB UI",
+        "Flask API with SQLite and bcrypt password hashing",
+        "70-hour T-Level Digital Production client project"
+      ],
+      "notes": "Licensed under MPL-2.0."
+    },
+    {
+      "title": "Sgàthach Discord Bot",
+      "summary": "Python Discord bot for moderation, engagement, and community management.",
+      "link": "https://github.com/CypherO2/Sg-thach-Discord-Bot",
+      "year": "2024",
+      "status": "Archive",
+      "featured": false,
+      "role": "Solo developer",
+      "stack": ["Python", "discord.py"],
+      "highlights": [
+        "Auto role assignment and auto-moderation for spam and profanity",
+        "YouTube and Twitch stream announcement hooks",
+        "Birthday announcements, ticketing channels, and welcome messages",
+        "GitHub commit alerts for watched repositories"
+      ],
+      "notes": "MIT licensed. Earlier Discord bot before Elysium."
+    },
+    {
+      "title": "LoginSystem",
+      "summary": "College winter project: React front end, Flask API, SQLite auth with password hashing.",
+      "link": "https://github.com/CypherO2/LoginSystem",
+      "year": "2024",
+      "status": "Coursework",
+      "featured": false,
+      "role": "Solo developer",
+      "stack": ["React", "TypeScript", "Vite", "Bootstrap", "Axios", "Flask", "SQLite"],
+      "highlights": [
+        "Customer sign-up and login against SQLite",
+        "Password hashing on the Flask side",
+        "Axios JSON between Vite React UI and Flask",
+        "Separate React, Python, and database folders in the repo"
+      ]
+    },
+    {
+      "title": "GMC Wordle",
+      "summary": "GM Skills hackathon Wordle-style game. Team of three, 3rd place in web development.",
+      "link": "https://github.com/CypherO2/GMC-Bury2024-CNCS",
+      "year": "2024",
+      "status": "Archive",
+      "featured": false,
+      "role": "Team developer",
+      "stack": ["Next.js", "TypeScript", "Primer", "styled-components", "Flask", "pandas"],
+      "highlights": [
+        "Hidden word from a CSV list, limited guesses with letter feedback",
+        "Next.js front end with Primer React and styled-components",
+        "Flask + pandas API with CORS for get-word and guess checks",
+        "3rd place in web development at GM Skills Bury 2024"
+      ]
+    },
+    {
+      "title": "Asteroid Blasters",
+      "summary": "Small pygame shooter. Dodge falling hazards and keep the ship alive.",
+      "link": "https://github.com/CypherO2/Asteroid-Blasters",
+      "year": "2024",
+      "status": "Archive",
+      "featured": false,
+      "role": "Solo developer",
+      "stack": ["Python", "pygame"],
+      "highlights": [
+        "Start menu and 1600x900 windowed playfield",
+        "Player HP, movement, and falling star hazards",
+        "Custom art assets and window icon"
+      ],
+      "notes": "Window title in code is Asteroid Evaders. MIT licensed."
+    }
+  ]
+}

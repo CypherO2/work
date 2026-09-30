@@ -1,0 +1,250 @@
+{
+  "profile": {
+    "name": "Cassiopeia J P",
+    "headline": "Software Engineer @ Citizens Advice SORT",
+    "location": "Manchester, England, UK",
+    "bio": "I build digital tools with TypeScript, Next.js, Python, and FastAPI. Day to day I work with developers and non-developers at Citizens Advice SORT in Manchester. Outside work I make art and write."
+  },
+  "focus": [
+    "TypeScript",
+    "Next.js",
+    "Python",
+    "FastAPI",
+    "React",
+    "Cloud (AWS, GCP)",
+    "Web/App Design",
+    "Accessibility",
+    "Graphic Design",
+    "Copywriting"
+  ],
+  "experience": [
+    {
+      "company": "Citizens Advice SORT Group",
+      "role": "Software Engineer",
+      "mode": "Full-time",
+      "location": "Manchester, UK",
+      "start": "Aug 2025",
+      "end": "Present",
+      "summary": "Part of a team building and shipping digital solutions with TypeScript, Next.js, Python, and FastAPI, through AWS and GCP, with a focus on AI tools that support charity work.",
+      "achievements": [
+        {
+          "text": "Laid foundations for SCPs (Simulated Client Personas) in a new agentic training platform, grounded in voice-to-text transcription and evaluation."
+        },
+        {
+          "text": "Built a platform to support clients on their PIP journey. The tool is meant as a gateway to an appointment and is projected to cut appointment times by 60%."
+        },
+        {
+          "text": "Wrote design, development, and architecture docs for team projects, and pushed GitHub project boards as the way we track tasks and issues."
+        },
+        {
+          "text": "Attended shareholder meetings to talk with funders about the fund and the direction of the project their award supported."
+        },
+        {
+          "text": "Made the case for rebuilding the internal expenses app and led the new build in React and Node.js with a Python backend and Firebase."
+        },
+        {
+          "text": "Shipped the first accessibility features on two training platforms and pushed to roll them out across the product catalogue."
+        }
+      ],
+      "stack": [
+        "TypeScript",
+        "Next.js",
+        "Python",
+        "FastAPI",
+        "React",
+        "Node.js",
+        "Firebase",
+        "PostgreSQL",
+        "Docker",
+        "GitHub Actions",
+        "OCR",
+        "VertexAI",
+        "AWS",
+        "GCP",
+        "Accessibility"
+      ],
+      "links": []
+    },
+    {
+      "company": "The Training Brokers Ltd",
+      "role": "Fixed-Term CRM/Web Administrator",
+      "mode": "Fixed-term",
+      "location": "UK",
+      "start": "May 2024",
+      "end": "July 2024",
+      "summary": "Supported staff with CRM and site issues, set up an online tutor schedule, and handled marketing tasks and hardware upkeep.",
+      "achievements": [
+        {
+          "text": "Researched and reached out to potential clients, and set up and ran the online tutor schedule."
+        },
+        {
+          "text": "Kept the CRM and website updated and running."
+        },
+        {
+          "text": "Designed adverts and worked with the marketing manager on distribution."
+        }
+      ],
+      "stack": ["CRM", "Web admin", "Scheduling", "Marketing"],
+      "links": []
+    },
+    {
+      "company": "LKYPCG",
+      "role": "Copywriter & Graphic Designer",
+      "mode": "Volunteer",
+      "location": "UK",
+      "start": "Mar 2024",
+      "end": "July 2024",
+      "summary": "Volunteer work on a print magazine for the group's 20th anniversary: designed assets and edited copy for readability.",
+      "achievements": [
+        {
+          "text": "Designed print assets for the 20th anniversary magazine, including cover, layout, and content."
+        },
+        {
+          "text": "Drafted and edited copy so it read clearly and stayed accurate."
+        },
+        {
+          "text": "Worked with a volunteer group through to print, on time."
+        }
+      ],
+      "stack": ["Graphic design", "Copywriting", "Print layout"],
+      "links": []
+    },
+    {
+      "company": "McDonalds",
+      "role": "Team Member",
+      "mode": "Casual",
+      "location": "UK",
+      "start": "Nov 2022",
+      "end": "Dec 2022",
+      "summary": "Prepared and served food, including drive-thru, plus standard cleaning duties.",
+      "achievements": [
+        {
+          "text": "Prepared and served food, mainly back of house work such as fry cooking, plus cleaning."
+        },
+        {
+          "text": "Worked with the team to keep the store running smoothly."
+        }
+      ],
+      "stack": ["Customer service", "Food preparation", "Food service"],
+      "links": []
+    }
+  ],
+  "education": [
+    {
+      "place": "The Open University",
+      "program": "Software Engineering",
+      "studyType": "HTQ Diploma of Higher Education",
+      "mode": "Part-time",
+      "start": "April 2025",
+      "end": "Feb 2026",
+      "summary": "Software Development pathway while working full-time. Left when I was not learning enough and wanted to focus on my own projects and skills.",
+      "courses": ["Software development", "Software engineering"]
+    },
+    {
+      "place": "Salford City College",
+      "program": "Digital Production, Design and Development",
+      "studyType": "T-Level",
+      "mode": "Full-time",
+      "location": "Salford, UK",
+      "start": "Sept 2022",
+      "end": "July 2024",
+      "summary": "Two-year technical qualification with industry placement and a 70-hour client project: a full-stack website and documentation.",
+      "courses": [
+        "Digital production",
+        "Design",
+        "Web development",
+        "Database Management Systems",
+        "SQLite",
+        "React",
+        "Node.js",
+        "Python",
+        "Flask",
+        "HTML",
+        "CSS",
+        "TypeScript",
+        "C#",
+        "Git",
+        "GitHub"
+      ],
+      "achievements": [
+        {
+          "text": "Completed the T-Level with passing grades in all modules."
+        },
+        {
+          "text": "Finished a 70-hour client project: full-stack site and docs, with a passing grade."
+        },
+        {
+          "text": "Learned HTML, CSS, TypeScript, React, Node.js, Python, database systems, and SQLite."
+        },
+        {
+          "text": "Completed 360 hours of industry placement."
+        }
+      ],
+      "links": [
+        {
+          "label": "RZA project",
+          "href": "https://github.com/CypherO2/rza-project"
+        },
+        {
+          "label": "LoginSystem",
+          "href": "https://github.com/CypherO2/LoginSystem"
+        }
+      ]
+    },
+    {
+      "place": "The Albion Academy",
+      "program": "GCSEs",
+      "studyType": "GCSE",
+      "mode": "Full-time",
+      "location": "Manchester, UK",
+      "start": "Sept 2017",
+      "end": "July 2022",
+      "summary": "Core academic subjects from the required UK school curriculum.",
+      "courses": [
+        "Mathematics",
+        "English Literature",
+        "English Language",
+        "Combined Science: Trilogy"
+      ],
+      "grades": [
+        { "subject": "Mathematics", "grade": "7" },
+        { "subject": "English Literature", "grade": "6" },
+        { "subject": "English Language", "grade": "5" },
+        { "subject": "Combined Science: Trilogy", "grade": "7-7" }
+      ],
+      "links": []
+    },
+    {
+      "place": "The Albion Academy",
+      "program": "Art and Creative Media",
+      "studyType": "BTEC & GCSE",
+      "mode": "Full-time",
+      "location": "Salford, UK",
+      "start": "Sept 2017",
+      "end": "July 2022",
+      "summary": "Creative subjects taken alongside GCSEs.",
+      "courses": [
+        "Art, Craft and Design (3D Design)",
+        "Art, Craft and Design",
+        "Creative iMedia"
+      ],
+      "grades": [
+        { "subject": "Art, Craft and Design (3D Design)", "grade": "Pass" },
+        { "subject": "Art, Craft and Design", "grade": "4" },
+        { "subject": "Creative iMedia", "grade": "Distinction at Level 2" }
+      ],
+      "achievements": [
+        {
+          "text": "Finished Creative iMedia coursework in the first 6 months of the 2-year course, with a Distinction at Level 2."
+        },
+        {
+          "text": "Planned and built a physical 3D Design model after the teacher was injured early in the course and was absent for most of it."
+        },
+        {
+          "text": "Completed Art, Craft and Design coursework with a grade 4, focused on multi-media production and design."
+        }
+      ],
+      "links": []
+    }
+  ]
+}

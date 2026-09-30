@@ -1,46 +1,80 @@
-import {
-  MDBCard,
-  MDBCardTitle,
-  MDBCardText,
-  MDBContainer,
-} from "mdb-react-ui-kit";
-// import { SGATHACH_LINK } from "../constants/mylinks";
+"use client";
 
-export interface RecRepoProps {
-  repoTitle: string;
-  repoDesc: string;
-  repoLink: string;
-}
+import DetailModal from "@/components/DetailModal";
+import type { Project } from "@/lib/projects";
+import { cardInteractive } from "@/lib/ui";
 
 export default function ContentCard({
-  repoDesc,
-  repoLink,
-  repoTitle,
-}: RecRepoProps) {
+  title,
+  summary,
+  link,
+  demo,
+  year,
+  status,
+  role,
+  stack,
+  highlights,
+  notes,
+}: Project) {
+  const chips = [year, status, role]
+    .map((item) => item?.trim())
+    .filter(Boolean);
+  const stackPreview = (stack ?? [])
+    .map((item) => item.trim())
+    .filter(Boolean)
+    .slice(0, 3);
+  const links = [
+    { href: link, label: "GitHub" },
+    ...(demo?.trim() ? [{ href: demo.trim(), label: "Live site" }] : []),
+  ];
+
   return (
-    <MDBContainer className="text-light py-5 h-100">
-      <MDBCard
-        className="text-white"
-        style={{ backgroundColor: "rgba(10,10,10,0.7)", height: "20rem" }}
-      >
-        <MDBContainer className="px-5 my-auto">
-          <MDBCardTitle
-            className="fw-bold fs-3"
-            style={{ fontFamily: "monospace" }}
-          >
-            {repoTitle}
-          </MDBCardTitle>
-          <MDBCardText className="fs-6">{repoDesc}</MDBCardText>
-          <a
-            className="btn btn-outline-purple btn-lg m-1 fw-bold my-auto"
-            href={repoLink}
-            style={{ color: "rgba(5, 109, 130, 1)" }}
-            role="button"
-          >
-            Github Repository
-          </a>
-        </MDBContainer>
-      </MDBCard>
-    </MDBContainer>
+    <DetailModal
+      className={`${cardInteractive} flex h-full min-h-52 cursor-pointer flex-col gap-3`}
+      fields={{
+        title,
+        subtitle: role?.trim() || undefined,
+        summary,
+        year,
+        status,
+        achievements: (highlights ?? [])
+          .map((text) => text.trim())
+          .filter(Boolean)
+          .map((text) => ({ text })),
+        tags: stack,
+        tagsLabel: "Stack",
+        notes,
+        links,
+      }}
+    >
+      {chips.length > 0 ? (
+        <div className="flex flex-wrap gap-1.5">
+          {chips.map((chip) => (
+            <span
+              key={chip}
+              className="rounded-[0.35rem] border border-panel-border px-2 py-0.5 text-xs text-muted"
+            >
+              {chip}
+            </span>
+          ))}
+        </div>
+      ) : null}
+      <h2 className="m-0 truncate text-[1.35rem] font-bold text-ink">{title}</h2>
+      <p className="m-0 line-clamp-3 flex-1 text-[0.95rem] text-muted">
+        {summary}
+      </p>
+      {stackPreview.length > 0 ? (
+        <ul className="m-0 flex list-none flex-wrap gap-1.5 p-0">
+          {stackPreview.map((item) => (
+            <li
+              key={item}
+              className="rounded-[0.35rem] border border-panel-border px-2 py-0.5 text-xs text-muted"
+            >
+              {item}
+            </li>
+          ))}
+        </ul>
+      ) : null}
+    </DetailModal>
   );
 }

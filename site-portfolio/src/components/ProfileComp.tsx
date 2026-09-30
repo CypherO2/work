@@ -1,114 +1,103 @@
-import {
-  MDBCol,
-  MDBContainer,
-  MDBRow,
-  MDBCard,
-  MDBCardText,
-  MDBCardBody,
-  MDBCardImage,
-  MDBBreadcrumb,
-  MDBBreadcrumbItem,
-  MDBIcon,
-  MDBListGroup,
-  MDBListGroupItem,
-} from "mdb-react-ui-kit";
-import Avatar from "../assets/myavatar.jpg";
-import { SOCIAL_LINKS } from "../constants/mylinks.ts";
-import ExperienceCard from "./Cards/ExperienceCard.tsx";
-import EducationCard from "./Cards/EducationCard.tsx";
-
-function SocialsInfo() {
-  return (
-    <>
-      {SOCIAL_LINKS.map((social, index) => {
-        return (
-          <MDBListGroupItem
-            key={index}
-            style={{ backgroundColor: "rgba(10,10,10,0.7)" }}
-            className="text-light d-flex justify-content-between align-items-center p-3"
-          >
-            {social.socialIcon[1] == "fab" && (
-              <MDBIcon fab icon={social.socialIcon[0] + " fa-lg text-light"} />
-            )}
-            {social.socialIcon[1] == "fas" && (
-              <MDBIcon fas icon={social.socialIcon[0] + " fa-lg text-light"} />
-            )}
-            <MDBCardText>{social.socialText}</MDBCardText>
-          </MDBListGroupItem>
-        );
-      })}
-    </>
-  );
-}
+import Avatar from "@/assets/myavatar.jpg";
+import { SOCIAL_LINKS, socialHref, socialLabel } from "@/constants/mylinks";
+import { about } from "@/lib/about";
+import { socialIcon } from "@/lib/socialIcons";
+import BioPanel from "./BioPanel";
+import FocusTags from "./FocusTags";
+import Timeline from "./Cards/Timeline";
+import { panel } from "@/lib/ui";
 
 export default function ProfileComp() {
-  return (
-    <>
-      <MDBContainer className="py-3">
-        <MDBRow>
-          <MDBCol>
-            <MDBBreadcrumb
-              style={{
-                backgroundColor: "rgba(10,10,10,0.7)",
-                fontFamily: "monospace",
-              }}
-              className="rounded-3 p-3 mb-4"
-            >
-              <MDBBreadcrumbItem>
-                <a href="#/" className="text-light">
-                  Work
-                </a>
-              </MDBBreadcrumbItem>
-              <MDBBreadcrumbItem className="text-light" active>
-                About Me
-              </MDBBreadcrumbItem>
-            </MDBBreadcrumb>
-          </MDBCol>
-        </MDBRow>
+  const { profile, focus, experience, education } = about;
 
-        <MDBRow>
-          <MDBCol lg="4">
-            <MDBCard
-              style={{ backgroundColor: "rgba(10,10,10,0.7)" }}
-              className="mb-3"
-            >
-              <MDBCardBody className="text-center">
-                <MDBCardImage
-                  src={Avatar}
-                  alt="avatar"
-                  className="rounded-circle m-2"
-                  style={{ width: "150px" }}
-                  fluid
-                />
-                <h5 className="text-light mb-1 fw-bold">
-                  Junior Developer @ Citizens Advice SORT
-                </h5>
-                <p className="text-light mb-4">Manchester, England, UK</p>
-              </MDBCardBody>
-            </MDBCard>
-            <MDBRow className="mb-4">
-              <MDBCard
-                className="mb-3 mb-lg-0"
-                style={{ backgroundColor: "rgba(10,10,10,0)" }}
-              >
-                <MDBCardBody className="p-0">
-                  <MDBListGroup flush className="rounded-3">
-                    <SocialsInfo />
-                  </MDBListGroup>
-                </MDBCardBody>
-              </MDBCard>
-            </MDBRow>
-          </MDBCol>
-          <MDBCol>
-            <MDBRow>
-              <ExperienceCard />
-            </MDBRow>
-          </MDBCol>
-        </MDBRow>
-        <MDBRow>
-          <EducationCard />
-        </MDBRow>
-      </MDBContainer>
-    </>
+  return (
+    <div className="grid gap-4 lg:grid-cols-[minmax(15rem,17.5rem)_minmax(0,1fr)] lg:items-start">
+      <aside className="grid gap-4 lg:sticky lg:top-4">
+        <section
+          className={`${panel} grid justify-items-center gap-2 px-4 py-7 text-center`}
+        >
+          <img
+            src={Avatar.src}
+            alt={profile.name}
+            className="h-[9.5rem] w-[9.5rem] rounded-full border-2 border-panel-border object-cover"
+          />
+          <h1 className="mt-1.5 text-[1.05rem] font-bold">{profile.headline}</h1>
+          <p className="m-0 text-muted">{profile.location}</p>
+        </section>
+
+        <FocusTags tags={focus} />
+
+        <ul className="m-0 grid list-none gap-2 p-0">
+          {SOCIAL_LINKS.map((social) => {
+            const Icon = socialIcon(social.socialType);
+            return (
+              <li key={social.socialType}>
+                <a
+                  href={socialHref(social.socialLink)}
+                  target={
+                    social.socialLink.startsWith("mailto:")
+                      ? undefined
+                      : "_blank"
+                  }
+                  rel={
+                    social.socialLink.startsWith("mailto:")
+                      ? undefined
+                      : "noopener noreferrer"
+                  }
+                  title={social.socialText}
+                  className="flex items-center justify-between gap-4 rounded-[0.35rem] border border-panel-border bg-panel px-4 py-3.5 text-ink hover:border-accent hover:text-accent"
+                >
+                  <Icon className="h-4 w-4 shrink-0" aria-hidden={true} />
+                  <span>{socialLabel(social.socialText)}</span>
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+      </aside>
+
+      <div className="grid gap-4">
+        <BioPanel text={profile.bio} />
+
+        <Timeline
+          title="Experience"
+          entries={experience.map((job) => ({
+            dateStart: job.start,
+            dateEnd: job.end,
+            jobRole: job.role,
+            workPlace: job.company,
+            roleDesc: job.summary,
+            mode: job.mode,
+            location: job.location,
+            achievements: job.achievements,
+            tags: job.stack,
+            tagsLabel: "Stack",
+            url: job.url,
+            links: job.links,
+          }))}
+        />
+
+        <Timeline
+          title="Education"
+          entries={education.map((item) => ({
+            dateStart: item.start,
+            dateEnd: item.end,
+            jobRole: item.program,
+            workPlace: item.place,
+            roleDesc: item.summary,
+            mode: item.mode,
+            location: item.location,
+            studyType: item.studyType,
+            score: item.score,
+            achievements: item.achievements,
+            grades: item.grades,
+            tags: item.courses,
+            tagsLabel: "Courses",
+            url: item.url,
+            links: item.links,
+          }))}
+        />
+      </div>
+    </div>
   );
 }

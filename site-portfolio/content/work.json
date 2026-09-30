@@ -1,0 +1,32 @@
+{
+  "intro": "Selected product work from my current role. Repos stay private where the org requires it.",
+  "cases": [
+    {
+      "title": "PIP journey gateway",
+      "org": "Citizens Advice SORT",
+      "role": "Software Engineer",
+      "period": "2025",
+      "summary": "A client-facing tool that gets people into a PIP appointment faster, instead of bouncing them through longer intake flows.",
+      "outcome": "Projected to cut appointment time by about 60%.",
+      "stack": ["TypeScript", "Next.js", "Python", "FastAPI"]
+    },
+    {
+      "title": "Simulated Client Personas",
+      "org": "Citizens Advice SORT",
+      "role": "Software Engineer",
+      "period": "2025",
+      "summary": "Early foundations for an agentic training platform: voice-to-text transcription and evaluation so advisers can practice with simulated clients.",
+      "outcome": "Shipped the first SCP building blocks the team is iterating on.",
+      "stack": ["TypeScript", "Python", "VertexAI", "OCR"]
+    },
+    {
+      "title": "Expenses app rebuild",
+      "org": "Citizens Advice SORT",
+      "role": "Software Engineer",
+      "period": "2025",
+      "summary": "Led the case for replacing the internal expenses app, then built the new stack with the team.",
+      "outcome": "React and Node front end, Python and Firebase backend, in active use.",
+      "stack": ["React", "Node.js", "Python", "Firebase"]
+    }
+  ]
+}
