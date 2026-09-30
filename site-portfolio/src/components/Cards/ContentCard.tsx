@@ -1,20 +1,8 @@
 "use client";
 
 import DetailModal from "../DetailModal";
+import type { Project } from "@/lib/projects";
 import { cardInteractive } from "@/lib/ui";
-
-export type ContentCardProps = {
-  title: string;
-  summary: string;
-  link: string;
-  demo?: string;
-  year?: string;
-  status?: string;
-  role?: string;
-  stack?: string[];
-  highlights?: string[];
-  notes?: string;
-};
 
 export default function ContentCard({
   title,
@@ -27,7 +15,7 @@ export default function ContentCard({
   stack,
   highlights,
   notes,
-}: ContentCardProps) {
+}: Project) {
   const chips = [year, status, role]
     .map((item) => item?.trim())
     .filter(Boolean);

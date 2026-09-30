@@ -1,15 +1,13 @@
 import Link from "next/link";
-import MainBanner from "../components/Banner/BannerComp";
-import ContentCard from "../components/Cards/ContentCard";
+import MainBanner from "@/components/Banner/BannerComp";
+import ContentCard from "@/components/Cards/ContentCard";
 import { about } from "@/lib/about";
 import { now } from "@/lib/now";
-import { featuredProjects, projectToCardProps } from "@/lib/projects";
-import { CODE_PATH, WORK_PATH } from "../constants/paths";
+import { featuredProjects } from "@/lib/projects";
+import { CODE_PATH, WORK_PATH } from "@/constants/paths";
 import { cardGrid, page } from "@/lib/ui";
 
 export default function Homepage() {
-  const featured = featuredProjects.slice(0, 3);
-
   return (
     <>
       <MainBanner
@@ -52,11 +50,8 @@ export default function Homepage() {
             </Link>
           </div>
           <div className={cardGrid}>
-            {featured.map((project) => (
-              <ContentCard
-                key={project.link}
-                {...projectToCardProps(project)}
-              />
+            {featuredProjects.map((project) => (
+              <ContentCard key={project.link} {...project} />
             ))}
           </div>
         </section>

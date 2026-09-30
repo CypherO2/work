@@ -6,7 +6,7 @@ const SOCIAL_LINKS = [
   },
   {
     socialType: "github",
-    socialText: "CyherO2",
+    socialText: "CypherO2",
     socialLink: "https://github.com/CypherO2/",
   },
   {
@@ -30,8 +30,6 @@ const SOCIAL_LINKS = [
     socialLink: "https://bsky.app/profile/cassi06.bsky.social",
   },
 ] as const;
-
-export type SocialLink = (typeof SOCIAL_LINKS)[number];
 
 export function socialHref(link: string): string {
   if (link.startsWith("http") || link.startsWith("mailto:")) return link;

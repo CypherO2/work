@@ -2,9 +2,6 @@
 export const page =
   "relative z-[1] mx-auto w-[min(100%-2*clamp(1rem,3vw,1.75rem),70rem)] py-6 pb-12";
 
-export const pageNarrow =
-  "relative z-[1] mx-auto w-[min(100%-2*clamp(1rem,3vw,1.75rem),46rem)] py-6 pb-12";
-
 export const panel =
   "rounded-[0.35rem] border border-panel-border bg-panel p-5";
 
@@ -16,9 +13,6 @@ export const btnAccent =
 
 export const masonry =
   "columns-1 gap-4 sm:columns-2 lg:columns-3 [&>*]:mb-4 [&>*]:w-full [&>*]:break-inside-avoid";
-
-export const masonry2 =
-  "columns-1 gap-4 sm:columns-2 [&>*]:mb-4 [&>*]:w-full [&>*]:break-inside-avoid";
 
 /** Equal-height project cards. Prefer this over masonry for text cards. */
 export const cardGrid =
@@ -32,8 +26,6 @@ export const dialogShell =
 
 export const pageTitle =
   "mb-5 text-center text-[clamp(1.5rem,3vw,2rem)] font-bold tracking-wide text-ink";
-
-export const thumbnail = "absolute top-0 -z-[5000] h-0 w-0";
 
 export function cx(...parts: Array<string | false | null | undefined>) {
   return parts.filter(Boolean).join(" ");
