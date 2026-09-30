@@ -64,10 +64,13 @@ export default function ProfileComp() {
             jobRole: job.role,
             workPlace: job.company,
             roleDesc: job.summary,
-            highlights: job.highlights,
-            stack: job.stack,
-            link: job.link,
-            notes: job.notes,
+            mode: job.mode,
+            location: job.location,
+            achievements: job.achievements,
+            tags: job.stack,
+            tagsLabel: "Stack",
+            url: job.url,
+            links: job.links,
           }))}
         />
 
@@ -79,10 +82,15 @@ export default function ProfileComp() {
             jobRole: item.program,
             workPlace: item.place,
             roleDesc: item.summary,
-            highlights: item.highlights,
-            stack: item.stack,
-            link: item.link,
-            notes: item.notes,
+            mode: item.mode,
+            location: item.location,
+            studyType: item.studyType,
+            score: item.score,
+            achievements: item.achievements,
+            tags: item.courses,
+            tagsLabel: "Courses",
+            url: item.url,
+            links: item.links,
           }))}
         />
       </div>

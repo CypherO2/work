@@ -1,10 +1,26 @@
 import aboutJson from "../../content/about.json";
 
-export type DetailSlots = {
-  highlights?: string[];
-  stack?: string[];
+export type Achievement = {
+  text: string;
   link?: string;
-  notes?: string;
+};
+
+export type ContentLink = {
+  label: string;
+  href: string;
+};
+
+/** Shared optional fields. Shape follows JSON Resume work/education closely. */
+export type DetailSlots = {
+  mode?: string;
+  location?: string;
+  achievements?: Achievement[];
+  stack?: string[];
+  courses?: string[];
+  studyType?: string;
+  score?: string;
+  url?: string;
+  links?: ContentLink[];
 };
 
 export type AboutContent = {

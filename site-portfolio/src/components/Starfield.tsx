@@ -156,8 +156,8 @@ function fieldStars(count: number): Star[] {
     const x = (i * 97 + ((i * i * 13) % 89) * 3) % SKY_W;
     const y = (i * 53 + ((i * 17) % 71) * 4 + 11) % SKY_H;
     const r = 0.14 + ((i * 11) % 9) * 0.04;
-    const twinkle =
-      i % 13 === 0 ? "fast" : i % 19 === 0 ? "slow" : undefined;
+    const twinkle: Star["twinkle"] =
+      i % 3 === 0 ? "fast" : i % 5 === 0 ? "slow" : "fast";
     stars.push({ x, y, r, twinkle });
   }
   return stars;
@@ -206,38 +206,47 @@ function StarMark({
 }
 
 function ConstellationGroup({ name, stars, lines }: Constellation) {
+  const showLines = name === "Cassiopeia";
+
   return (
     <g data-name={name}>
-      {lines.map(([a, b]) => {
-        const from = stars[a];
-        const to = stars[b];
-        if (!from || !to) return null;
-        return (
-          <g key={`${name}-${a}-${b}`}>
-            <line
-              x1={from.x}
-              y1={from.y}
-              x2={to.x}
-              y2={to.y}
-              className="constellation-line-glow"
-              strokeWidth="0.7"
-              strokeLinecap="round"
-              filter="url(#line-blur)"
-            />
-            <line
-              x1={from.x}
-              y1={from.y}
-              x2={to.x}
-              y2={to.y}
-              className="constellation-line"
-              strokeWidth="0.22"
-              strokeLinecap="round"
-            />
-          </g>
-        );
-      })}
-      {stars.map((star) => (
-        <StarMark key={`${name}-${star.x}-${star.y}`} {...star} bright />
+      {showLines
+        ? lines.map(([a, b]) => {
+            const from = stars[a];
+            const to = stars[b];
+            if (!from || !to) return null;
+            return (
+              <g key={`${name}-${a}-${b}`} className="cassiopeia-lines">
+                <line
+                  x1={from.x}
+                  y1={from.y}
+                  x2={to.x}
+                  y2={to.y}
+                  className="constellation-line-glow"
+                  strokeWidth="0.7"
+                  strokeLinecap="round"
+                  filter="url(#line-blur)"
+                />
+                <line
+                  x1={from.x}
+                  y1={from.y}
+                  x2={to.x}
+                  y2={to.y}
+                  className="constellation-line"
+                  strokeWidth="0.22"
+                  strokeLinecap="round"
+                />
+              </g>
+            );
+          })
+        : null}
+      {stars.map((star, index) => (
+        <StarMark
+          key={`${name}-${star.x}-${star.y}`}
+          {...star}
+          bright
+          twinkle={star.twinkle ?? (index % 2 === 0 ? "fast" : "slow")}
+        />
       ))}
     </g>
   );

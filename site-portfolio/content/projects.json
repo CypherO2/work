@@ -4,13 +4,15 @@
       "title": "Sgàthach Discord Bot",
       "summary": "Python Discord bot for moderation, engagement, and community management.",
       "link": "https://github.com/CypherO2/Sg-thach-Discord-Bot",
+      "demo": "",
+      "year": "2024",
+      "status": "Active",
       "featured": true,
       "role": "Solo developer",
-      "stack": ["Python", "Discord.py", ""],
+      "stack": ["Python", "discord.py"],
       "highlights": [
         "Moderation and engagement commands",
-        "",
-        ""
+        "Community management tools"
       ],
       "notes": ""
     },
@@ -18,13 +20,15 @@
       "title": "CypherO2/work",
       "summary": "This site, hosted from GitHub Pages.",
       "link": "https://github.com/CypherO2/work",
+      "demo": "https://cyphero2.github.io/work/",
+      "year": "2024",
+      "status": "Active",
       "featured": true,
       "role": "Solo developer",
-      "stack": ["Next.js", "TypeScript", "Tailwind", ""],
+      "stack": ["Next.js", "TypeScript", "Tailwind"],
       "highlights": [
         "Static export for GitHub Pages",
-        "",
-        ""
+        "Portfolio, about, and project pages"
       ],
       "notes": ""
     },
@@ -32,50 +36,74 @@
       "title": "CypherO2/RZA-Project",
       "summary": "70-hour project: planned, designed, built, documented, and evaluated a full-stack web app.",
       "link": "https://github.com/CypherO2/rza-project",
+      "demo": "",
+      "year": "2024",
+      "status": "Coursework",
       "featured": true,
-      "role": "",
-      "stack": ["", "", ""],
-      "highlights": ["", "", ""],
+      "role": "Solo developer",
+      "stack": ["Full-stack", "Web app"],
+      "highlights": [
+        "End-to-end plan, build, docs, and evaluation",
+        "70-hour college project"
+      ],
       "notes": ""
     },
     {
       "title": "CypherO2/Pokedex-python",
       "summary": "Small Python projects and experiments.",
       "link": "https://github.com/CypherO2/Pokedex-python",
+      "demo": "",
+      "year": "2023",
+      "status": "Archive",
       "featured": false,
-      "role": "",
-      "stack": ["Python", ""],
-      "highlights": ["", "", ""],
+      "role": "Solo developer",
+      "stack": ["Python"],
+      "highlights": [],
       "notes": ""
     },
     {
       "title": "CypherO2/LoginSystem",
       "summary": "College winter project: React front end, Flask back end, SQLite auth with password hashing.",
       "link": "https://github.com/CypherO2/LoginSystem",
+      "demo": "",
+      "year": "2023",
+      "status": "Coursework",
       "featured": false,
-      "role": "",
-      "stack": ["React", "Flask", "SQLite", ""],
-      "highlights": ["", "", ""],
+      "role": "Solo developer",
+      "stack": ["React", "Flask", "SQLite"],
+      "highlights": [
+        "Auth with password hashing",
+        "React front end and Flask API"
+      ],
       "notes": ""
     },
     {
       "title": "CypherO2/GMC-Bury2024-CNCS",
       "summary": "GMSkills contest site. Team of three, 3rd place in web development.",
       "link": "https://github.com/CypherO2/gmc-bury2024-cncs",
+      "demo": "",
+      "year": "2024",
+      "status": "Archive",
       "featured": false,
-      "role": "",
-      "stack": ["", "", ""],
-      "highlights": ["", "", ""],
+      "role": "Team developer",
+      "stack": ["Web development"],
+      "highlights": [
+        "Team of three",
+        "3rd place in web development contest"
+      ],
       "notes": ""
     },
     {
       "title": "CypherO2/Elysium_DiscordBot",
       "summary": "Multi-purpose Discord bot with a wide command set.",
       "link": "https://github.com/CypherO2/Elysium_DiscordBot",
+      "demo": "",
+      "year": "2023",
+      "status": "Archive",
       "featured": false,
-      "role": "",
-      "stack": ["Python", ""],
-      "highlights": ["", "", ""],
+      "role": "Solo developer",
+      "stack": ["Python"],
+      "highlights": [],
       "notes": ""
     }
   ]

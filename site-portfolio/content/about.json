@@ -1,7 +1,7 @@
 {
   "profile": {
     "name": "CJ Presley",
-    "headline": "Junior Developer @ Citizens Advice SORT",
+    "headline": "Software Engineer @ Citizens Advice SORT",
     "location": "Manchester, England, UK",
     "bio": "I build digital tools with TypeScript, Next.js, Python, and FastAPI. Day to day I work with developers and non-developers at Citizens Advice SORT. Outside work I study software engineering, make art, and write."
   },
@@ -15,106 +15,212 @@
   ],
   "experience": [
     {
-      "company": "Citizens Advice SORT",
-      "role": "Junior Developer",
+      "company": "Citizens Advice SORT Group",
+      "role": "Software Engineer",
+      "mode": "Full-time",
+      "location": "Manchester, UK",
       "start": "Aug 2025",
       "end": "Present",
-      "summary": "Part of a team building and shipping digital solutions with TypeScript, Next.js, Python, and FastAPI.",
-      "highlights": [
-        "Build and ship digital tools with the team",
-        "",
-        ""
+      "summary": "Part of a team building and shipping digital solutions with TypeScript, Next.js, Python, and FastAPI, through AWS and GCP with a focus on AI solutions to supporting charity work.",
+      "achievements": [
+        {
+          "text": "Helped lay the foundations SCPs (Simulated Client Personas) in a new agentic training platform, having a basis in voice to text transcription and evaluation."
+        },
+        {
+          "text": "Helped to build a platform with the pupose of supporting clients in their PIP journey, tool aimed to be a gateway to an appointment and is projected to reduce appointment times by 60%."
+        },
+        {
+          "text": "Handled design, development and architecture documentation for the various projects that the team worked on, laying the groundwork for further development as well as championing the usage of the GitHub project boards as a means to manage tasks and issues."
+        },
+        {
+          "text": "Attended shareholder meetings to converse and network with funders regarding the future of the fund and the direction of the project using the funding they awarded us."
+        },
+        {
+          "text": "Championed the necessity of a rebuild to the internal expenses app and led the development of the new app using React and Node.js with a python backend and Firebase database."
+        },
+        {
+          "text": "Created the initial accessibility feature for two of the training platforms whilst pushing to be allowed to implement such features across the entire catalogue of products we build/work on."
+        }
       ],
-      "stack": ["TypeScript", "Next.js", "Python", "FastAPI", ""],
-      "link": "",
-      "notes": ""
+      "stack": [
+        "TypeScript",
+        "Next.js",
+        "Python",
+        "FastAPI",
+        "React",
+        "Node.js",
+        "Firebase",
+        "PostgreSQL",
+        "Docker",
+        "GitHub Actions",
+        "GitHub Project Boards",
+        "GitHub Issues",
+        "GitHub Pull Requests",
+        "Stacked PRs",
+        "OCR",
+        "VertexAI",
+        "AWS",
+        "GCP",
+        "Web Design",
+        "Web Development",
+        "Accessibility"
+    ],
+      "url": "",
+      "links": []
     },
     {
       "company": "The Training Brokers Ltd",
       "role": "Fixed-Term CRM/Web Administrator",
+      "mode": "Fixed-term",
+      "location": "UK",
       "start": "May 2024",
       "end": "July 2024",
       "summary": "Supported staff with CRM and site issues, set up an online tutor schedule, and handled marketing tasks and hardware upkeep.",
-      "highlights": [
-        "Set up an online tutor schedule",
-        "",
-        ""
+      "achievements": [
+        { "text": "Set up an online tutor schedule" },
+        { "text": "Helped staff with CRM and site issues" },
+        { "text": "Handled marketing tasks and hardware upkeep" }
       ],
-      "stack": ["CRM", "Web admin", ""],
-      "link": "",
-      "notes": ""
+      "stack": ["CRM", "Web admin", "Scheduling"],
+      "url": "",
+      "links": []
     },
     {
       "company": "LKYPCG",
       "role": "Copywriter & Graphic Designer",
+      "mode": "Volunteer",
+      "location": "UK",
       "start": "Mar 2024",
       "end": "July 2024",
       "summary": "Volunteer work on a print magazine for the group's 20th anniversary: designed assets and edited copy for readability.",
-      "highlights": [
-        "Designed print assets for the anniversary magazine",
-        "",
-        ""
+      "achievements": [
+        { "text": "Designed print assets for the 20th anniversary magazine" },
+        { "text": "Edited copy for clearer reading" },
+        { "text": "Worked with a volunteer group through to print" }
       ],
-      "stack": ["Graphic design", "Copywriting", ""],
-      "link": "",
-      "notes": ""
+      "stack": ["Graphic design", "Copywriting", "Print layout"],
+      "url": "",
+      "links": []
     },
     {
       "company": "McDonalds",
       "role": "Team Member",
+      "mode": "Casual",
+      "location": "UK",
       "start": "Nov 2022",
       "end": "Dec 2022",
       "summary": "Prepared and served food, including drive-thru delivery, plus standard cleaning duties.",
-      "highlights": ["", "", ""],
-      "stack": [""],
-      "link": "",
-      "notes": ""
+      "achievements": [
+        { "text": "Food prep and packaging" },
+        { "text": "Drive-thru service" },
+        { "text": "Shared cleaning duties" }
+      ],
+      "stack": ["Customer service", "Teamwork"],
+      "url": "",
+      "links": []
     }
   ],
   "education": [
     {
       "place": "The Open University",
       "program": "Software Engineering",
+      "studyType": "HTQ Diploma of Higher Education",
+      "mode": "Part-time",
+      "location": "Distance learning, UK",
       "start": "April 2025",
       "end": "Present",
-      "summary": "HTQ Diploma of Higher Education in Software Development.",
-      "highlights": ["", "", ""],
-      "stack": ["Software development", ""],
-      "link": "",
-      "notes": ""
+      "summary": "Software Development pathway while working full-time.",
+      "score": "",
+      "courses": ["Software development", "Software engineering"],
+      "achievements": [
+        {
+          "text": "HTQ Diploma of Higher Education in Software Development",
+          "link": "https://www.open.ac.uk/"
+        },
+        { "text": "Studying alongside full-time work" }
+      ],
+      "url": "https://www.open.ac.uk/",
+      "links": [
+        {
+          "label": "Open University",
+          "href": "https://www.open.ac.uk/"
+        }
+      ]
     },
     {
       "place": "Salford City College",
-      "program": "T-Level",
+      "program": "Digital Production, Design and Development",
+      "studyType": "T-Level",
+      "mode": "Full-time",
+      "location": "Salford, UK",
       "start": "Sept 2022",
       "end": "July 2024",
-      "summary": "T-Level in Digital Production, Design and Development.",
-      "highlights": ["", "", ""],
-      "stack": ["Digital production", "Design", "Development", ""],
-      "link": "",
-      "notes": ""
+      "summary": "Two-year technical qualification with industry placement and project work.",
+      "score": "",
+      "courses": ["Digital production", "Design", "Web development"],
+      "achievements": [
+        {
+          "text": "Completed T-Level in Digital Production, Design and Development"
+        },
+        {
+          "text": "RZA full-stack project from plan through evaluation",
+          "link": "https://github.com/CypherO2/rza-project"
+        },
+        {
+          "text": "LoginSystem winter project (React, Flask, SQLite)",
+          "link": "https://github.com/CypherO2/LoginSystem"
+        }
+      ],
+      "url": "",
+      "links": [
+        {
+          "label": "RZA project",
+          "href": "https://github.com/CypherO2/rza-project"
+        }
+      ]
     },
     {
       "place": "The Albion Academy",
       "program": "GCSEs",
+      "studyType": "GCSE",
+      "mode": "Full-time",
+      "location": "Manchester, UK",
       "start": "Sept 2017",
       "end": "July 2022",
-      "summary": "Mathematics, English Literature, English Language, Combined Science: Trilogy.",
-      "highlights": ["", "", ""],
-      "stack": [""],
-      "link": "",
-      "notes": ""
+      "summary": "Core academic subjects.",
+      "score": "",
+      "courses": [
+        "Mathematics",
+        "English Literature",
+        "English Language",
+        "Combined Science: Trilogy"
+      ],
+      "achievements": [],
+      "url": "",
+      "links": []
     },
     {
       "place": "The Albion Academy",
-      "program": "BTECs",
+      "program": "Art and Creative Media",
+      "studyType": "BTEC",
+      "mode": "Full-time",
+      "location": "Manchester, UK",
       "start": "Sept 2017",
       "end": "July 2022",
-      "summary": "Art, Craft and Design (3D Design), Art, Craft and Design, Creative iMedia.",
-      "highlights": ["", "", ""],
-      "stack": ["Art", "3D design", "Creative iMedia", ""],
-      "link": "",
-      "notes": ""
+      "summary": "Creative subjects alongside GCSEs.",
+      "score": "",
+      "courses": [
+        "Art, Craft and Design (3D Design)",
+        "Art, Craft and Design",
+        "Creative iMedia"
+      ],
+      "achievements": [
+        {
+          "text": "Creative iMedia and 3D design coursework"
+        }
+      ],
+      "url": "",
+      "links": []
     }
   ]
 }

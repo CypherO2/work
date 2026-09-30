@@ -4,6 +4,9 @@ export type Project = {
   title: string;
   summary: string;
   link: string;
+  demo?: string;
+  year?: string;
+  status?: string;
   featured?: boolean;
   role?: string;
   stack?: string[];
@@ -24,6 +27,9 @@ export function projectToCardProps(project: Project) {
     title: project.title,
     summary: project.summary,
     link: project.link,
+    demo: project.demo,
+    year: project.year,
+    status: project.status,
     role: project.role,
     stack: project.stack,
     highlights: project.highlights,

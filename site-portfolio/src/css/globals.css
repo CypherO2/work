@@ -18,6 +18,8 @@
     background-image: none;
     font-family: var(--font-sans);
     line-height: 1.55;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(61, 184, 197, 0.45) rgba(8, 12, 18, 0.85);
   }
 
   a {
@@ -34,6 +36,37 @@
 
   summary::-webkit-details-marker {
     display: none;
+  }
+
+  *::-webkit-scrollbar {
+    width: 0.55rem;
+    height: 0.55rem;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: rgba(8, 12, 18, 0.85);
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: rgba(61, 184, 197, 0.4);
+    border: 2px solid transparent;
+    border-radius: 999px;
+    background-clip: padding-box;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background: rgba(61, 184, 197, 0.7);
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+
+  *::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(61, 184, 197, 0.45) rgba(8, 12, 18, 0.85);
   }
 }
 
@@ -147,51 +180,69 @@ body::before {
 .constellation-line-glow {
   stroke: color-mix(in srgb, var(--star-line) 70%, transparent);
   fill: none;
-  opacity: 0.55;
+}
+
+.cassiopeia-lines {
+  animation: cassiopeia-fade 14s ease-in-out infinite;
 }
 
 .star-twinkle {
-  animation: twinkle 4.5s ease-in-out infinite;
+  animation: twinkle 3.8s ease-in-out infinite;
 }
 
 .star-twinkle-slow {
-  animation: twinkle 7s ease-in-out infinite;
-  animation-delay: 1.2s;
+  animation: twinkle 6.5s ease-in-out infinite;
+  animation-delay: 1.4s;
 }
 
 @keyframes twinkle {
   0%,
   100% {
-    opacity: 0.45;
+    opacity: 0.35;
   }
   50% {
     opacity: 1;
   }
 }
 
+@keyframes cassiopeia-fade {
+  0%,
+  12% {
+    opacity: 0;
+  }
+  28%,
+  48% {
+    opacity: 1;
+  }
+  68%,
+  100% {
+    opacity: 0;
+  }
+}
+
 @keyframes gradient-fade {
   0%,
   100% {
-    --glow-a: rgba(9, 70, 139, 0.22);
-    --glow-b: rgba(9, 50, 100, 0.12);
-    --sky-glow-a: rgba(35, 70, 120, 0.4);
-    --sky-glow-mid: rgba(12, 28, 55, 0.18);
-    --sky-glow-b: rgba(20, 55, 90, 0.28);
-    --star-halo: rgba(120, 210, 230, 0.5);
-    --star-mid: rgba(180, 235, 245, 0.32);
-    --star-core: #f2fbff;
-    --star-line: rgba(61, 184, 197, 0.35);
+    --glow-a: rgba(100, 45, 150, 0.28);
+    --glow-b: rgba(120, 55, 165, 0.18);
+    --sky-glow-a: rgba(90, 40, 140, 0.4);
+    --sky-glow-mid: rgba(40, 20, 70, 0.2);
+    --sky-glow-b: rgba(70, 35, 120, 0.28);
+    --star-halo: rgba(180, 140, 230, 0.5);
+    --star-mid: rgba(210, 180, 245, 0.32);
+    --star-core: #f4ecff;
+    --star-line: rgba(170, 120, 220, 0.4);
   }
   50% {
-    --glow-a: rgba(20, 90, 130, 0.26);
-    --glow-b: rgba(40, 70, 120, 0.14);
-    --sky-glow-a: rgba(45, 95, 145, 0.42);
-    --sky-glow-mid: rgba(18, 40, 70, 0.2);
-    --sky-glow-b: rgba(30, 75, 115, 0.3);
-    --star-halo: rgba(150, 200, 240, 0.55);
-    --star-mid: rgba(200, 225, 250, 0.36);
-    --star-core: #eaf4ff;
-    --star-line: rgba(90, 170, 210, 0.4);
+    --glow-a: rgba(9, 70, 139, 0.28);
+    --glow-b: rgba(9, 50, 100, 0.16);
+    --sky-glow-a: rgba(35, 70, 120, 0.42);
+    --sky-glow-mid: rgba(12, 28, 55, 0.2);
+    --sky-glow-b: rgba(20, 55, 90, 0.3);
+    --star-halo: rgba(120, 210, 230, 0.55);
+    --star-mid: rgba(180, 235, 245, 0.36);
+    --star-core: #f2fbff;
+    --star-line: rgba(61, 184, 197, 0.42);
   }
 }
 
@@ -199,13 +250,18 @@ body::before {
   body::before,
   .starfield-svg,
   .star-twinkle,
-  .star-twinkle-slow {
+  .star-twinkle-slow,
+  .cassiopeia-lines {
     animation: none;
   }
 
   .star-twinkle,
   .star-twinkle-slow {
     opacity: 0.85;
+  }
+
+  .cassiopeia-lines {
+    opacity: 0.7;
   }
 }
 
