@@ -4,5 +4,7 @@ export const basePath =
 
 export function withBase(path: string): string {
   if (!path.startsWith("/")) return path;
-  return `${basePath}${path}`;
+  const hashAt = path.indexOf("#");
+  if (hashAt === -1) return `${basePath}${path}`;
+  return `${basePath}${path.slice(0, hashAt)}${path.slice(hashAt)}`;
 }

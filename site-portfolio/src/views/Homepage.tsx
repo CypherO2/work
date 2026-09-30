@@ -2,9 +2,10 @@ import { withBase } from "@/lib/basePath";
 import MainBanner from "../components/Banner/BannerComp";
 import ContentCard from "../components/Cards/ContentCard";
 import { about } from "@/lib/about";
+import { now } from "@/lib/now";
 import { featuredProjects, projectToCardProps } from "@/lib/projects";
-import { ABOUT_PATH, CODE_PATH } from "../constants/paths";
-import { btn, cardGrid, page, panel } from "@/lib/ui";
+import { CODE_PATH, WORK_PATH } from "../constants/paths";
+import { cardGrid, page } from "@/lib/ui";
 
 export default function Homepage() {
   const featured = featuredProjects.slice(0, 3);
@@ -13,27 +14,36 @@ export default function Homepage() {
     <>
       <MainBanner
         titleText="CJ Presley"
-        subtitleText="Developer, graphic designer, and copywriter"
-        firstButtonText="About"
-        firstRedirect={withBase(ABOUT_PATH)}
+        subtitleText={about.profile.headline}
+        firstButtonText="Work"
+        firstRedirect={withBase(WORK_PATH)}
         secondButtonText="Projects"
         secondRedirect={withBase(CODE_PATH)}
       />
 
-      <div className={`${page} grid gap-8`}>
-        <section className={panel}>
-          <h2 className="mb-2 text-[1.25rem] font-bold">Hello</h2>
-          <p className="m-0 mb-4 max-w-[42rem] text-[0.95rem] text-muted">
-            {about.profile.bio}
-          </p>
-          <a className={btn} href={withBase(ABOUT_PATH)}>
-            Full about page
-          </a>
+      <div className={`${page} grid gap-10`}>
+        <section id="now" className="scroll-mt-6">
+          <div className="mb-4 flex flex-wrap items-baseline justify-between gap-2">
+            <h2 className="m-0 text-[1.35rem] font-bold">{now.headline}</h2>
+            <p className="m-0 text-sm text-muted">Updated {now.updated}</p>
+          </div>
+          <ul className="m-0 grid list-none gap-5 border-t border-panel-border p-0 pt-5">
+            {now.items.map((item) => (
+              <li key={item.title}>
+                <h3 className="m-0 text-[1.05rem] font-bold text-ink">
+                  {item.title}
+                </h3>
+                <p className="m-0 mt-1 max-w-[42rem] text-[0.95rem] text-muted">
+                  {item.detail}
+                </p>
+              </li>
+            ))}
+          </ul>
         </section>
 
         <section>
           <div className="mb-4 flex flex-wrap items-end justify-between gap-3">
-            <h2 className="m-0 text-[1.35rem] font-bold">Selected work</h2>
+            <h2 className="m-0 text-[1.35rem] font-bold">Selected projects</h2>
             <a
               className="text-sm font-bold text-accent hover:text-[#7ad4dc]"
               href={withBase(CODE_PATH)}

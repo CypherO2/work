@@ -2,9 +2,9 @@
 
 import { useEffect, useId, useState } from "react";
 import {
+  Briefcase,
   Code2,
   Home,
-  Mail,
   Menu,
   Palette,
   Radar,
@@ -17,9 +17,9 @@ import {
   ABOUT_PATH,
   ARTS_PATH,
   CODE_PATH,
-  CONTACT_PATH,
   INDEX_PATH,
-  NOW_PATH,
+  NOW_HASH,
+  WORK_PATH,
 } from "../../constants/paths";
 import { withBase } from "@/lib/basePath";
 import { cx } from "@/lib/ui";
@@ -42,7 +42,7 @@ type NavItem = NavLink | NavSection;
 const NAV_ITEMS: NavItem[] = [
   { kind: "link", label: "Home", href: INDEX_PATH, icon: Home },
   { kind: "link", label: "About me", href: ABOUT_PATH, icon: User },
-  { kind: "link", label: "Now", href: NOW_PATH, icon: Radar },
+  { kind: "link", label: "Work", href: WORK_PATH, icon: Briefcase },
   {
     kind: "section",
     label: "Portfolio",
@@ -51,7 +51,6 @@ const NAV_ITEMS: NavItem[] = [
       { label: "Projects", href: CODE_PATH, icon: Code2 },
     ],
   },
-  { kind: "link", label: "Contact", href: CONTACT_PATH, icon: Mail },
 ];
 
 const linkClass =
@@ -70,7 +69,7 @@ function NavList({ onNavigate }: { onNavigate?: () => void }) {
                 href={withBase(item.href)}
                 onClick={onNavigate}
               >
-                <Icon className="h-4 w-4 shrink-0" aria-hidden />
+                <Icon className="h-4 w-4 shrink-0" aria-hidden={true} />
                 {item.label}
               </a>
             </li>
@@ -92,7 +91,7 @@ function NavList({ onNavigate }: { onNavigate?: () => void }) {
                       href={withBase(child.href)}
                       onClick={onNavigate}
                     >
-                      <Icon className="h-4 w-4 shrink-0" aria-hidden />
+                      <Icon className="h-4 w-4 shrink-0" aria-hidden={true} />
                       {child.label}
                     </a>
                   </li>
@@ -150,9 +149,9 @@ export default function NavComp() {
           onClick={() => setOpen((value) => !value)}
         >
           {open ? (
-            <X className="h-5 w-5" aria-hidden />
+            <X className="h-5 w-5" aria-hidden={true} />
           ) : (
-            <Menu className="h-5 w-5" aria-hidden />
+            <Menu className="h-5 w-5" aria-hidden={true} />
           )}
         </button>
       </header>
@@ -208,7 +207,7 @@ export default function NavComp() {
               aria-label="Close menu"
               onClick={close}
             >
-              <X className="h-5 w-5" aria-hidden />
+              <X className="h-5 w-5" aria-hidden={true} />
             </button>
           </div>
           <nav className="flex-1 overflow-y-auto px-3 py-4" aria-label="Site">
