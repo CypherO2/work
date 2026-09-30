@@ -1,6 +1,6 @@
 "use client";
 
-import DetailModal from "../DetailModal";
+import DetailModal from "@/components/DetailModal";
 import type { Project } from "@/lib/projects";
 import { cardInteractive } from "@/lib/ui";
 

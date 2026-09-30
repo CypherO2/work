@@ -5,7 +5,7 @@ import { X } from "lucide-react";
 import type { Achievement, ContentLink, Grade } from "@/lib/about";
 import { btnAccent, cx, dialogShell } from "@/lib/ui";
 
-export type DetailFields = {
+type DetailFields = {
   title: string;
   subtitle?: string;
   period?: string;

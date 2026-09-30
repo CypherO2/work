@@ -25,25 +25,25 @@
       "location": "Manchester, UK",
       "start": "Aug 2025",
       "end": "Present",
-      "summary": "Part of a team building and shipping digital solutions with TypeScript, Next.js, Python, and FastAPI, through AWS and GCP with a focus on AI solutions to supporting charity work.",
+      "summary": "Part of a team building and shipping digital solutions with TypeScript, Next.js, Python, and FastAPI, through AWS and GCP, with a focus on AI tools that support charity work.",
       "achievements": [
         {
-          "text": "Helped lay the foundations SCPs (Simulated Client Personas) in a new agentic training platform, having a basis in voice to text transcription and evaluation."
+          "text": "Laid foundations for SCPs (Simulated Client Personas) in a new agentic training platform, grounded in voice-to-text transcription and evaluation."
         },
         {
-          "text": "Helped to build a platform with the pupose of supporting clients in their PIP journey, tool aimed to be a gateway to an appointment and is projected to reduce appointment times by 60%."
+          "text": "Built a platform to support clients on their PIP journey. The tool is meant as a gateway to an appointment and is projected to cut appointment times by 60%."
         },
         {
-          "text": "Handled design, development and architecture documentation for the various projects that the team worked on, laying the groundwork for further development as well as championing the usage of the GitHub project boards as a means to manage tasks and issues."
+          "text": "Wrote design, development, and architecture docs for team projects, and pushed GitHub project boards as the way we track tasks and issues."
         },
         {
-          "text": "Attended shareholder meetings to converse and network with funders regarding the future of the fund and the direction of the project using the funding they awarded us."
+          "text": "Attended shareholder meetings to talk with funders about the fund and the direction of the project their award supported."
         },
         {
-          "text": "Championed the necessity of a rebuild to the internal expenses app and led the development of the new app using React and Node.js with a python backend and Firebase database."
+          "text": "Made the case for rebuilding the internal expenses app and led the new build in React and Node.js with a Python backend and Firebase."
         },
         {
-          "text": "Created the initial accessibility feature for two of the training platforms whilst pushing to be allowed to implement such features across the entire catalogue of products we build/work on."
+          "text": "Shipped the first accessibility features on two training platforms and pushed to roll them out across the product catalogue."
         }
       ],
       "stack": [
@@ -57,19 +57,12 @@
         "PostgreSQL",
         "Docker",
         "GitHub Actions",
-        "GitHub Project Boards",
-        "GitHub Issues",
-        "GitHub Pull Requests",
-        "Stacked PRs",
         "OCR",
         "VertexAI",
         "AWS",
         "GCP",
-        "Web Design",
-        "Web Development",
         "Accessibility"
-    ],
-      "url": "",
+      ],
       "links": []
     },
     {
@@ -79,14 +72,19 @@
       "location": "UK",
       "start": "May 2024",
       "end": "July 2024",
-      "summary": "Supported staff with CRM and site issues, set up an online tutor schedule, and handled marketing tasks and hardware upkeep. Worked in a team to ensure the store was running smoothly and efficiently, whilst fostering a positive and supportive work environment.",
+      "summary": "Supported staff with CRM and site issues, set up an online tutor schedule, and handled marketing tasks and hardware upkeep.",
       "achievements": [
-        { "text": "Helped handle the research and outreach to potential clients, as well as the setup and management of the online tutor schedule."},
-        { "text": "Handled the CRM and site updates, as well as the general upkeep of the website and CRM system."},
-        { "text": "Handled marketing tasks, such as advert design and coordinated with the marketing manager to push to distribution channels." }
+        {
+          "text": "Researched and reached out to potential clients, and set up and ran the online tutor schedule."
+        },
+        {
+          "text": "Kept the CRM and website updated and running."
+        },
+        {
+          "text": "Designed adverts and worked with the marketing manager on distribution."
+        }
       ],
-      "stack": ["CRM", "Web admin", "Scheduling", "Hardware upkeep", "Marketing", "Teamwork", "Communication", "Customer service", "Telephone etiquette"],
-      "url": "",
+      "stack": ["CRM", "Web admin", "Scheduling", "Marketing"],
       "links": []
     },
     {
@@ -98,12 +96,17 @@
       "end": "July 2024",
       "summary": "Volunteer work on a print magazine for the group's 20th anniversary: designed assets and edited copy for readability.",
       "achievements": [
-        { "text": "Designed print assets for the 20th anniversary magazine, including the cover, layout, and content." },
-        { "text": "Drafted and edited copy for clearer reading, ensuring the content was engaging, informative and truthful." },
-        { "text": "Worked with a volunteer group through to print, ensuring the magazine was produced to a high standard and on time." }
+        {
+          "text": "Designed print assets for the 20th anniversary magazine, including cover, layout, and content."
+        },
+        {
+          "text": "Drafted and edited copy so it read clearly and stayed accurate."
+        },
+        {
+          "text": "Worked with a volunteer group through to print, on time."
+        }
       ],
-      "stack": ["Graphic design", "Copywriting", "Print layout", "Print design", "Print production", "Print management", "Printing", "Printing techniques", "Printing materials", "Printing processes"],
-      "url": "",
+      "stack": ["Graphic design", "Copywriting", "Print layout"],
       "links": []
     },
     {
@@ -113,13 +116,16 @@
       "location": "UK",
       "start": "Nov 2022",
       "end": "Dec 2022",
-      "summary": "Prepared and served food, including drive-thru delivery, plus standard cleaning duties.",
+      "summary": "Prepared and served food, including drive-thru, plus standard cleaning duties.",
       "achievements": [
-        { "text": "Prepared and served food, primarily focusing on bad of house work such as fry cooking, plus standard cleaning duties." },
-        { "text": "Worked in a team to ensure the store was running smoothly and efficiently, whilst fostering a positive and supportive work environment." }
+        {
+          "text": "Prepared and served food, mainly back of house work such as fry cooking, plus cleaning."
+        },
+        {
+          "text": "Worked with the team to keep the store running smoothly."
+        }
       ],
-      "stack": ["Customer service", "Teamwork", "Communication", "Food preparation", "Food service", "Cleaning", "Time Management", "Multi-tasking", "Problem Solving", "Adaptability"],
-      "url": "",
+      "stack": ["Customer service", "Food preparation", "Food service"],
       "links": []
     }
   ],
@@ -129,11 +135,9 @@
       "program": "Software Engineering",
       "studyType": "HTQ Diploma of Higher Education",
       "mode": "Part-time",
-      "location": "",
       "start": "April 2025",
       "end": "Feb 2026",
-      "summary": "Software Development pathway while working full-time, studying part-time and working full-time. Dropped out when I realised I was not learning as much as I would have liked to and wanted to focus on building my own projects and skills.",
-      "score": "",
+      "summary": "Software Development pathway while working full-time. Left when I was not learning enough and wanted to focus on my own projects and skills.",
       "courses": ["Software development", "Software engineering"]
     },
     {
@@ -144,8 +148,7 @@
       "location": "Salford, UK",
       "start": "Sept 2022",
       "end": "July 2024",
-      "summary": "Two-year technical qualification with industry placement and project work, focusing on digital production, design and development culminating in a 70hr project based on a real client's needs including a full stack website and documentation.",
-      "score": "",
+      "summary": "Two-year technical qualification with industry placement and a 70-hour client project: a full-stack website and documentation.",
       "courses": [
         "Digital production",
         "Design",
@@ -160,26 +163,23 @@
         "CSS",
         "TypeScript",
         "C#",
-        "VSCode",
-        "Version Control",
         "Git",
         "GitHub"
       ],
       "achievements": [
         {
-          "text": "Completed T-Level in Digital Production, Design and Development with passing grades in all modules."
+          "text": "Completed the T-Level with passing grades in all modules."
         },
         {
-          "text": "Completed a 70hr project based on a real client's needs including a full stack website and documentation. gaining a passing grade in the project."
+          "text": "Finished a 70-hour client project: full-stack site and docs, with a passing grade."
         },
         {
-          "text": "Learnt the basics of HTML, CSS, TypeScript, React, Node.js, Python Database Management Systems and SQLite."
+          "text": "Learned HTML, CSS, TypeScript, React, Node.js, Python, database systems, and SQLite."
         },
         {
-          "text": "Completed 360hrs of industry placement in a real client's business, gaining valuable experience and insights into the industry."
+          "text": "Completed 360 hours of industry placement."
         }
       ],
-      "url": "",
       "links": [
         {
           "label": "RZA project",
@@ -199,8 +199,7 @@
       "location": "Manchester, UK",
       "start": "Sept 2017",
       "end": "July 2022",
-      "summary": "Core academic subjects offered by the school, part of the required curriculum for schools in the UK.",
-      "score": "",
+      "summary": "Core academic subjects from the required UK school curriculum.",
       "courses": [
         "Mathematics",
         "English Literature",
@@ -213,8 +212,6 @@
         { "subject": "English Language", "grade": "5" },
         { "subject": "Combined Science: Trilogy", "grade": "7-7" }
       ],
-      "achievements": [],
-      "url": "",
       "links": []
     },
     {
@@ -225,8 +222,7 @@
       "location": "Salford, UK",
       "start": "Sept 2017",
       "end": "July 2022",
-      "summary": "Creative subjects alongside GCSEs offered by the school, part of the elective curriculums offered by schools in the UK.",
-      "score": "",
+      "summary": "Creative subjects taken alongside GCSEs.",
       "courses": [
         "Art, Craft and Design (3D Design)",
         "Art, Craft and Design",
@@ -239,16 +235,15 @@
       ],
       "achievements": [
         {
-          "text": "Completed the Creative iMedia course work within the 1st 6 months of the 2 year course, whilst still gaining a distinction at level 2."
+          "text": "Finished Creative iMedia coursework in the first 6 months of the 2-year course, with a Distinction at Level 2."
         },
         {
-          "text": "Handled the Art, Craft and Design (3D Design) course work, including the planning and creation of a physical model of the planned product despite having our teacher be injured early into the course and being missing for a majority of the course."
+          "text": "Planned and built a physical 3D Design model after the teacher was injured early in the course and was absent for most of it."
         },
         {
-          "text": "Completed the Art, Craft and Design course work, gaining a grade 4, with a focus on multi-media production and design."
+          "text": "Completed Art, Craft and Design coursework with a grade 4, focused on multi-media production and design."
         }
       ],
-      "url": "",
       "links": []
     }
   ]

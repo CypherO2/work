@@ -1,11 +1,11 @@
 "use client";
 
-import DetailModal from "../DetailModal";
+import DetailModal from "@/components/DetailModal";
 import type { Achievement, ContentLink, Grade } from "@/lib/about";
 import { formatDuration, formatPeriod } from "@/lib/duration";
 import { cardInteractive } from "@/lib/ui";
 
-export type TimelineEntry = {
+type TimelineEntry = {
   dateStart: string;
   dateEnd: string;
   jobRole: string;

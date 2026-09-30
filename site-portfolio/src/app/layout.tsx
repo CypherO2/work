@@ -32,12 +32,12 @@ const atkinson = Atkinson_Hyperlegible({
 });
 
 export const metadata: Metadata = {
-  title: "Cj Presley | Home",
+  title: "CJ Presley | Home",
   description: "Personal site for projects, art, and writing.",
   icons: { icon: "/favicon.png" },
   openGraph: {
-    title: "Cj Presley | Site",
-    description: "Personal GitHub Pages site.",
+    title: "CJ Presley",
+    description: "Personal site for projects, art, and writing.",
     type: "website",
   },
 };

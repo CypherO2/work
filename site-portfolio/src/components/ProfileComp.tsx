@@ -1,5 +1,5 @@
-import Avatar from "../assets/myavatar.jpg";
-import { SOCIAL_LINKS, socialHref, socialLabel } from "../constants/mylinks";
+import Avatar from "@/assets/myavatar.jpg";
+import { SOCIAL_LINKS, socialHref, socialLabel } from "@/constants/mylinks";
 import { about } from "@/lib/about";
 import { socialIcon } from "@/lib/socialIcons";
 import BioPanel from "./BioPanel";

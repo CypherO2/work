@@ -13,7 +13,7 @@ import {
   X,
   type LucideIcon,
 } from "lucide-react";
-import Logo from "../../assets/SiteIcon.png";
+import Logo from "@/assets/SiteIcon.png";
 import {
   A11Y_PATH,
   ABOUT_PATH,
@@ -21,7 +21,7 @@ import {
   CODE_PATH,
   INDEX_PATH,
   WORK_PATH,
-} from "../../constants/paths";
+} from "@/constants/paths";
 import { cx } from "@/lib/ui";
 
 type NavLink = {
@@ -182,7 +182,7 @@ export default function NavComp() {
           <Link href={INDEX_PATH} className="shrink-0">
             <img
               src={Logo.src}
-              alt="CJ Presley site logo"
+              alt="Cassi Presley site logo"
               className="site-logo block w-9"
             />
           </Link>

@@ -3,15 +3,6 @@
 import Link from "next/link";
 import { btn } from "@/lib/ui";
 
-export type BannerProps = {
-  titleText: string;
-  subtitleText: string;
-  firstButtonText?: string;
-  firstRedirect?: string;
-  secondButtonText?: string;
-  secondRedirect?: string;
-};
-
 export default function MainBanner({
   titleText,
   subtitleText,
@@ -19,7 +10,14 @@ export default function MainBanner({
   firstRedirect,
   secondButtonText,
   secondRedirect,
-}: BannerProps) {
+}: {
+  titleText: string;
+  subtitleText: string;
+  firstButtonText?: string;
+  firstRedirect?: string;
+  secondButtonText?: string;
+  secondRedirect?: string;
+}) {
   return (
     <section className="relative z-[1] grid min-h-[min(70vh,28rem)] place-items-center px-[clamp(1rem,3vw,1.75rem)] py-12 text-center">
       <div>
