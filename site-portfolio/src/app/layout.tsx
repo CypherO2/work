@@ -24,14 +24,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        style={
-          {
-            ["--bg-url" as string]: `url(${basePath}/BGImg2.png)`,
-          }
+    <html
+      lang="en"
+      style={
+        {
+          ["--bg-url" as string]: `url(${basePath}/BGImg2.png)`,
         }
-      >
+      }
+    >
+      <body>
         <NavComp />
         <span style={{ backgroundColor: "rgb(10,10,10)" }}>{children}</span>
         <FootComp />

@@ -96,7 +96,7 @@ export default function ProfileComp() {
                 style={{ backgroundColor: "rgba(10,10,10,0)" }}
               >
                 <MDBCardBody className="p-0">
-                  <MDBListGroup flush className="rounded-3">
+                  <MDBListGroup className="list-group-flush rounded-3">
                     <SocialsInfo />
                   </MDBListGroup>
                 </MDBCardBody>

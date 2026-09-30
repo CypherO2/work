@@ -1,9 +1,28 @@
+html,
 body {
-  background-image: var(--bg-url);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-color: rgb(10, 10, 10);
+  background-color: #000;
+  background-image: none;
+}
+
+html::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: var(--bg-url) center / cover no-repeat;
+  animation: image-fade 17s ease-in-out infinite;
+}
+
+@property --glow-a {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: rgba(9, 70, 139, 0.28);
+}
+
+@property --glow-b {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: rgba(9, 50, 100, 0.16);
 }
 
 body::before {
@@ -14,39 +33,50 @@ body::before {
   background:
     radial-gradient(
       ellipse 70% 55% at 25% 35%,
-      rgba(9, 70, 139, 0.4),
+      var(--glow-a),
       transparent 70%
     ),
     radial-gradient(
-      ellipse 60% 50% at 75% 65%,
-      rgba(10, 10, 10, 0.5),
-      transparent 65%
-    ),
-    radial-gradient(
       ellipse 80% 70% at 50% 50%,
-      rgba(9, 50, 100, 0.22),
+      var(--glow-b),
       transparent 75%
     );
-  animation: gradient-fade 18s ease-in-out infinite;
+  animation: gradient-fade 28s ease-in-out infinite;
+}
+
+@keyframes image-fade {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+  40% {
+    opacity: 0.85;
+  }
+  70% {
+    opacity: 0.55;
+  }
 }
 
 @keyframes gradient-fade {
   0%,
   100% {
-    opacity: 0.55;
-    transform: translate(0, 0) scale(1);
+    --glow-a: rgba(9, 70, 139, 0.28);
+    --glow-b: rgba(9, 50, 100, 0.16);
   }
   50% {
-    opacity: 0.9;
-    transform: translate(-2%, 1.5%) scale(1.06);
+    --glow-a: rgba(100, 45, 150, 0.28);
+    --glow-b: rgba(120, 55, 165, 0.18);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html::before,
   body::before {
     animation: none;
+  }
+
+  html::before {
     opacity: 0.7;
-    transform: none;
   }
 }
 
